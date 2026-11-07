@@ -1,0 +1,1 @@
+function f(a) { a[2]="changed" } BEGIN { a[2]="old"; f(a); print a[2] }

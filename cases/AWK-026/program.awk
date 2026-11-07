@@ -1,0 +1,1 @@
+BEGIN { x="a" "b"; print x, (2+3) "x" }

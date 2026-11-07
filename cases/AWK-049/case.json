@@ -1,0 +1,10 @@
+{
+  "id": "AWK-049",
+  "group": "strings",
+  "name": "index-positions",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

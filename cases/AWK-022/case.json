@@ -1,0 +1,10 @@
+{
+  "id": "AWK-022",
+  "group": "values",
+  "name": "literal-string-comparison",
+  "section": "Expressions in awk",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

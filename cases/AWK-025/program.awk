@@ -1,0 +1,1 @@
+BEGIN { x="  12.5xyz"; printf "%.1f\n", x+0 }

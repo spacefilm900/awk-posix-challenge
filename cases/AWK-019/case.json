@@ -1,0 +1,10 @@
+{
+  "id": "AWK-019",
+  "group": "records",
+  "name": "getline-eof",
+  "section": "Variables and Special Variables",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

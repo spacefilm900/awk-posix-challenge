@@ -1,0 +1,10 @@
+{
+  "id": "AWK-013",
+  "group": "records",
+  "name": "range-pattern",
+  "section": "Patterns and Actions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

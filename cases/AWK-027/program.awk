@@ -1,0 +1,1 @@
+BEGIN { x=0; y=(1 ? 7 : ++x); print y, x }

@@ -1,0 +1,10 @@
+{
+  "id": "AWK-009",
+  "group": "fields",
+  "name": "fs-regex",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

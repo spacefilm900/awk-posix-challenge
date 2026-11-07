@@ -1,0 +1,10 @@
+{
+  "id": "AWK-036",
+  "group": "arrays",
+  "name": "split-clears-array",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

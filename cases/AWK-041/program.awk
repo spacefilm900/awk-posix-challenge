@@ -1,0 +1,1 @@
+BEGIN { s="ab"; sub(/a|ab/,"X",s); print s }

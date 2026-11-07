@@ -1,0 +1,10 @@
+{
+  "id": "AWK-044",
+  "group": "regex",
+  "name": "gsub-count",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

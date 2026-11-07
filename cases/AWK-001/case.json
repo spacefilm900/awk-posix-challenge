@@ -1,0 +1,10 @@
+{
+  "id": "AWK-001",
+  "group": "fields",
+  "name": "default-whitespace",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

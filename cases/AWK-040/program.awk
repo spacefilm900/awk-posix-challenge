@@ -1,0 +1,1 @@
+function f(x, temp) { temp=x+1; return temp } BEGIN { print f(4) }

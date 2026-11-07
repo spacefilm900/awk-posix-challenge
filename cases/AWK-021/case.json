@@ -1,0 +1,10 @@
+{
+  "id": "AWK-021",
+  "group": "values",
+  "name": "numeric-field-comparison",
+  "section": "Expressions in awk",
+  "note": "Input fields containing numeric strings participate in numeric comparison.",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "AWK-050",
+  "group": "strings",
+  "name": "sprintf-format",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

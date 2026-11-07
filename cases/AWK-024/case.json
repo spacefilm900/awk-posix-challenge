@@ -1,0 +1,10 @@
+{
+  "id": "AWK-024",
+  "group": "values",
+  "name": "uninitialized-arithmetic",
+  "section": "Variables and Special Variables",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

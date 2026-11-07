@@ -1,0 +1,10 @@
+{
+  "id": "AWK-032",
+  "group": "arrays",
+  "name": "delete-element",
+  "section": "Arrays",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

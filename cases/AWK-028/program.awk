@@ -1,0 +1,1 @@
+BEGIN { x=0; if (0 && ++x) print "bad"; print x }

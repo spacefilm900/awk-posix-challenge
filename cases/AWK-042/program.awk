@@ -1,0 +1,1 @@
+BEGIN { print match("xxabczz", /ab[c]/), RSTART, RLENGTH }

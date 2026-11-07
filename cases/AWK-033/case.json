@@ -1,0 +1,10 @@
+{
+  "id": "AWK-033",
+  "group": "arrays",
+  "name": "multisubscript",
+  "section": "Arrays",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

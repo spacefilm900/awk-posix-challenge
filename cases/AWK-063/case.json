@@ -1,0 +1,11 @@
+{
+  "id": "AWK-063",
+  "group": "records",
+  "name": "begin-end-order",
+  "section": "BEGIN and END",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "note": "Independent portable-success case; expected output predetermined before candidate execution.",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

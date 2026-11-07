@@ -1,0 +1,10 @@
+{
+  "id": "AWK-007",
+  "group": "fields",
+  "name": "zero-reassign",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

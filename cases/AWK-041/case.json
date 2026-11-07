@@ -1,0 +1,10 @@
+{
+  "id": "AWK-041",
+  "group": "regex",
+  "name": "leftmost-longest-sub",
+  "section": "Regular Expressions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

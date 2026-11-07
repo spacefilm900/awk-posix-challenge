@@ -1,0 +1,1 @@
+{ if (NR==1) { r=getline x; print r, x, NR, FNR, $0 } }

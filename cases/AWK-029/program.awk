@@ -1,0 +1,1 @@
+BEGIN { x=0; if (1 || ++x) print "ok"; print x }

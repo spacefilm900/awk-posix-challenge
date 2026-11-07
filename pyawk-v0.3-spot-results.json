@@ -1,0 +1,153 @@
+{
+  "label": "pyawk",
+  "command": [
+    "python",
+    "-m",
+    "pyawk"
+  ],
+  "cases": 10,
+  "passes": 10,
+  "failures": 0,
+  "results": [
+    {
+      "id": "AWK-101",
+      "name": "empty-middle-field",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2722
+    },
+    {
+      "id": "AWK-116",
+      "name": "custom-rs-colon",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2852
+    },
+    {
+      "id": "AWK-131",
+      "name": "numeric-string-equality",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3085
+    },
+    {
+      "id": "AWK-146",
+      "name": "key-zero-vs-string",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2459
+    },
+    {
+      "id": "AWK-161",
+      "name": "recursive-sum",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3265
+    },
+    {
+      "id": "AWK-176",
+      "name": "leftmost-longest-alt",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2614
+    },
+    {
+      "id": "AWK-191",
+      "name": "substr-middle",
+      "group": "strings",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3257
+    },
+    {
+      "id": "AWK-206",
+      "name": "for-loop",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2609
+    },
+    {
+      "id": "AWK-221",
+      "name": "escape-tab",
+      "group": "formatting",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2168
+    },
+    {
+      "id": "AWK-236",
+      "name": "field-write-then-regex",
+      "group": "interactions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2212
+    }
+  ]
+}

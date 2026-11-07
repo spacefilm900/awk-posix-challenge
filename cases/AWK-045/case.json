@@ -1,0 +1,10 @@
+{
+  "id": "AWK-045",
+  "group": "regex",
+  "name": "sub-ampersand",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

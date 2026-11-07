@@ -1,0 +1,10 @@
+{
+  "id": "AWK-038",
+  "group": "arrays",
+  "name": "scalar-by-value",
+  "section": "User-Defined Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

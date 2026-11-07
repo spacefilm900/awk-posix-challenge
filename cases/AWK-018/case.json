@@ -1,0 +1,10 @@
+{
+  "id": "AWK-018",
+  "group": "records",
+  "name": "getline-record",
+  "section": "Input/Output and General Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

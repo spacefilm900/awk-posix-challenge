@@ -1,0 +1,1 @@
+{ print NR ":" FNR ":" $0 } END { print "END", NR, FNR }

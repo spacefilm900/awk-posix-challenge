@@ -1,0 +1,1 @@
+BEGIN { ORS=";" } { print $1 } END { printf "!" }

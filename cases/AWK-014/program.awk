@@ -1,0 +1,1 @@
+BEGIN { print "start" } { print "rec", NR } END { print "stop", NR }

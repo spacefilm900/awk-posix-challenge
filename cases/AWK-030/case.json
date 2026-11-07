@@ -1,0 +1,10 @@
+{
+  "id": "AWK-030",
+  "group": "values",
+  "name": "modulo-sign",
+  "section": "Expressions in awk",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

@@ -1,0 +1,1 @@
+BEGIN { print "[" substr("abcd",2,2) "]", "[" substr("abcd",5) "]" }

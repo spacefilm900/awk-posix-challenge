@@ -1,0 +1,1 @@
+function f(x) { x=99 } BEGIN { x=5; f(x); print x }

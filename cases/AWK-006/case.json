@@ -1,0 +1,10 @@
+{
+  "id": "AWK-006",
+  "group": "fields",
+  "name": "nf-truncate",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

@@ -1,0 +1,5 @@
+before
+START
+middle
+STOP
+after

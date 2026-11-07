@@ -1,0 +1,1 @@
+BEGIN { a["k"]=3; delete a["k"]; print ("k" in a) }

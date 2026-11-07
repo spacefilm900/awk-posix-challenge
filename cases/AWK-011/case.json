@@ -1,0 +1,10 @@
+{
+  "id": "AWK-011",
+  "group": "records",
+  "name": "nr-fnr",
+  "section": "Variables and Special Variables",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

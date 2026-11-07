@@ -1,0 +1,1 @@
+BEGIN { a[1]="x"; print a["1"], (1 in a), ("01" in a) }

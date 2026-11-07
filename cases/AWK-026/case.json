@@ -1,0 +1,10 @@
+{
+  "id": "AWK-026",
+  "group": "values",
+  "name": "concatenation-precedence",
+  "section": "Expressions in awk",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

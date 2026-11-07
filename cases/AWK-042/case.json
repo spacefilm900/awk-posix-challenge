@@ -1,0 +1,10 @@
+{
+  "id": "AWK-042",
+  "group": "regex",
+  "name": "match-offset",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

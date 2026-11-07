@@ -1,0 +1,10 @@
+{
+  "id": "AWK-014",
+  "group": "records",
+  "name": "begin-end",
+  "section": "Overall Program Structure",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

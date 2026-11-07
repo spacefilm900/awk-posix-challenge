@@ -1,0 +1,10 @@
+{
+  "id": "AWK-008",
+  "group": "fields",
+  "name": "beyond-nf-read",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

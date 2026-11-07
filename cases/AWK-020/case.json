@@ -1,0 +1,10 @@
+{
+  "id": "AWK-020",
+  "group": "records",
+  "name": "blank-record-as-data",
+  "section": "Input Files",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

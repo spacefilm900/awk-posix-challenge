@@ -1,0 +1,10 @@
+{
+  "id": "AWK-004",
+  "group": "fields",
+  "name": "field-assign-rebuild",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

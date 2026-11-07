@@ -1,0 +1,1 @@
+BEGIN { a[9]=9; n=split("x:y",a,":"); print n,(9 in a),(2 in a) }

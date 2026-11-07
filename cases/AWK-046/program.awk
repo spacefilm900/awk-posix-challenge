@@ -1,0 +1,1 @@
+BEGIN { print ("alpha"~/^al/), ("xalpha"~/^al/), ("alpha"~/ha$/) }

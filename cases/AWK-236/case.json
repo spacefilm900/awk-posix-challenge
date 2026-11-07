@@ -1,0 +1,11 @@
+{
+  "id": "AWK-236",
+  "group": "interactions",
+  "name": "field-write-then-regex",
+  "section": "Combined Semantics",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

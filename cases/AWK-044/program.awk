@@ -1,0 +1,1 @@
+BEGIN { s="aba"; n=gsub(/a/,"X",s); print n,s }

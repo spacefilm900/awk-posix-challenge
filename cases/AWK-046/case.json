@@ -1,0 +1,10 @@
+{
+  "id": "AWK-046",
+  "group": "regex",
+  "name": "anchored-match",
+  "section": "Regular Expressions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

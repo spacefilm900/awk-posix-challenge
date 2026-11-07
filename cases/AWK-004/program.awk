@@ -1,0 +1,1 @@
+BEGIN { OFS="|" } { $2="Z"; print $0, NF }

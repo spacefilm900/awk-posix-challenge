@@ -1,0 +1,1414 @@
+{
+  "label": "pyawk-enhancements (supplied ZIP, 2026-11-03 snapshot)",
+  "command": [
+    "python",
+    "-m",
+    "pyawk"
+  ],
+  "cases": 100,
+  "passes": 100,
+  "failures": 0,
+  "results": [
+    {
+      "id": "AWK-001",
+      "name": "default-whitespace",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 2.1657
+    },
+    {
+      "id": "AWK-002",
+      "name": "empty-line",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2228
+    },
+    {
+      "id": "AWK-003",
+      "name": "explicit-separator-empty",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1039
+    },
+    {
+      "id": "AWK-004",
+      "name": "field-assign-rebuild",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0758
+    },
+    {
+      "id": "AWK-005",
+      "name": "extend-nf",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.088
+    },
+    {
+      "id": "AWK-006",
+      "name": "nf-truncate",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1157
+    },
+    {
+      "id": "AWK-007",
+      "name": "zero-reassign",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1523
+    },
+    {
+      "id": "AWK-008",
+      "name": "beyond-nf-read",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0739
+    },
+    {
+      "id": "AWK-009",
+      "name": "fs-regex",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0513
+    },
+    {
+      "id": "AWK-010",
+      "name": "ofs-dynamic-rebuild",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1348
+    },
+    {
+      "id": "AWK-011",
+      "name": "nr-fnr",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.061
+    },
+    {
+      "id": "AWK-012",
+      "name": "next-skips",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0709
+    },
+    {
+      "id": "AWK-013",
+      "name": "range-pattern",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0538
+    },
+    {
+      "id": "AWK-014",
+      "name": "begin-end",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0705
+    },
+    {
+      "id": "AWK-015",
+      "name": "rs-single-char",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0555
+    },
+    {
+      "id": "AWK-016",
+      "name": "ors-custom",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0791
+    },
+    {
+      "id": "AWK-017",
+      "name": "getline-var",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3424
+    },
+    {
+      "id": "AWK-018",
+      "name": "getline-record",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1872
+    },
+    {
+      "id": "AWK-019",
+      "name": "getline-eof",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1354
+    },
+    {
+      "id": "AWK-020",
+      "name": "blank-record-as-data",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0401
+    },
+    {
+      "id": "AWK-021",
+      "name": "numeric-field-comparison",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.055
+    },
+    {
+      "id": "AWK-022",
+      "name": "literal-string-comparison",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0423
+    },
+    {
+      "id": "AWK-023",
+      "name": "numeric-string-field-lexical",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0673
+    },
+    {
+      "id": "AWK-024",
+      "name": "uninitialized-arithmetic",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1004
+    },
+    {
+      "id": "AWK-025",
+      "name": "string-to-number",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1558
+    },
+    {
+      "id": "AWK-026",
+      "name": "concatenation-precedence",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2206
+    },
+    {
+      "id": "AWK-027",
+      "name": "ternary-shortcircuit",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2361
+    },
+    {
+      "id": "AWK-028",
+      "name": "and-shortcircuit",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2539
+    },
+    {
+      "id": "AWK-029",
+      "name": "or-shortcircuit",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.306
+    },
+    {
+      "id": "AWK-030",
+      "name": "modulo-sign",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.535
+    },
+    {
+      "id": "AWK-031",
+      "name": "key-coercion",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2083
+    },
+    {
+      "id": "AWK-032",
+      "name": "delete-element",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.249
+    },
+    {
+      "id": "AWK-033",
+      "name": "multisubscript",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.212
+    },
+    {
+      "id": "AWK-034",
+      "name": "custom-subsep",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4536
+    },
+    {
+      "id": "AWK-035",
+      "name": "split-basic",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4812
+    },
+    {
+      "id": "AWK-036",
+      "name": "split-clears-array",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4073
+    },
+    {
+      "id": "AWK-037",
+      "name": "array-by-reference",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3461
+    },
+    {
+      "id": "AWK-038",
+      "name": "scalar-by-value",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.249
+    },
+    {
+      "id": "AWK-039",
+      "name": "recursion",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.7951
+    },
+    {
+      "id": "AWK-040",
+      "name": "function-local-extra-param",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4795
+    },
+    {
+      "id": "AWK-041",
+      "name": "leftmost-longest-sub",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2888
+    },
+    {
+      "id": "AWK-042",
+      "name": "match-offset",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.5806
+    },
+    {
+      "id": "AWK-043",
+      "name": "match-no-result",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2309
+    },
+    {
+      "id": "AWK-044",
+      "name": "gsub-count",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2146
+    },
+    {
+      "id": "AWK-045",
+      "name": "sub-ampersand",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2886
+    },
+    {
+      "id": "AWK-046",
+      "name": "anchored-match",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3252
+    },
+    {
+      "id": "AWK-047",
+      "name": "regex-in-split",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3465
+    },
+    {
+      "id": "AWK-048",
+      "name": "substr-edge",
+      "group": "strings",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 2.0666
+    },
+    {
+      "id": "AWK-049",
+      "name": "index-positions",
+      "group": "strings",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3291
+    },
+    {
+      "id": "AWK-050",
+      "name": "sprintf-format",
+      "group": "strings",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3117
+    },
+    {
+      "id": "AWK-051",
+      "name": "assign-field-rebuild",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.292
+    },
+    {
+      "id": "AWK-052",
+      "name": "assign-record-resplit",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3433
+    },
+    {
+      "id": "AWK-053",
+      "name": "increase-nf",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2284
+    },
+    {
+      "id": "AWK-054",
+      "name": "lower-nf",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0618
+    },
+    {
+      "id": "AWK-055",
+      "name": "field-zero-reassign",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0557
+    },
+    {
+      "id": "AWK-056",
+      "name": "fs-literal-comma",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.0527
+    },
+    {
+      "id": "AWK-057",
+      "name": "ofs-record-rebuild",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 2.8615
+    },
+    {
+      "id": "AWK-058",
+      "name": "empty-record",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 2.0287
+    },
+    {
+      "id": "AWK-059",
+      "name": "field-numeric-index",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2705
+    },
+    {
+      "id": "AWK-060",
+      "name": "fs-regex-multiple",
+      "group": "fields",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.178
+    },
+    {
+      "id": "AWK-061",
+      "name": "nr-fnr-single",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.9404
+    },
+    {
+      "id": "AWK-062",
+      "name": "next-skips-action",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.6645
+    },
+    {
+      "id": "AWK-063",
+      "name": "begin-end-order",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.332
+    },
+    {
+      "id": "AWK-064",
+      "name": "custom-rs",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2335
+    },
+    {
+      "id": "AWK-065",
+      "name": "final-unterminated",
+      "group": "records",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2617
+    },
+    {
+      "id": "AWK-066",
+      "name": "num-string-compare-input",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2615
+    },
+    {
+      "id": "AWK-067",
+      "name": "numeric-string-array-key",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1974
+    },
+    {
+      "id": "AWK-068",
+      "name": "postincrement-evaluation",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2027
+    },
+    {
+      "id": "AWK-069",
+      "name": "string-concatenation",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2336
+    },
+    {
+      "id": "AWK-070",
+      "name": "logical-short-circuit",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2283
+    },
+    {
+      "id": "AWK-071",
+      "name": "ternary-branch-only",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.277
+    },
+    {
+      "id": "AWK-072",
+      "name": "numeric-format-printf",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3309
+    },
+    {
+      "id": "AWK-073",
+      "name": "conversion-leading-space",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2743
+    },
+    {
+      "id": "AWK-074",
+      "name": "subsep-array-tuple",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3028
+    },
+    {
+      "id": "AWK-075",
+      "name": "delete-key",
+      "group": "values",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.1947
+    },
+    {
+      "id": "AWK-076",
+      "name": "array-pass-mutates",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.13
+    },
+    {
+      "id": "AWK-077",
+      "name": "scalar-pass-by-value",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4077
+    },
+    {
+      "id": "AWK-078",
+      "name": "recursive-factorial",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4468
+    },
+    {
+      "id": "AWK-079",
+      "name": "local-scalar",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4828
+    },
+    {
+      "id": "AWK-080",
+      "name": "return-default",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4911
+    },
+    {
+      "id": "AWK-081",
+      "name": "function-array-alias",
+      "group": "functions",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2704
+    },
+    {
+      "id": "AWK-082",
+      "name": "leftmost-longest-sub",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2234
+    },
+    {
+      "id": "AWK-083",
+      "name": "repetition-longest",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2476
+    },
+    {
+      "id": "AWK-084",
+      "name": "gsub-non-overlap",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4792
+    },
+    {
+      "id": "AWK-085",
+      "name": "match-start-length",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.5527
+    },
+    {
+      "id": "AWK-086",
+      "name": "sub-only-first",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2385
+    },
+    {
+      "id": "AWK-087",
+      "name": "regex-range",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3783
+    },
+    {
+      "id": "AWK-088",
+      "name": "alternation-priority",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2201
+    },
+    {
+      "id": "AWK-089",
+      "name": "anchor-record",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2072
+    },
+    {
+      "id": "AWK-090",
+      "name": "sub-replacement-ampersand",
+      "group": "regex",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.222
+    },
+    {
+      "id": "AWK-091",
+      "name": "for-loop-break",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.197
+    },
+    {
+      "id": "AWK-092",
+      "name": "while-continue",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2403
+    },
+    {
+      "id": "AWK-093",
+      "name": "do-while-once",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2718
+    },
+    {
+      "id": "AWK-094",
+      "name": "pattern-range",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.2038
+    },
+    {
+      "id": "AWK-095",
+      "name": "range-rearm",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.3065
+    },
+    {
+      "id": "AWK-096",
+      "name": "compound-assignment",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.44
+    },
+    {
+      "id": "AWK-097",
+      "name": "printf-without-newline",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4715
+    },
+    {
+      "id": "AWK-098",
+      "name": "nextfile-no",
+      "group": "control",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4597
+    },
+    {
+      "id": "AWK-099",
+      "name": "multi-dimensional-subsep",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4815
+    },
+    {
+      "id": "AWK-100",
+      "name": "membership-vs-unset",
+      "group": "arrays",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true
+      },
+      "returncode": 0,
+      "duration_seconds": 1.4145
+    }
+  ],
+  "note": "Ran 4 batches of 25, unmodified v0.2 corpus, using PYTHONPATH to extracted pyawk-enhancements source."
+}

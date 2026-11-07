@@ -1,0 +1,10 @@
+{
+  "id": "AWK-039",
+  "group": "arrays",
+  "name": "recursion",
+  "section": "User-Defined Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

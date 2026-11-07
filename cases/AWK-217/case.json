@@ -1,0 +1,11 @@
+{
+  "id": "AWK-217",
+  "group": "control",
+  "name": "range-trigger",
+  "section": "Patterns and Actions / Control Flow",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "AWK-003",
+  "group": "fields",
+  "name": "explicit-separator-empty",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

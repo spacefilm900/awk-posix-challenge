@@ -1,0 +1,1 @@
+BEGIN { s="abc"; sub(/b/,"<&>",s); print s }

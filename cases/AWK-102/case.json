@@ -1,0 +1,11 @@
+{
+  "id": "AWK-102",
+  "group": "fields",
+  "name": "assign-beyond-nf",
+  "section": "Fields and Records",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "AWK-031",
+  "group": "arrays",
+  "name": "key-coercion",
+  "section": "Arrays",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

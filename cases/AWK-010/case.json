@@ -1,0 +1,10 @@
+{
+  "id": "AWK-010",
+  "group": "fields",
+  "name": "ofs-dynamic-rebuild",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

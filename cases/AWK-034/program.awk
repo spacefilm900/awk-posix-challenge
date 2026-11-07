@@ -1,0 +1,1 @@
+BEGIN { SUBSEP="|"; a["a","b"]=4; print a["a|b"] }

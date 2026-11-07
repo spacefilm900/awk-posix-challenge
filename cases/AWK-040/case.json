@@ -1,0 +1,10 @@
+{
+  "id": "AWK-040",
+  "group": "arrays",
+  "name": "function-local-extra-param",
+  "section": "User-Defined Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

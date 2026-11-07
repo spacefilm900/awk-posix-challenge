@@ -1,0 +1,10 @@
+{
+  "id": "AWK-017",
+  "group": "records",
+  "name": "getline-var",
+  "section": "Input/Output and General Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

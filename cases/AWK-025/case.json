@@ -1,0 +1,10 @@
+{
+  "id": "AWK-025",
+  "group": "values",
+  "name": "string-to-number",
+  "section": "Expressions in awk",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

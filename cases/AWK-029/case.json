@@ -1,0 +1,10 @@
+{
+  "id": "AWK-029",
+  "group": "values",
+  "name": "or-shortcircuit",
+  "section": "Expressions in awk",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

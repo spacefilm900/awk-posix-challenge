@@ -1,0 +1,10 @@
+{
+  "id": "AWK-016",
+  "group": "records",
+  "name": "ors-custom",
+  "section": "Output Statements",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

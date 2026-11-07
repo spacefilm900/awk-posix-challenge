@@ -1,0 +1,1 @@
+BEGIN { x=sprintf("%04d:%-3s",7,"a"); print "[" x "]" }

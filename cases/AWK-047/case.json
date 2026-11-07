@@ -1,0 +1,10 @@
+{
+  "id": "AWK-047",
+  "group": "regex",
+  "name": "regex-in-split",
+  "section": "String Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

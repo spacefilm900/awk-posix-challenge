@@ -1,0 +1,1 @@
+{ if ($0=="") print "blank", NR; else print "text", NR }

@@ -1,0 +1,10 @@
+{
+  "id": "AWK-012",
+  "group": "records",
+  "name": "next-skips",
+  "section": "Patterns and Actions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

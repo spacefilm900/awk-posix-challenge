@@ -1,0 +1,1 @@
+{ if (NR==2) next; print NR, $0 }

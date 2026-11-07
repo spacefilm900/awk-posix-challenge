@@ -1,0 +1,1 @@
+BEGIN { OFS=":" } { $4="q"; print NF, "[" $0 "]" }

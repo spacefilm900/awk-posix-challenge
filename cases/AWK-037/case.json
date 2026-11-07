@@ -1,0 +1,10 @@
+{
+  "id": "AWK-037",
+  "group": "arrays",
+  "name": "array-by-reference",
+  "section": "User-Defined Functions",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

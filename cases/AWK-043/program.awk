@@ -1,0 +1,1 @@
+BEGIN { r=match("abc",/z/); print r, RSTART, RLENGTH }

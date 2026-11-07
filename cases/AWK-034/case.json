@@ -1,0 +1,10 @@
+{
+  "id": "AWK-034",
+  "group": "arrays",
+  "name": "custom-subsep",
+  "section": "Arrays",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}

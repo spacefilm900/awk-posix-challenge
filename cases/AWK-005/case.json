@@ -1,0 +1,10 @@
+{
+  "id": "AWK-005",
+  "group": "fields",
+  "name": "extend-nf",
+  "section": "Fields",
+  "note": "",
+  "expected_exit": 0,
+  "classification": "portable",
+  "locale": "C"
+}
