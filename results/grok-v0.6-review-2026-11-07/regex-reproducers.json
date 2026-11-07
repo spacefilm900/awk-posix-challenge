@@ -1,0 +1,1098 @@
+{
+  "pattern": "\\xc3\\xa9",
+  "probe_program": "{ s = $0; r = match(s, /\\xc3\\xa9/); printf \"%d %d %d\", r, RLENGTH, (s ~ /\\xc3\\xa9/)\n  t = s; n = gsub(/\\xc3\\xa9/, \"<&>\", t); printf \" %d %s\", n, t\n  n = split(s, A, /\\xc3\\xa9/); printf \" %d\", n\n  for (i = 1; i <= n; i++) printf \":%s\", A[i]\n  print \"\" }\n",
+  "cases": [
+    {
+      "n": 1,
+      "input_hex": "c3 a9",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 20 31 3a c3 a9 0a",
+            "stdout": "0 -1 0 0 é 1:é",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 20 31 3a c3 a9 0a",
+            "stdout": "0 -1 0 0 é 1:é",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 1 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 20 31 3a c3 a9 0a",
+            "stdout": "0 -1 0 0 é 1:é",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 20 31 3a c3 a9 0a",
+            "stdout": "0 -1 0 0 é 1:é",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 20 32 3a 3a 0a",
+            "stdout": "1 2 1 1 <é> 2::",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    },
+    {
+      "n": 2,
+      "input_hex": "c3 a9 65",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 65 20 31 3a c3 a9 65 0a",
+            "stdout": "0 -1 0 0 ée 1:ée",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 65 20 31 3a c3 a9 65 0a",
+            "stdout": "0 -1 0 0 ée 1:ée",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 1 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 65 20 31 3a c3 a9 65 0a",
+            "stdout": "0 -1 0 0 ée 1:ée",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 65 20 31 3a c3 a9 65 0a",
+            "stdout": "0 -1 0 0 ée 1:ée",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 31 20 3c c3 a9 3e 65 20 32 3a 3a 65 0a",
+            "stdout": "1 2 1 1 <é>e 2::e",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    },
+    {
+      "n": 3,
+      "input_hex": "61 c3 a9 62",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 62 20 31 3a 61 c3 a9 62 0a",
+            "stdout": "0 -1 0 0 aéb 1:aéb",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 62 20 31 3a 61 c3 a9 62 0a",
+            "stdout": "0 -1 0 0 aéb 1:aéb",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 1 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 62 20 31 3a 61 c3 a9 62 0a",
+            "stdout": "0 -1 0 0 aéb 1:aéb",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 62 20 31 3a 61 c3 a9 62 0a",
+            "stdout": "0 -1 0 0 aéb 1:aéb",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e 62 20 32 3a 61 3a 62 0a",
+            "stdout": "2 2 1 1 a<é>b 2:a:b",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    },
+    {
+      "n": 4,
+      "input_hex": "c3 a9 c3 a9",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 c3 a9 20 31 3a c3 a9 c3 a9 0a",
+            "stdout": "0 -1 0 0 éé 1:éé",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 c3 a9 20 31 3a c3 a9 c3 a9 0a",
+            "stdout": "0 -1 0 0 éé 1:éé",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 31 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 1 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 c3 a9 20 31 3a c3 a9 c3 a9 0a",
+            "stdout": "0 -1 0 0 éé 1:éé",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 c3 a9 c3 a9 20 31 3a c3 a9 c3 a9 0a",
+            "stdout": "0 -1 0 0 éé 1:éé",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "31 20 32 20 31 20 32 20 3c c3 a9 3e 3c c3 a9 3e 20 33 3a 3a 3a 0a",
+            "stdout": "1 2 1 2 <é><é> 3:::",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    },
+    {
+      "n": 5,
+      "input_hex": "e9 c3 a9",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 e9 c3 a9 20 31 3a e9 c3 a9 0a",
+            "stdout": "0 -1 0 0 \\xe9é 1:\\xe9é",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "gawk: cmd. line:1: (FILENAME=- FNR=1) warning: Invalid multibyte data detected. There may be a mismatch between your data and your locale",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 e9 c3 a9 20 31 3a e9 c3 a9 0a",
+            "stdout": "0 -1 0 0 \\xe9é 1:\\xe9é",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "gawk: cmd. line:1: (FILENAME=- FNR=1) warning: Invalid multibyte data detected. There may be a mismatch between your data and your locale",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 1 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "gawk: cmd. line:1: (FILENAME=- FNR=1) warning: Invalid multibyte data detected. There may be a mismatch between your data and your locale",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 e9 c3 a9 20 31 3a e9 c3 a9 0a",
+            "stdout": "0 -1 0 0 \\xe9é 1:\\xe9é",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 e9 c3 a9 20 31 3a e9 c3 a9 0a",
+            "stdout": "0 -1 0 0 \\xe9é 1:\\xe9é",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 e9 3c c3 a9 3e 20 32 3a e9 3a 0a",
+            "stdout": "2 2 1 1 \\xe9<é> 2:\\xe9:",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    },
+    {
+      "n": 6,
+      "input_hex": "61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80",
+      "runs": {
+        "C.UTF-8 | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 20 31 3a 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "0 -1 0 0 aé€日😀 1:aé€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 20 31 3a 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "0 -1 0 0 aé€日😀 1:aé€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C.UTF-8 | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 31 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 1 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 20 31 3a 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "0 -1 0 0 aé€日😀 1:aé€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | corpus \\x": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "30 20 2d 31 20 30 20 30 20 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 20 31 3a 61 c3 a9 e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "0 -1 0 0 aé€日😀 1:aé€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          }
+        },
+        "C | POSIX octal": {
+          "hawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "pyawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "mawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk --posix": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "gawk": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "onetrue": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          },
+          "busybox": {
+            "stdout_hex": "32 20 32 20 31 20 31 20 61 3c c3 a9 3e e2 82 ac e6 97 a5 f0 9f 98 80 20 32 3a 61 3a e2 82 ac e6 97 a5 f0 9f 98 80 0a",
+            "stdout": "2 2 1 1 a<é>€日😀 2:a:€日😀",
+            "stderr": "",
+            "exit": 0
+          }
+        }
+      }
+    }
+  ]
+}
