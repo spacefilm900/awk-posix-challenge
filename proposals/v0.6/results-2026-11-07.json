@@ -1,0 +1,2777 @@
+[
+  {
+    "id": "P01",
+    "title": "-v value with \\t escape",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a\tb|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a\tb|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a\tb|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a\tb|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a\tb|3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P02",
+    "title": "-v value ending in an unescaped backslash",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "ab\\|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "ab\\|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "ab\\|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "ab\\|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "ab\\|3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P03",
+    "title": "-v value with \\\\ (double backslash)",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a\\b|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a\\b|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a\\b|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a\\b|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a\\b|3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P04",
+    "title": "-v value with octal escapes",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "ABC|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "ABC|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "ABC|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "ABC|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "ABC|3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P05",
+    "title": "-v numeric string with leading zeros",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "010 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "010 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "010 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "010 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "010 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P06",
+    "title": "-v numeric string with leading and trailing blanks",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "[ 3 ] 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "[ 3 ] 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "[ 3 ] 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "[ 3 ] 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "[ 3 ] 1 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P07",
+    "title": "-v value that only looks numeric (1e)",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P08",
+    "title": "Assignment operand with \\t escape",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1\t2|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1\t2|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1\t2|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1\t2|3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1\t2|3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P09",
+    "title": "Timing of assignment operands around BEGIN and END",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "B[]\nR[1]\nE[2]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "B[]\nR[1]\nE[2]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "B[]\nR[1]\nE[2]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "B[]\nR[1]\nE[2]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "B[]\nR[1]\nE[2]\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P10",
+    "title": "-F '\\t' is escape-processed like -v FS=",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2|c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2|c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2|c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2|c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2|c\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P11",
+    "title": "-F t means the letter t, not tab",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2|a\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2|a\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "2|atb\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2|a\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2|a\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P12",
+    "title": "-F with a single ERE metacharacter '|' is literal",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P13",
+    "title": "-F with a multi-character ERE",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3|b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P14",
+    "title": "-F ' ' is the default field splitting",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2|a|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2|a|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2|a|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2|a|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2|a|b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P15",
+    "title": "-F '\\\\.' becomes the ERE \\. (a literal dot)",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2|b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2|b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P16",
+    "title": "%c with a numeric argument",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "Aa\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "Aa\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "Aa\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "Aa\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "Aa\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P17",
+    "title": "%c with a string constant that looks numeric",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "6|h\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "6|h\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "6|h\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "6|h\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "6|h\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P18",
+    "title": "%c with a number and a concatenated string",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "H7\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "H7\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "H7\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "H7\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "H7\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P19",
+    "title": "%c with a numeric-string field",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "B\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "B\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "B\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "B\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "B\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P20",
+    "title": "%c with width and the - flag",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "[  x][y  ]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "[  x][y  ]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "[  x][y  ]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "[  x][y  ]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "[  x][y  ]\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P21",
+    "title": "system() returns the command's exit status",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "768 0 256\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 0 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P22",
+    "title": "Output order around system()",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "ab\nc0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "ab\nc0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "ab\nc0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "ab\nc0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "ab\nc0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P23",
+    "title": "close() of a stream that was never opened is non-zero",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P24",
+    "title": "close() twice: 0 the first time, then non-zero",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P25",
+    "title": "close() of an input pipe whose command succeeded",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P26",
+    "title": "close() of an output pipe whose command exits 3",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P27",
+    "title": "Reading a file again after close() starts at the beginning",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 2 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P28",
+    "title": "'>' after close() truncates again",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "got b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "got b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "got b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "got b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "got b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P29",
+    "title": "getline from a missing file returns -1 and leaves NR alone",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "-1 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "-1 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "-1 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "-1 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "-1 0 []\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P30",
+    "title": "getline < \"-\" when a file named \"-\" exists",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "from-stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "from-stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "from-stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "DIFF",
+        "stdout": "from-stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "DIFF",
+        "stdout": "from-stdin\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P31",
+    "title": "-f - reads the program from standard input",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "prog from stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "prog from stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "prog from stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "prog from stdin\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "prog from stdin\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P32",
+    "title": "ARGV element set to \"-\" at run time reads stdin",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "- s\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "- s\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "- s\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "- s\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "- s\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P33",
+    "title": "An uninitialised scalar is both 0 and \"\"",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "both\n0 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "both\n0 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "both\n0 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "both\n0 0 []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "both\n0 0 []\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P34",
+    "title": "Comparisons involving an uninitialised value",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P35",
+    "title": "An empty field is uninitialised",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "0 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "0 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "0 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "DIFF",
+        "stdout": "0 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "DIFF",
+        "stdout": "0 1 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P36",
+    "title": "Referencing a field past NF does not create it",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "2 0 a b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "2 0 a b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "2 0 a b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "DIFF",
+        "stdout": "2 0 a b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "DIFF",
+        "stdout": "2 0 a b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P37",
+    "title": "'in' does not create an element; a reference does",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "absent\n1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "absent\n1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "absent\n1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "absent\n1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "absent\n1 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P38",
+    "title": "Missing function arguments are uninitialised",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "11\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "11\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "11\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "11\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "11\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P39",
+    "title": "An uninitialised global passed to a function becomes an array",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P40",
+    "title": "substr bounds: omitted n, n too large, start past the end",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "ello|ello||o\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "ello|ello||o\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "ello|ello||o\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "ello|ello||o\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "ello|ello||o\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P41",
+    "title": "substr with n <= 0 is empty",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "[][]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "[][]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "[][]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "[][]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "[][]\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P42",
+    "title": "substr with m = 0",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "[he]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "DIFF",
+        "stdout": "[he]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "[he]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "DIFF",
+        "stdout": "[he]\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "DIFF",
+        "stdout": "[he]\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P43",
+    "title": "substr and length count characters in UTF-8",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "� 4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "é 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "é 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "é 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "é 3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P44",
+    "title": "index with an empty needle",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P45",
+    "title": "index basic cases, including an empty haystack",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0 3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0 3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0 3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0 3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0 3 3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P46",
+    "title": "match of an ERE that matches empty",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P47",
+    "title": "match of /$/ is at the end of the string",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "4 4 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "4 4 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "4 4 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "4 4 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "4 4 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P48",
+    "title": "A failed match resets RSTART and RLENGTH",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2 1 0 -1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2 1 0 -1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2 1 0 -1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2 1 0 -1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2 1 0 -1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P49",
+    "title": "RSTART and RLENGTH count characters in UTF-8",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "DIFF",
+        "stdout": "5 2\n2 2\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 2\n2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "DIFF",
+        "stdout": "3 2\n0 -1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 2\n2 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 2\n2 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P50",
+    "title": "Leftmost beats longer; then longest at the same start",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 2\n<za>bcd\n1 4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 2\n<za>bcd\n1 4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 2\n<za>bcd\n1 4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 2\n<za>bcd\n1 4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 2\n<za>bcd\n1 4\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P51",
+    "title": "Other functions do not set RSTART or RLENGTH",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 1 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 1 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P52",
+    "title": "split with fs \" \" uses default field splitting",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 a c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 a c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 a c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 a c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 a c\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P53",
+    "title": "split with a single-character fs \".\" is literal",
+    "status": "portable (provisional)",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 b\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 b\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P54",
+    "title": "split deletes every old element first",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P55",
+    "title": "split(\"\", A) empties the array",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P56",
+    "title": "split elements are numeric strings",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P57",
+    "title": "The source string is an element of the target array",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 x z\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 x z\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 x z\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 x z\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 x z\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P58",
+    "title": "An ERE fs with leading and trailing separators",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "5 [] [] []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "5 [] [] []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "5 [] [] []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "5 [] [] []\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "5 [] [] []\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P59",
+    "title": "delete A, then reuse A",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n1 5\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0 0\n1 5\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0 0\n1 5\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n1 5\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0 0\n1 5\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P60",
+    "title": "delete a on an array parameter clears the caller's array",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0\n1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0\n1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0\n1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0\n1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0\n1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P61",
+    "title": "delete A[k] inside for (k in A)",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P62",
+    "title": "exit with no expression in END keeps the earlier status",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "",
+        "stderr": "",
+        "exit": 3
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "",
+        "stderr": "",
+        "exit": 3
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "",
+        "stderr": "",
+        "exit": 3
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "",
+        "stderr": "",
+        "exit": 3
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "",
+        "stderr": "",
+        "exit": 3
+      }
+    }
+  },
+  {
+    "id": "P63",
+    "title": "exit in BEGIN runs END and reads no input",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "b\ne\n",
+        "stderr": "",
+        "exit": 2
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "b\ne\n",
+        "stderr": "",
+        "exit": 2
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "b\ne\n",
+        "stderr": "",
+        "exit": 2
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "b\ne\n",
+        "stderr": "",
+        "exit": 2
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "b\ne\n",
+        "stderr": "",
+        "exit": 2
+      }
+    }
+  },
+  {
+    "id": "P64",
+    "title": "exit inside END stops the remaining END actions",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 4
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 4
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 4
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 4
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1\n",
+        "stderr": "",
+        "exit": 4
+      }
+    }
+  },
+  {
+    "id": "P65",
+    "title": "getline var < file leaves NR, FNR, NF and $0 alone",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 3 a b c L1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "1 1 3 a b c L1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "1 1 3 a b c L1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 3 a b c L1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "1 1 3 a b c L1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P66",
+    "title": "Plain getline updates NR, FNR, NF and $0",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 2 b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2 2 2 b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2 2 2 b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 2 b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 2 b c\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P67",
+    "title": "getline var updates NR and FNR, not $0 or NF",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 1 a b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "2 2 1 a b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "2 2 1 a b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 1 a b c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "2 2 1 a b c\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P68",
+    "title": "Assigning $(NF+2) creates empty fields and rebuilds with OFS",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a-b--z\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a-b--z\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a-b--z\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a-b--z\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a-b--z\n4\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P69",
+    "title": "Changing OFS without touching a field leaves $0 alone",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a b c\na-b-c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a b c\na-b-c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a b c\na-b-c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a b c\na-b-c\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a b c\na-b-c\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P70",
+    "title": "CONVFMT for subscripts and concatenation, OFMT for print, %d for integers",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3.1\n3.1416\n3.1\n17\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3.1\n3.1416\n3.1\n17\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3.1\n3.1416\n3.1\n17\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3.1\n3.1416\n3.1\n17\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3.1\n3.1416\n3.1\n17\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P71",
+    "title": "FNR, NR and FILENAME with an empty middle file",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1\nf2 3\nf2 3 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "f1 1\nf2 3\nf2 3 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "f1 1\nf2 3\nf2 3 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1\nf2 3\nf2 3 1\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1\nf2 3\nf2 3 1\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P72",
+    "title": "FILENAME and FNR in END when the last file is empty",
+    "status": "observational",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "empty 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "empty 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "empty 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "empty 2 0\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "empty 2 0\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P73",
+    "title": "getline < FILENAME is a separate stream from the main input",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "3 3\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "3 3\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P74",
+    "title": "nextfile in each file: NR counts the record that called it",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1 1\nf2 1 3\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "f1 1 1\nf2 1 3\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "f1 1 1\nf2 1 3\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1 1\nf2 1 3\n4\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "f1 1 1\nf2 1 3\n4\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  },
+  {
+    "id": "P75",
+    "title": "An FS= operand between files applies to the next file",
+    "status": "portable",
+    "results": {
+      "mawk": {
+        "verdict": "PASS",
+        "stdout": "a:b\na\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "gawk --posix": {
+        "verdict": "PASS",
+        "stdout": "a:b\na\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "onetrue": {
+        "verdict": "PASS",
+        "stdout": "a:b\na\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "pyawk": {
+        "verdict": "PASS",
+        "stdout": "a:b\na\n",
+        "stderr": "",
+        "exit": 0
+      },
+      "hawk": {
+        "verdict": "PASS",
+        "stdout": "a:b\na\n",
+        "stderr": "",
+        "exit": 0
+      }
+    }
+  }
+]
