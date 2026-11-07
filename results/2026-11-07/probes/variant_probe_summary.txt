@@ -1,0 +1,15 @@
+variant            pass  fails
+pyawk               250 
+pyawk.utf8          250 
+hawk                250 
+hawk.utf8           250 
+mawk                250 
+mawk.utf8           250 
+onetrue             250 
+onetrue.utf8        250 
+gawk-posix          249 AWK-105
+gawk-posix.utf8     249 AWK-105
+gawk-trad           249 AWK-105
+gawk                250 
+gawk.utf8           250 
+busybox             247 AWK-021 AWK-023 AWK-131

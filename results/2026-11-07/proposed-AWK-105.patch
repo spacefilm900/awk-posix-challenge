@@ -1,0 +1,23 @@
+--- a/cases/AWK-105/case.json
++++ b/cases/AWK-105/case.json
+@@ -6,6 +6,19 @@
+   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+   "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
+   "expected_exit": 0,
+-  "classification": "portable",
++  "classification": "nonportable",
++  "extension": "empty-fs-splits-characters",
++  "posix_status": "unspecified",
++  "posix_clause": "If FS is a null string, the behavior is unspecified.",
++  "posix_reference": "POSIX.1-2024 (IEEE Std 1003.1-2024), awk, EXTENDED DESCRIPTION, Regular Expressions, list of FS behaviours, first item",
++  "expected_behaviour": "Common extension: with FS set to the null string, each character of the record becomes a separate field (abc -> NF=3, $1=a, $3=c).",
++  "alternative_behaviours": [
++    {
++      "observed_in": "gawk 5.4.1 --posix and gawk 5.4.1 --traditional",
++      "stdout": "1:abc:\n",
++      "description": "The whole record is a single field (NF=1, $1=abc, $3 empty). This is permitted because POSIX leaves a null FS unspecified."
++    }
++  ],
++  "history": "v0.3.1: reclassified from portable to nonportable (extension-sensitive). Program, stdin and expected output unchanged. Reason: the expected result depends on behaviour POSIX.1-2024 explicitly leaves unspecified; gawk --posix produces a different, permitted result. Reported in the 2026-11-07 run review.",
+   "locale": "C"
+ }

@@ -1,0 +1,231 @@
+## cmd_getline_NR: BEGIN{ "echo x y" | getline; print NR, NF, $2 }  
+  pyawk    rc=0 0 2 y|
+  hawk     rc=0 0 2 y|
+  mawk     rc=0 0 2 y|
+  gawkP    rc=0 0 2 y|
+  onetrue  rc=0 0 2 y|
+  busybox  rc=0 0 2 y|
+## cmd_getline_var_NR: BEGIN{ "echo x" | getline v; print NR, v }  
+  pyawk    rc=0 0 x|
+  hawk     rc=0 0 x|
+  mawk     rc=0 0 x|
+  gawkP    rc=0 0 x|
+  onetrue  rc=0 0 x|
+  busybox  rc=0 0 x|
+## file_getline_NR: { while ((getline l < "f2") > 0) n++; print NR, FNR, n, $0 }  f1
+  pyawk    rc=0 1 1 3 a1|2 2 3 a2|
+  hawk     rc=0 1 1 3 a1|2 2 3 a2|
+  mawk     rc=0 1 1 3 a1|2 2 3 a2|
+  gawkP    rc=0 1 1 3 a1|2 2 3 a2|
+  onetrue  rc=0 1 1 3 a1|2 2 3 a2|
+  busybox  rc=0 1 1 3 a1|2 2 3 a2|
+## getline_var_file_NF: { getline l < "f2"; print NF, $0, l }  f1
+  pyawk    rc=0 1 a1 b1|1 a2 b2|
+  hawk     rc=0 1 a1 b1|1 a2 b2|
+  mawk     rc=0 1 a1 b1|1 a2 b2|
+  gawkP    rc=0 1 a1 b1|1 a2 b2|
+  onetrue  rc=0 1 a1 b1|1 a2 b2|
+  busybox  rc=0 1 a1 b1|1 a2 b2|
+## plain_getline_eof: END{ r = getline; print r, $0 }  f1
+  pyawk    rc=0 0 a2|
+  hawk     rc=0 0 a2|
+  mawk     rc=0 0 a2|
+  gawkP    rc=0 0 a2|
+  onetrue  rc=0 0 a2|
+  busybox  rc=0 -1 a2|
+## getline_nonexist: BEGIN{ r = (getline l < "/nonexistent/x"); print r }  
+  pyawk    rc=0 -1|
+  hawk     rc=0 -1|
+  mawk     rc=0 -1|
+  gawkP    rc=0 -1|
+  onetrue  rc=0 -1|
+  busybox  rc=0 -1|
+## fnr_filename: FNR==1{ print FILENAME, NR, FNR }  f1 f2
+  pyawk    rc=0 f1 1 1|f2 3 1|
+  hawk     rc=0 f1 1 1|f2 3 1|
+  mawk     rc=0 f1 1 1|f2 3 1|
+  gawkP    rc=0 f1 1 1|f2 3 1|
+  onetrue  rc=0 f1 1 1|f2 3 1|
+  busybox  rc=0 f1 1 1|f2 3 1|
+## assign_operand: { print v, $0 }  v=1 f1 v=2 f2
+  pyawk    rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+  hawk     rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+  mawk     rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+  gawkP    rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+  onetrue  rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+  busybox  rc=0 1 a1|1 a2|2 b1|2 b2|2 b3|
+## assign_after_last: END{ print v }  f1 v=9
+  pyawk    rc=0 9|
+  hawk     rc=0 9|
+  mawk     rc=0 9|
+  gawkP    rc=0 9|
+  onetrue  rc=0 9|
+  busybox  rc=0 9|
+## begin_filename: BEGIN{ print "[" FILENAME "]" }  f1
+  pyawk    rc=0 []|
+  hawk     rc=0 []|
+  mawk     rc=0 []|
+  gawkP    rc=0 []|
+  onetrue  rc=0 []|
+  busybox  rc=0 []|
+## close_return: BEGIN{ print "x" > "out"; print close("out"); print close("never-opened") }  
+  pyawk    rc=0 0|-1|
+  hawk     rc=0 0|-1|
+  mawk     rc=0 0|-1|
+  gawkP    rc=0 0|-1|
+  onetrue  rc=0 0|-1|
+  busybox  rc=0 0|0|
+## close_pipe_status: BEGIN{ print "x" | "cat >/dev/null; exit 3"; print close("cat >/dev/null; exit 3") }  
+  pyawk    rc=0 3|
+  hawk     rc=0 3|
+  mawk     rc=0 3|
+  gawkP    rc=0 0|
+  onetrue  rc=0 0|
+  busybox  rc=0 768|
+## append_after_close: BEGIN{ print "a" > "o2"; close("o2"); print "b" >> "o2"; close("o2"); while ((getline l < "o2") > 0) print l }  
+  pyawk    rc=0 a|b|
+  hawk     rc=0 a|b|
+  mawk     rc=0 a|b|
+  gawkP    rc=0 a|b|
+  onetrue  rc=0 a|b|
+  busybox  rc=0 a|b|
+## rs_para: BEGIN{RS=""}{ print NR ": NF=" NF " $2=" $2 }  para
+  pyawk    rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+  hawk     rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+  mawk     rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+  gawkP    rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+  onetrue  rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+  busybox  rc=0 1: NF=4 $2=x|2: NF=2 $2=z|
+## rs_para_fs: BEGIN{RS="";FS=","}{ print NF }  para
+  pyawk    rc=0 2|1|
+  hawk     rc=0 2|1|
+  mawk     rc=0 1|1|
+  gawkP    rc=0 2|1|
+  onetrue  rc=0 2|1|
+  busybox  rc=0 2|1|
+## nf_end: END{ print NF, $0 }  f1
+  pyawk    rc=0 1 a2|
+  hawk     rc=0 1 a2|
+  mawk     rc=0 1 a2|
+  gawkP    rc=0 1 a2|
+  onetrue  rc=0 1 a2|
+  busybox  rc=0 1 a2|
+## dollar0_end: END{ $0 = "q r"; print NF }  f1
+  pyawk    rc=0 2|
+  hawk     rc=0 2|
+  mawk     rc=0 2|
+  gawkP    rc=0 2|
+  onetrue  rc=0 2|
+  busybox  rc=0 2|
+## strnum_getline_var: BEGIN{ "echo 010" | getline v; print (v == 10) }  
+  pyawk    rc=0 1|
+  hawk     rc=0 1|
+  mawk     rc=0 1|
+  gawkP    rc=0 1|
+  onetrue  rc=0 1|
+  busybox  rc=0 0|
+## convfmt_vs_ofmt: BEGIN{ CONVFMT="%.2g"; OFMT="%.3g"; x=3.14159; y = x ""; print x, y }  
+  pyawk    rc=0 3.14 3.1|
+  hawk     rc=0 3.14 3.1|
+  mawk     rc=0 3.14 3.1|
+  gawkP    rc=0 3.14 3.1|
+  onetrue  rc=0 3.14 3.1|
+  busybox  rc=0 3.14 3.1|
+## int_convfmt: BEGIN{ CONVFMT="%.2g"; x = 12345678; print (x "") }  
+  pyawk    rc=0 12345678|
+  hawk     rc=0 12345678|
+  mawk     rc=0 12345678|
+  gawkP    rc=0 12345678|
+  onetrue  rc=0 12345678|
+  busybox  rc=0 12345678|
+## uninit_cmp: BEGIN{ print (u < 1), (u == ""), (u == 0) }  
+  pyawk    rc=0 1 1 1|
+  hawk     rc=0 1 1 1|
+  mawk     rc=0 1 1 1|
+  gawkP    rc=0 1 1 1|
+  onetrue  rc=0 1 1 1|
+  busybox  rc=0 1 1 1|
+## exit_code_end: BEGIN{ exit 3 } END{ }  
+  pyawk    rc=3 |
+  hawk     rc=3 |
+  mawk     rc=3 |
+  gawkP    rc=3 |
+  onetrue  rc=3 |
+  busybox  rc=3 |
+## exit_in_end_override: BEGIN{ exit 3 } END{ exit }  
+  pyawk    rc=3 |
+  hawk     rc=3 |
+  mawk     rc=3 |
+  gawkP    rc=3 |
+  onetrue  rc=3 |
+  busybox  rc=3 |
+## div_zero: BEGIN{ print 1/0 }  
+  pyawk    rc=2 pyawk: division by zero|
+  hawk     rc=2 hawk: division by zero|
+  mawk     rc=0 +inf|
+  gawkP    rc=2 gawk: cmd. line:1: fatal: division by zero attempted|
+  onetrue  rc=2 /workspace/refs/onetrue-awk/a.out: division by zero| source line number 1|
+  busybox  rc=1 awk: cmd. line:1: Division by zero|
+## substr_odd: BEGIN{ print "[" substr("hello", 0, 2) "][" substr("hello", -1, 3) "][" substr("hello", 1.5, 2) "]" }  
+  pyawk    rc=0 [he][hel][he]|
+  hawk     rc=0 [he][hel][he]|
+  mawk     rc=0 [he][hell][he]|
+  gawkP    rc=0 [he][hel][he]|
+  onetrue  rc=0 [he][hel][he]|
+  busybox  rc=0 [he][hel][he]|
+## printf_c_num: BEGIN{ printf "%c%c\n", 65, "66" }  
+  pyawk    rc=0 A6|
+  hawk     rc=0 A6|
+  mawk     rc=0 A6|
+  gawkP    rc=0 A6|
+  onetrue  rc=0 A6|
+  busybox  rc=0 A6|
+## length_noparen: { print length }  f1
+  pyawk    rc=0 2|2|
+  hawk     rc=0 2|2|
+  mawk     rc=0 2|2|
+  gawkP    rc=0 2|2|
+  onetrue  rc=0 2|2|
+  busybox  rc=0 2|2|
+## hex_strnum: BEGIN{ "echo 0x1A" | getline v; print v + 0 }  
+  pyawk    rc=0 0|
+  hawk     rc=0 0|
+  mawk     rc=0 0|
+  gawkP    rc=0 26|
+  onetrue  rc=0 0|
+  busybox  rc=0 26|
+## missing_file_operand: {print} END{print "end"}  f1 /nonexistent
+  pyawk    rc=2 a1|a2|pyawk: cannot open /nonexistent (No such file or directory)|
+  hawk     rc=2 a1|a2|hawk: cannot open /nonexistent (No such file or directory)|
+  mawk     rc=2 mawk: cannot open "/nonexistent" (No such file or directory)|a1|a2|
+  gawkP    rc=2 a1|a2|gawk: cmd. line:1: fatal: cannot open file `/nonexistent' for reading: No such file or directory|
+  onetrue  rc=2 a1|a2|/workspace/refs/onetrue-awk/a.out: can't open file /nonexistent| input record number 2, file /nonexisten
+  busybox  rc=1 a1|a2|awk: /nonexistent: No such file or directory|
+## begin_getline: BEGIN{getline; print "B:" $0 ":" NR} {print NR ": " $0}  f1
+  pyawk    rc=0 B:a1:1|2: a2|
+  hawk     rc=0 B:a1:1|2: a2|
+  mawk     rc=0 B:a1:1|2: a2|
+  gawkP    rc=0 B:a1:1|2: a2|
+  onetrue  rc=0 B:a1:1|2: a2|
+  busybox  rc=0 B:a1:1|2: a2|
+## convfmt_subscript: BEGIN{x=0.1; CONVFMT="%.2f"; a[x]=1; for(k in a) print k; print x}  
+  pyawk    rc=0 0.10|0.1|
+  hawk     rc=0 0.10|0.1|
+  mawk     rc=0 0.10|0.1|
+  gawkP    rc=0 0.10|0.1|
+  onetrue  rc=0 0.10|0.1|
+  busybox  rc=0 0.10|0.1|
+## rs_para_blank_spaces: BEGIN{RS=""}{print NR": "NF}  blank
+  pyawk    rc=0 1: 4|2: 2|
+  hawk     rc=0 1: 4|2: 2|
+  mawk     rc=0 1: 4|2: 2|
+  gawkP    rc=0 1: 4|2: 2|
+  onetrue  rc=0 1: 4|2: 2|
+  busybox  rc=0 1: 4|2: 2|
+## fs_change_timing: {FS=":"; print $1}  fsin
+  pyawk    rc=0 a:b|d|
+  hawk     rc=0 a:b|d|
+  mawk     rc=0 a:b|d|
+  gawkP    rc=0 a:b|d|
+  onetrue  rc=0 a:b|d|
+  busybox  rc=0 a:b|d|

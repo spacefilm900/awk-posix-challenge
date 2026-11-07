@@ -1,0 +1,33 @@
+cmd_getline_NR	BEGIN{ "echo x y" | getline; print NR, NF, $2 }
+cmd_getline_var_NR	BEGIN{ "echo x" | getline v; print NR, v }
+file_getline_NR	{ while ((getline l < "f2") > 0) n++; print NR, FNR, n, $0 }	f1
+getline_var_file_NF	{ getline l < "f2"; print NF, $0, l }	f1
+plain_getline_eof	END{ r = getline; print r, $0 }	f1
+getline_nonexist	BEGIN{ r = (getline l < "/nonexistent/x"); print r }
+fnr_filename	FNR==1{ print FILENAME, NR, FNR }	f1 f2
+assign_operand	{ print v, $0 }	v=1 f1 v=2 f2
+assign_after_last	END{ print v }	f1 v=9
+begin_filename	BEGIN{ print "[" FILENAME "]" }	f1
+close_return	BEGIN{ print "x" > "out"; print close("out"); print close("never-opened") }
+close_pipe_status	BEGIN{ print "x" | "cat >/dev/null; exit 3"; print close("cat >/dev/null; exit 3") }
+append_after_close	BEGIN{ print "a" > "o2"; close("o2"); print "b" >> "o2"; close("o2"); while ((getline l < "o2") > 0) print l }
+rs_para	BEGIN{RS=""}{ print NR ": NF=" NF " $2=" $2 }	para
+rs_para_fs	BEGIN{RS="";FS=","}{ print NF }	para
+nf_end	END{ print NF, $0 }	f1
+dollar0_end	END{ $0 = "q r"; print NF }	f1
+strnum_getline_var	BEGIN{ "echo 010" | getline v; print (v == 10) }
+convfmt_vs_ofmt	BEGIN{ CONVFMT="%.2g"; OFMT="%.3g"; x=3.14159; y = x ""; print x, y }
+int_convfmt	BEGIN{ CONVFMT="%.2g"; x = 12345678; print (x "") }
+uninit_cmp	BEGIN{ print (u < 1), (u == ""), (u == 0) }
+exit_code_end	BEGIN{ exit 3 } END{ }
+exit_in_end_override	BEGIN{ exit 3 } END{ exit }
+div_zero	BEGIN{ print 1/0 }
+substr_odd	BEGIN{ print "[" substr("hello", 0, 2) "][" substr("hello", -1, 3) "][" substr("hello", 1.5, 2) "]" }
+printf_c_num	BEGIN{ printf "%c%c\n", 65, "66" }
+length_noparen	{ print length }	f1
+hex_strnum	BEGIN{ "echo 0x1A" | getline v; print v + 0 }
+missing_file_operand	{print} END{print "end"}	f1 /nonexistent
+begin_getline	BEGIN{getline; print "B:" $0 ":" NR} {print NR ": " $0}	f1
+convfmt_subscript	BEGIN{x=0.1; CONVFMT="%.2f"; a[x]=1; for(k in a) print k; print x}	
+rs_para_blank_spaces	BEGIN{RS=""}{print NR": "NF}	blank
+fs_change_timing	{FS=":"; print $1}	fsin
