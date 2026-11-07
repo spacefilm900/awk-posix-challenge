@@ -1,0 +1,108 @@
+cases: 440; distinct program skeletons (literals masked): 289; skeletons shared by >1 case: 51 covering 202 cases
+  8  AWK-041, AWK-045, AWK-176, AWK-177, AWK-178, AWK-179, AWK-184, AWK-187
+     BEGIN { s = S ; sub ( R , S , s ) ; print s }
+  6  AWK-101, AWK-321, AWK-322, AWK-323, AWK-324, AWK-325
+     BEGIN { FS = S ; OFS = S } { $ N = S ; print NF , $ N }
+  6  AWK-220, AWK-311, AWK-312, AWK-313, AWK-314, AWK-315
+     BEGIN { print S ; exit N } END { print S }
+  5  AWK-251, AWK-252, AWK-253, AWK-254, AWK-255
+     BEGIN { r = getline ; print r , NR , FNR , $ N , NF } { print S , NR , $ N }
+  5  AWK-256, AWK-257, AWK-258, AWK-259, AWK-260
+     { old = $ N ; r = getline v ; print NR , FNR , old , $ N , v , r ; exit }
+  5  AWK-261, AWK-262, AWK-263, AWK-264, AWK-265
+     BEGIN { while ( ( getline v < S ) > N ) { print S , v , NR , FNR } ; close ( S ) } { print S , NR , FNR , $ N }
+  5  AWK-266, AWK-267, AWK-268, AWK-269, AWK-270
+     BEGIN { cmd = S ; for ( i = N ; i <= N ; i ++ ) { r = ( cmd | getline v ) ; print r , v , NR } ; close ( cmd ) ; r = ( cmd | getline v ) ; print r , v
+  5  AWK-271, AWK-272, AWK-273, AWK-274, AWK-275
+     { print FILENAME , NR , FNR , $ N } END { print S , NR , FNR , FILENAME }
+  5  AWK-276, AWK-277, AWK-278, AWK-279, AWK-280
+     FNR == N { print S , FILENAME , NR } { print $ N }
+  5  AWK-281, AWK-282, AWK-283, AWK-284, AWK-285
+     FNR == N { print FILENAME , NR } { if ( FNR == N ) nextfile ; print $ N } END { print S , NR }
+  5  AWK-286, AWK-287, AWK-288, AWK-289, AWK-290
+     BEGIN { print S , v } { print v , $ N , FILENAME } END { print S , v }
+  5  AWK-291, AWK-292, AWK-293, AWK-294, AWK-295
+     BEGIN { print S , v } { print S , v , $ N } END { print S , v }
+  5  AWK-296, AWK-297, AWK-298, AWK-299, AWK-300
+     BEGIN { print S > S ; print S > S ; close ( S ) ; while ( ( getline v < S ) > N ) print v ; close ( S ) }
+  5  AWK-301, AWK-302, AWK-303, AWK-304, AWK-305
+     BEGIN { print S > S ; close ( S ) ; print S > S ; close ( S ) ; while ( ( getline x < S ) > N ) print x ; close ( S ) }
+  5  AWK-306, AWK-307, AWK-308, AWK-309, AWK-310
+     BEGIN { print S > S ; close ( S ) ; print S >> S ; close ( S ) ; while ( ( getline v < S ) > N ) print v ; close ( S ) }
+  5  AWK-326, AWK-327, AWK-328, AWK-329, AWK-330
+     BEGIN { FS = S ; OFS = S } { $ N = S ; print NF , $ N ; $ N = S ; print $ N }
+  5  AWK-331, AWK-332, AWK-333, AWK-334, AWK-335
+     BEGIN { FS = S } { OFS = S ; print $ N ; $ N = $ N ; print $ N }
+  5  AWK-336, AWK-337, AWK-338, AWK-339, AWK-340
+     BEGIN { FS = S } { print NF , $ N , $ N ; $ N = S ; print NF , $ N , $ N }
+  5  AWK-341, AWK-342, AWK-343, AWK-344, AWK-345
+     { x = $ N ; print ( x == ( $ N + N ) ) , ( x == ( $ N S ) ) , ( x + N ) , ( x == N ) }
+  5  AWK-346, AWK-347, AWK-348, AWK-349, AWK-350
+     BEGIN { CONVFMT = S ; k = N / N ; a [ k ] = S ; printf S , a [ sprintf ( S , k ) ] , k S }
+  5  AWK-351, AWK-352, AWK-353, AWK-354, AWK-355
+     BEGIN { x = S ; y = N ; print ( x == y ) , ( x + N == y ) }
+  5  AWK-356, AWK-357, AWK-358, AWK-359, AWK-360
+     BEGIN { x = N ; a [ x ] = S ; print ( x in a ) , ( x S in a ) ; delete a [ x ] ; print ( x in a ) }
+  5  AWK-361, AWK-362, AWK-363, AWK-364, AWK-365
+     function modify ( v ) { sub ( R , S , v ) ; return v } BEGIN { FS = S ; OFS = S } { $ N = modify ( $ N ) ; print NF , $ N }
+  5  AWK-366, AWK-367, AWK-368, AWK-369, AWK-370
+     BEGIN { FS = S ; OFS = S } { a = $ N ; $ N = S ; print substr ( $ N , N , N ) , NF , a }
+  5  AWK-371, AWK-372, AWK-373, AWK-374, AWK-375
+     BEGIN { cmd = S ; r = ( cmd | getline x ) ; print r , x , NR ; r = ( cmd | getline y ) ; print r , y , NR ; close ( cmd ) }
+  5  AWK-376, AWK-377, AWK-378, AWK-379, AWK-380
+     BEGIN { FS = S ; a [ N ] = S ; split ( S , a , S ) ; print length ( a ) , a [ N ] , a [ N ] }
+  5  AWK-382, AWK-383, AWK-384, AWK-385, AWK-439
+     BEGIN { x = S ; n = gsub ( R , S , x ) ; print n S x }
+  5  AWK-386, AWK-387, AWK-388, AWK-389, AWK-390
+     BEGIN { a [ S ] = N ; a [ S ] = N ; total = N ; for ( k in a ) total += a [ k ] ; print total ; delete a [ S ] ; print ( S in a ) , ( S in a ) }
+  4  AWK-064, AWK-116, AWK-117, AWK-418
+     BEGIN { RS = S } { print NR S $ N }
+  4  AWK-082, AWK-083, AWK-088, AWK-090
+     BEGIN { x = S ; sub ( R , S , x ) ; print x }
+  4  AWK-137, AWK-145, AWK-225, AWK-227
+     BEGIN { printf S , N }
+  4  AWK-221, AWK-222, AWK-223, AWK-224
+     BEGIN { print S }
+  3  AWK-095, AWK-126, AWK-127
+     R , R { print NR }
+  3  AWK-191, AWK-192, AWK-193
+     BEGIN { print substr ( S , N , N ) }
+  3  AWK-415, AWK-416, AWK-417
+     BEGIN { RS = S ; FS = S } { print NF S $ N S $ NF }
+  2  AWK-010, AWK-104
+     { OFS = S ; $ N = $ N ; print $ N }
+  2  AWK-032, AWK-148
+     BEGIN { a [ S ] = N ; delete a [ S ] ; print ( S in a ) }
+  2  AWK-035, AWK-047
+     BEGIN { n = split ( S , a , S ) ; print n , a [ N ] , a [ N ] , a [ N ] }
+  2  AWK-087, AWK-186
+     BEGIN { print ( S ~ R ) S ( S ~ R ) }
+  2  AWK-089, AWK-185
+     { print ( $ N ~ R ) S ( $ N ~ R ) }
+  2  AWK-093, AWK-211
+     BEGIN { i = N ; do { print i ; i ++ } while ( i < N ) }
+  2  AWK-094, AWK-217
+     R , R { print $ N }
+  2  AWK-105, AWK-106
+     BEGIN { FS = S } { print NF S $ N S $ N }
+  2  AWK-118, AWK-119
+     BEGIN { RS = S } { print NR S length ( $ N ) }
+  2  AWK-182, AWK-190
+     BEGIN { s = S ; print sub ( R , S , s ) S s }
+  2  AWK-183, AWK-188
+     BEGIN { s = S ; print gsub ( R , S , s ) S s }
+  2  AWK-195, AWK-196
+     BEGIN { print index ( S , S ) }
+  2  AWK-203, AWK-226
+     BEGIN { printf S , S }
+  2  AWK-317, AWK-320
+     BEGIN { print S } { print S , $ N } END { print S }
+  2  AWK-318, AWK-319
+     { print S , $ N } END { print S }
+  2  AWK-393, AWK-396
+     BEGIN { ARGV [ N ] = S } { print FILENAME S $ N }
+
+# Exact duplicates: same token stream (whitespace ignored), same stdin, options/operands/fixtures and expected output
+  AWK-010, AWK-104
+  AWK-041, AWK-176
+exact-duplicate groups: 2
