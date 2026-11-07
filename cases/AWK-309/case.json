@@ -1,0 +1,17 @@
+{
+  "id": "AWK-309",
+  "group": "redirection",
+  "name": "append-after-close-4",
+  "section": "redirection",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, redirection",
+  "posix_clause": ">> appends to an existing output file.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "expected_files": {
+    "out.txt": "expected-file-out.txt"
+  }
+}

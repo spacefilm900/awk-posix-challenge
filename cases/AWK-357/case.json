@@ -1,0 +1,14 @@
+{
+  "id": "AWK-357",
+  "group": "types",
+  "name": "array-key-delete-2",
+  "section": "types",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, types",
+  "posix_clause": "Array subscripts use string keys; deleting element removes membership.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

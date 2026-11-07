@@ -1,0 +1,14 @@
+{
+  "id": "AWK-380",
+  "group": "interactions-advanced",
+  "name": "split-clears-array-5",
+  "section": "interactions-advanced",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, interactions-advanced",
+  "posix_clause": "split clears destination array, then populates elements using the supplied separator.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

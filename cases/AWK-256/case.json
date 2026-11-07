@@ -1,0 +1,14 @@
+{
+  "id": "AWK-256",
+  "group": "getline",
+  "name": "getline-variable-preserves-record-1",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, getline",
+  "posix_clause": "getline variable assigns to variable and updates NR/FNR, but not current $0.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

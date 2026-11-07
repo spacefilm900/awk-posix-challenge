@@ -1,0 +1,22 @@
+{
+  "id": "AWK-273",
+  "group": "multifile",
+  "name": "nr-fnr-two-files-3",
+  "section": "multifile",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, multifile",
+  "posix_clause": "NR accumulates across input files, FNR resets for each file, FILENAME identifies the current file.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "one.txt",
+    "two.txt"
+  ],
+  "operands": [
+    "one.txt",
+    "two.txt"
+  ]
+}

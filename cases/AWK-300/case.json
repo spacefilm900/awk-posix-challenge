@@ -1,0 +1,17 @@
+{
+  "id": "AWK-300",
+  "group": "redirection",
+  "name": "reuse-file-output-stream-5",
+  "section": "redirection",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, redirection",
+  "posix_clause": "Repeated > redirection to an open stream does not retruncate; close flushes stream.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "expected_files": {
+    "out.txt": "expected-file-out.txt"
+  }
+}

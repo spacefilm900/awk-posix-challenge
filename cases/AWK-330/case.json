@@ -1,0 +1,14 @@
+{
+  "id": "AWK-330",
+  "group": "fields-state",
+  "name": "resplit-and-rebuild-5",
+  "section": "fields-state",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, fields-state",
+  "posix_clause": "Assignment to $0 causes field splitting; assigning to a field recomputes $0.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

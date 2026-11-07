@@ -1,0 +1,24 @@
+{
+  "id": "AWK-278",
+  "group": "multifile",
+  "name": "empty-middle-file-3",
+  "section": "multifile",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, multifile",
+  "posix_clause": "An empty file contributes no input records; file-processing proceeds to the next operand.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "first.txt",
+    "empty.txt",
+    "last.txt"
+  ],
+  "operands": [
+    "first.txt",
+    "empty.txt",
+    "last.txt"
+  ]
+}

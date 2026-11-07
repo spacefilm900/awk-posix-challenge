@@ -1,0 +1,17 @@
+{
+  "id": "AWK-301",
+  "group": "redirection",
+  "name": "close-reopens-truncated-1",
+  "section": "redirection",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, redirection",
+  "posix_clause": "A redirected output stream closed and reopened with > is truncated on reopen.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "expected_files": {
+    "out.txt": "expected-file-out.txt"
+  }
+}

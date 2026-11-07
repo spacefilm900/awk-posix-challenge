@@ -1,0 +1,24 @@
+{
+  "id": "AWK-287",
+  "group": "operands",
+  "name": "between-file-variable-assignment-2",
+  "section": "operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, operands",
+  "posix_clause": "Assignment operands take effect at their respective position in input operand list.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "first.txt",
+    "last.txt"
+  ],
+  "operands": [
+    "v=2",
+    "first.txt",
+    "v=3",
+    "last.txt"
+  ]
+}

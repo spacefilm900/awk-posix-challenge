@@ -1,0 +1,22 @@
+{
+  "id": "AWK-283",
+  "group": "multifile",
+  "name": "nextfile-skips-records-3",
+  "section": "multifile",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, multifile",
+  "posix_clause": "nextfile stops reading current input file; skipped records do not increment NR.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "first.txt",
+    "last.txt"
+  ],
+  "operands": [
+    "first.txt",
+    "last.txt"
+  ]
+}

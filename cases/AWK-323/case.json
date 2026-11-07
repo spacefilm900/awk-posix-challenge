@@ -1,0 +1,14 @@
+{
+  "id": "AWK-323",
+  "group": "fields-state",
+  "name": "extend-field-with-OFS-3",
+  "section": "fields-state",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, fields-state",
+  "posix_clause": "Assigning beyond NF extends fields and recomputes $0 using OFS.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

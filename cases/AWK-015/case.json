@@ -5,6 +5,8 @@
   "section": "Records",
   "note": "",
   "expected_exit": 0,
-  "classification": "portable",
-  "locale": "C"
+  "classification": "observational",
+  "locale": "C",
+  "posix_status": "outside-requirements",
+  "audit_note": "Input is not a POSIX text file; retained unchanged for behaviour comparison."
 }

@@ -1,0 +1,14 @@
+{
+  "id": "AWK-370",
+  "group": "interactions-advanced",
+  "name": "substr-after-field-assignment-5",
+  "section": "interactions-advanced",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, interactions-advanced",
+  "posix_clause": "Field assignment rebuilds $0 before substr observes the new record.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

@@ -6,6 +6,8 @@
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
   "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
   "expected_exit": 0,
-  "classification": "portable",
-  "locale": "C"
+  "classification": "observational",
+  "locale": "C",
+  "posix_status": "unstated",
+  "audit_note": "The specific expected behaviour is not clearly prescribed by POSIX; retained unchanged."
 }

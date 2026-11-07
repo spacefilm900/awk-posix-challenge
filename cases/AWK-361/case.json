@@ -1,0 +1,14 @@
+{
+  "id": "AWK-361",
+  "group": "interactions-advanced",
+  "name": "function-regex-field-rebuild-1",
+  "section": "interactions-advanced",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, interactions-advanced",
+  "posix_clause": "User function return, sub replacement, assignment to a field, and $0 rebuilding interact.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

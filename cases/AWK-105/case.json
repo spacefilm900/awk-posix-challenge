@@ -6,6 +6,10 @@
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
   "note": "Expected output independently specified; review ambiguous POSIX cases before treating disagreements as defects.",
   "expected_exit": 0,
-  "classification": "portable",
-  "locale": "C"
+  "classification": "nonportable",
+  "locale": "C",
+  "posix_status": "unspecified",
+  "extension": "empty-fs-splits-characters",
+  "posix_clause": "If FS is a null string, the behavior is unspecified.",
+  "history": "v0.4: metadata-only portability correction; original program and expectations retained."
 }

@@ -1,0 +1,14 @@
+{
+  "id": "AWK-252",
+  "group": "getline",
+  "name": "implicit-getline-in-BEGIN-2",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, getline",
+  "posix_clause": "getline without redirection reads the next input record and updates $0, NF, NR, FNR.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

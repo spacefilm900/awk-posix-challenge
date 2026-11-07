@@ -1,0 +1,14 @@
+{
+  "id": "AWK-340",
+  "group": "fields-state",
+  "name": "zero-reassign-updates-fields-5",
+  "section": "fields-state",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, fields-state",
+  "posix_clause": "Assignment to $0 replaces record and recomputes fields according to FS.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

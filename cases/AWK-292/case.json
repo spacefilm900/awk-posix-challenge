@@ -1,0 +1,25 @@
+{
+  "id": "AWK-292",
+  "group": "operands",
+  "name": "option-v-and-trailing-assignment-2",
+  "section": "operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, operands",
+  "posix_clause": "-v assignments precede BEGIN, whereas operand assignments are processed in input order.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "in.txt"
+  ],
+  "operands": [
+    "in.txt",
+    "v=3"
+  ],
+  "options": [
+    "-v",
+    "v=2"
+  ]
+}

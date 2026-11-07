@@ -1,0 +1,17 @@
+{
+  "id": "AWK-266",
+  "group": "getline",
+  "name": "pipe-getline-reopen-1",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, getline",
+  "posix_clause": "Command pipe is reused until close; reopening command restarts it.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Five deliberate repetitions vary the case label only; reserved for future distinct pipe variants.",
+  "requires": [
+    "sh"
+  ]
+}

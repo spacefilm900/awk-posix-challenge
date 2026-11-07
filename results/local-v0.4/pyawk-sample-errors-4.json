@@ -1,0 +1,89 @@
+{
+  "label": "pyawk",
+  "command": [
+    "python",
+    "-m",
+    "pyawk"
+  ],
+  "cases": 4,
+  "passes": 4,
+  "failures": 0,
+  "skips": 0,
+  "by_classification": {
+    "portable": {
+      "PASS": 4,
+      "FAIL": 0,
+      "SKIP": 0
+    }
+  },
+  "results": [
+    {
+      "id": "AWK-317",
+      "name": "missing-file-operand",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.6312
+    },
+    {
+      "id": "AWK-318",
+      "name": "missing-between-files",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.6522
+    },
+    {
+      "id": "AWK-319",
+      "name": "missing-first-file",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.6999
+    },
+    {
+      "id": "AWK-320",
+      "name": "missing-file-after-empty",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.6604
+    }
+  ]
+}

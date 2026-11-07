@@ -1,0 +1,14 @@
+{
+  "id": "AWK-342",
+  "group": "types",
+  "name": "numeric-string-copy-2",
+  "section": "types",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, types",
+  "posix_clause": "Input field numeric-string type propagates on assignment and participates in numeric comparison.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

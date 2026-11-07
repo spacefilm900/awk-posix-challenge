@@ -1,0 +1,23 @@
+{
+  "id": "AWK-320",
+  "group": "errors",
+  "name": "missing-file-after-empty",
+  "section": "Input error handling",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk, CONSEQUENCES OF ERRORS and EXIT STATUS",
+  "posix_clause": "An unreadable input file operand requires a diagnostic, unsuccessful exit, and no further action.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": "nonzero",
+  "note": "Fatal input error: no END action executed; exact diagnostic wording not prescribed.",
+  "stderr_check": "nonempty",
+  "stdout_check": "exact",
+  "operands": [
+    "empty.txt",
+    "missing.txt"
+  ],
+  "fixtures": [
+    "empty.txt"
+  ]
+}

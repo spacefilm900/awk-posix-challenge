@@ -1,0 +1,14 @@
+{
+  "id": "AWK-353",
+  "group": "types",
+  "name": "quoted-string-vs-number-3",
+  "section": "types",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, types",
+  "posix_clause": "String literal is not numeric string; comparison with numeric values observes operand types.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution."
+}

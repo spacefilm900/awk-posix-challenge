@@ -1,0 +1,6659 @@
+{
+  "label": "mawk",
+  "command": [
+    "mawk"
+  ],
+  "cases": 390,
+  "passes": 390,
+  "failures": 0,
+  "skips": 0,
+  "by_classification": {
+    "nonportable": {
+      "PASS": 1,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "observational": {
+      "PASS": 15,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "portable": {
+      "PASS": 374,
+      "FAIL": 0,
+      "SKIP": 0
+    }
+  },
+  "results": [
+    {
+      "id": "AWK-001",
+      "name": "default-whitespace",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-002",
+      "name": "empty-line",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-003",
+      "name": "explicit-separator-empty",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-004",
+      "name": "field-assign-rebuild",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-005",
+      "name": "extend-nf",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-006",
+      "name": "nf-truncate",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-007",
+      "name": "zero-reassign",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-008",
+      "name": "beyond-nf-read",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-009",
+      "name": "fs-regex",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-010",
+      "name": "ofs-dynamic-rebuild",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-011",
+      "name": "nr-fnr",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-012",
+      "name": "next-skips",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-013",
+      "name": "range-pattern",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-014",
+      "name": "begin-end",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-015",
+      "name": "rs-single-char",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-016",
+      "name": "ors-custom",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-017",
+      "name": "getline-var",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-018",
+      "name": "getline-record",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-019",
+      "name": "getline-eof",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-020",
+      "name": "blank-record-as-data",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-021",
+      "name": "numeric-field-comparison",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-022",
+      "name": "literal-string-comparison",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-023",
+      "name": "numeric-string-field-lexical",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-024",
+      "name": "uninitialized-arithmetic",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-025",
+      "name": "string-to-number",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-026",
+      "name": "concatenation-precedence",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-027",
+      "name": "ternary-shortcircuit",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-028",
+      "name": "and-shortcircuit",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-029",
+      "name": "or-shortcircuit",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-030",
+      "name": "modulo-sign",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-031",
+      "name": "key-coercion",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-032",
+      "name": "delete-element",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-033",
+      "name": "multisubscript",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-034",
+      "name": "custom-subsep",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-035",
+      "name": "split-basic",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-036",
+      "name": "split-clears-array",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-037",
+      "name": "array-by-reference",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-038",
+      "name": "scalar-by-value",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-039",
+      "name": "recursion",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-040",
+      "name": "function-local-extra-param",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-041",
+      "name": "leftmost-longest-sub",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-042",
+      "name": "match-offset",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-043",
+      "name": "match-no-result",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0025
+    },
+    {
+      "id": "AWK-044",
+      "name": "gsub-count",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-045",
+      "name": "sub-ampersand",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-046",
+      "name": "anchored-match",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-047",
+      "name": "regex-in-split",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-048",
+      "name": "substr-edge",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-049",
+      "name": "index-positions",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-050",
+      "name": "sprintf-format",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0037
+    },
+    {
+      "id": "AWK-051",
+      "name": "assign-field-rebuild",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-052",
+      "name": "assign-record-resplit",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0027
+    },
+    {
+      "id": "AWK-053",
+      "name": "increase-nf",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-054",
+      "name": "lower-nf",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-055",
+      "name": "field-zero-reassign",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-056",
+      "name": "fs-literal-comma",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-057",
+      "name": "ofs-record-rebuild",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-058",
+      "name": "empty-record",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-059",
+      "name": "field-numeric-index",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-060",
+      "name": "fs-regex-multiple",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-061",
+      "name": "nr-fnr-single",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0029
+    },
+    {
+      "id": "AWK-062",
+      "name": "next-skips-action",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0016
+    },
+    {
+      "id": "AWK-063",
+      "name": "begin-end-order",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0026
+    },
+    {
+      "id": "AWK-064",
+      "name": "custom-rs",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.003
+    },
+    {
+      "id": "AWK-065",
+      "name": "final-unterminated",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-066",
+      "name": "num-string-compare-input",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-067",
+      "name": "numeric-string-array-key",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-068",
+      "name": "postincrement-evaluation",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-069",
+      "name": "string-concatenation",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-070",
+      "name": "logical-short-circuit",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-071",
+      "name": "ternary-branch-only",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-072",
+      "name": "numeric-format-printf",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-073",
+      "name": "conversion-leading-space",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-074",
+      "name": "subsep-array-tuple",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-075",
+      "name": "delete-key",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-076",
+      "name": "array-pass-mutates",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0017
+    },
+    {
+      "id": "AWK-077",
+      "name": "scalar-pass-by-value",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-078",
+      "name": "recursive-factorial",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0017
+    },
+    {
+      "id": "AWK-079",
+      "name": "local-scalar",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-080",
+      "name": "return-default",
+      "group": "functions",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-081",
+      "name": "function-array-alias",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-082",
+      "name": "leftmost-longest-sub",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-083",
+      "name": "repetition-longest",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-084",
+      "name": "gsub-non-overlap",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-085",
+      "name": "match-start-length",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-086",
+      "name": "sub-only-first",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-087",
+      "name": "regex-range",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-088",
+      "name": "alternation-priority",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-089",
+      "name": "anchor-record",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-090",
+      "name": "sub-replacement-ampersand",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-091",
+      "name": "for-loop-break",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0025
+    },
+    {
+      "id": "AWK-092",
+      "name": "while-continue",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-093",
+      "name": "do-while-once",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0015
+    },
+    {
+      "id": "AWK-094",
+      "name": "pattern-range",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-095",
+      "name": "range-rearm",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-096",
+      "name": "compound-assignment",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-097",
+      "name": "printf-without-newline",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-098",
+      "name": "nextfile-no",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-099",
+      "name": "multi-dimensional-subsep",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-100",
+      "name": "membership-vs-unset",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-101",
+      "name": "empty-middle-field",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-102",
+      "name": "assign-beyond-nf",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-103",
+      "name": "assign-nf-zero",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-104",
+      "name": "rebuild-after-ofs-change",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-105",
+      "name": "fs-char-split",
+      "group": "fields",
+      "classification": "nonportable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-106",
+      "name": "fs-one-space-trims",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-107",
+      "name": "fs-comma-preserves-trailing",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-108",
+      "name": "field-and-record-update",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-109",
+      "name": "set-fs-before-field-read",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-110",
+      "name": "rebuild-string-field",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0023
+    },
+    {
+      "id": "AWK-111",
+      "name": "nf-shrink-and-extend",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-112",
+      "name": "field-assignment-expression",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-113",
+      "name": "preserve-leading-delimiter",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-114",
+      "name": "record-number-with-blank-lines",
+      "group": "fields",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-115",
+      "name": "multiple-records-last-no-nl",
+      "group": "fields",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-116",
+      "name": "custom-rs-colon",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-117",
+      "name": "rs-single-char-not-found",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-118",
+      "name": "rs-leading-delimiter",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-119",
+      "name": "rs-repeated-delimiters",
+      "group": "records",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-120",
+      "name": "nr-and-end-records",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-121",
+      "name": "next-in-first-rule",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-122",
+      "name": "end-after-next",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-123",
+      "name": "begin-only-no-stdin",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-124",
+      "name": "begin-body-end-count",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-125",
+      "name": "range-start-end-same",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-126",
+      "name": "range-rearm-after-end",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-127",
+      "name": "range-both-patterns-one-record",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-128",
+      "name": "next-skip-second-pattern",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-129",
+      "name": "ors-custom",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-130",
+      "name": "one-rule-multiple-input",
+      "group": "records",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-131",
+      "name": "numeric-string-equality",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-132",
+      "name": "literal-string-comparison",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-133",
+      "name": "numeric-conversion-leading",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-134",
+      "name": "printf-truncate-integer",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-135",
+      "name": "printf-number-sign",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-136",
+      "name": "printf-left-align",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-137",
+      "name": "printf-zero-pad",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-138",
+      "name": "arithmetic-precedence",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-139",
+      "name": "modulo-positive",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-140",
+      "name": "logical-nonzero",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-141",
+      "name": "conditional-branch-evaluation",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-142",
+      "name": "short-circuit-and",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-143",
+      "name": "short-circuit-or",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-144",
+      "name": "assignment-chain",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-145",
+      "name": "sprintf-width-precision",
+      "group": "values",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-146",
+      "name": "key-zero-vs-string",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-147",
+      "name": "key-01-distinct",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-148",
+      "name": "membership-after-delete",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-149",
+      "name": "membership-empty-value",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-150",
+      "name": "multiindex-subsep",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-151",
+      "name": "subsep-changing-lookup",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-152",
+      "name": "array-value-increment",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-153",
+      "name": "uninitialized-array-value",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-154",
+      "name": "array-numeric-key-conversion",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-155",
+      "name": "array-colon-string-key",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-156",
+      "name": "in-after-reference",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-157",
+      "name": "array-composite-key",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-158",
+      "name": "array-string-number-values",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-159",
+      "name": "array-conditional-operator",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-160",
+      "name": "array-delete-reinsert",
+      "group": "arrays",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-161",
+      "name": "recursive-sum",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-162",
+      "name": "recursive-fib-small",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-163",
+      "name": "scalars-passed-by-value",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-164",
+      "name": "arrays-passed-by-reference",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-165",
+      "name": "optional-local",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-166",
+      "name": "missing-arg-default",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-167",
+      "name": "early-return",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-168",
+      "name": "function-global-write",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-169",
+      "name": "function-array-and-scalar",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-170",
+      "name": "nested-function-call",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-171",
+      "name": "return-concat",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-172",
+      "name": "function-sprintf",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-173",
+      "name": "function-regex-match",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-174",
+      "name": "function-parameter-shadow",
+      "group": "functions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-175",
+      "name": "function-return-default",
+      "group": "functions",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-176",
+      "name": "leftmost-longest-alt",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-177",
+      "name": "leftmost-longest-backwards",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-178",
+      "name": "regex-longest-prefix",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-179",
+      "name": "regex-alt-middle",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-180",
+      "name": "regex-match-offset",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0019
+    },
+    {
+      "id": "AWK-181",
+      "name": "regex-no-match",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-182",
+      "name": "regex-sub-count",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-183",
+      "name": "regex-gsub-count",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-184",
+      "name": "regex-sub-replacement-amp",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-185",
+      "name": "regex-anchored-start",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-186",
+      "name": "regex-char-class",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-187",
+      "name": "regex-group-repeat",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-188",
+      "name": "regex-gsub-nonoverlap",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-189",
+      "name": "regex-match-begin-end",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-190",
+      "name": "regex-conditional-sub",
+      "group": "regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-191",
+      "name": "substr-middle",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0014
+    },
+    {
+      "id": "AWK-192",
+      "name": "substr-longer",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-193",
+      "name": "substr-one",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-194",
+      "name": "substr-empty-past-end",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-195",
+      "name": "index-found",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-196",
+      "name": "index-not-found",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-197",
+      "name": "length-string",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0015
+    },
+    {
+      "id": "AWK-198",
+      "name": "tolower-plain",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-199",
+      "name": "toupper-plain",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-200",
+      "name": "split-comma",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-201",
+      "name": "split-regexp",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-202",
+      "name": "split-trailing-empty",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0034
+    },
+    {
+      "id": "AWK-203",
+      "name": "sprintf-string-precision",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-204",
+      "name": "sprintf-two-calls",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-205",
+      "name": "split-assignments",
+      "group": "strings",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-206",
+      "name": "for-loop",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-207",
+      "name": "nested-loops",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-208",
+      "name": "break-inner",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-209",
+      "name": "continue-for",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-210",
+      "name": "while-loop",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-211",
+      "name": "do-while",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.004
+    },
+    {
+      "id": "AWK-212",
+      "name": "if-else",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0015
+    },
+    {
+      "id": "AWK-213",
+      "name": "nested-if",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-214",
+      "name": "ternary",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-215",
+      "name": "next-even",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-216",
+      "name": "pattern-condition",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-217",
+      "name": "range-trigger",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-218",
+      "name": "two-independent-rules",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-219",
+      "name": "begin-and-end-only",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-220",
+      "name": "exit-status-success",
+      "group": "control",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-221",
+      "name": "escape-tab",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0031
+    },
+    {
+      "id": "AWK-222",
+      "name": "escape-newline",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-223",
+      "name": "escape-backslash",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-224",
+      "name": "string-quote",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-225",
+      "name": "printf-integer-width",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-226",
+      "name": "printf-string-left",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-227",
+      "name": "printf-precision-float",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-228",
+      "name": "printf-percent",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-229",
+      "name": "print-ofs",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-230",
+      "name": "print-ors",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-231",
+      "name": "print-empty",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-232",
+      "name": "printf-no-implicit-newline",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-233",
+      "name": "printf-zero-width-number",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-234",
+      "name": "sprintf-as-expression",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-235",
+      "name": "multiple-prints",
+      "group": "formatting",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0019
+    },
+    {
+      "id": "AWK-236",
+      "name": "field-write-then-regex",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-237",
+      "name": "split-and-array-membership",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-238",
+      "name": "function-field-read",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-239",
+      "name": "regex-and-substr",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-240",
+      "name": "array-from-fields",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-241",
+      "name": "regex-rewrite-field",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-242",
+      "name": "function-mutates-array-from-split",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-243",
+      "name": "range-and-next",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-244",
+      "name": "mutable-field-nf-and-function",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-245",
+      "name": "numeric-array-and-format",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-246",
+      "name": "loop-over-fields",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-247",
+      "name": "function-and-match",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-248",
+      "name": "field-string-conversion",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-249",
+      "name": "array-aggregation-and-end",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-250",
+      "name": "next-and-counter",
+      "group": "interactions",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-251",
+      "name": "implicit-getline-in-BEGIN-1",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-252",
+      "name": "implicit-getline-in-BEGIN-2",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-253",
+      "name": "implicit-getline-in-BEGIN-3",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-254",
+      "name": "implicit-getline-in-BEGIN-4",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-255",
+      "name": "implicit-getline-in-BEGIN-5",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-256",
+      "name": "getline-variable-preserves-record-1",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-257",
+      "name": "getline-variable-preserves-record-2",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-258",
+      "name": "getline-variable-preserves-record-3",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-259",
+      "name": "getline-variable-preserves-record-4",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-260",
+      "name": "getline-variable-preserves-record-5",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-261",
+      "name": "redirected-getline-count-1",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-262",
+      "name": "redirected-getline-count-2",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-263",
+      "name": "redirected-getline-count-3",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-264",
+      "name": "redirected-getline-count-4",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-265",
+      "name": "redirected-getline-count-5",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-266",
+      "name": "pipe-getline-reopen-1",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0027
+    },
+    {
+      "id": "AWK-267",
+      "name": "pipe-getline-reopen-2",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0034
+    },
+    {
+      "id": "AWK-268",
+      "name": "pipe-getline-reopen-3",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0035
+    },
+    {
+      "id": "AWK-269",
+      "name": "pipe-getline-reopen-4",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0034
+    },
+    {
+      "id": "AWK-270",
+      "name": "pipe-getline-reopen-5",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0036
+    },
+    {
+      "id": "AWK-271",
+      "name": "nr-fnr-two-files-1",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-272",
+      "name": "nr-fnr-two-files-2",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-273",
+      "name": "nr-fnr-two-files-3",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-274",
+      "name": "nr-fnr-two-files-4",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-275",
+      "name": "nr-fnr-two-files-5",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-276",
+      "name": "empty-middle-file-1",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-277",
+      "name": "empty-middle-file-2",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-278",
+      "name": "empty-middle-file-3",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-279",
+      "name": "empty-middle-file-4",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-280",
+      "name": "empty-middle-file-5",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-281",
+      "name": "nextfile-skips-records-1",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-282",
+      "name": "nextfile-skips-records-2",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-283",
+      "name": "nextfile-skips-records-3",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-284",
+      "name": "nextfile-skips-records-4",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-285",
+      "name": "nextfile-skips-records-5",
+      "group": "multifile",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-286",
+      "name": "between-file-variable-assignment-1",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-287",
+      "name": "between-file-variable-assignment-2",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-288",
+      "name": "between-file-variable-assignment-3",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-289",
+      "name": "between-file-variable-assignment-4",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-290",
+      "name": "between-file-variable-assignment-5",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-291",
+      "name": "option-v-and-trailing-assignment-1",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-292",
+      "name": "option-v-and-trailing-assignment-2",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-293",
+      "name": "option-v-and-trailing-assignment-3",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-294",
+      "name": "option-v-and-trailing-assignment-4",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-295",
+      "name": "option-v-and-trailing-assignment-5",
+      "group": "operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-296",
+      "name": "reuse-file-output-stream-1",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-297",
+      "name": "reuse-file-output-stream-2",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-298",
+      "name": "reuse-file-output-stream-3",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-299",
+      "name": "reuse-file-output-stream-4",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-300",
+      "name": "reuse-file-output-stream-5",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-301",
+      "name": "close-reopens-truncated-1",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-302",
+      "name": "close-reopens-truncated-2",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-303",
+      "name": "close-reopens-truncated-3",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0014
+    },
+    {
+      "id": "AWK-304",
+      "name": "close-reopens-truncated-4",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-305",
+      "name": "close-reopens-truncated-5",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-306",
+      "name": "append-after-close-1",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-307",
+      "name": "append-after-close-2",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-308",
+      "name": "append-after-close-3",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-309",
+      "name": "append-after-close-4",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-310",
+      "name": "append-after-close-5",
+      "group": "redirection",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-311",
+      "name": "exit-status-with-END-1",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 1,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-312",
+      "name": "exit-status-with-END-2",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-313",
+      "name": "exit-status-with-END-3",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 3,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-314",
+      "name": "exit-status-with-END-4",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 4,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-315",
+      "name": "exit-status-with-END-5",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 5,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-316",
+      "name": "exit-status-preserved-END-1",
+      "group": "exit",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 1,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-317",
+      "name": "missing-file-operand",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-318",
+      "name": "missing-between-files",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-319",
+      "name": "missing-first-file",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-320",
+      "name": "missing-file-after-empty",
+      "group": "errors",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 2,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-321",
+      "name": "extend-field-with-OFS-1",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-322",
+      "name": "extend-field-with-OFS-2",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-323",
+      "name": "extend-field-with-OFS-3",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-324",
+      "name": "extend-field-with-OFS-4",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-325",
+      "name": "extend-field-with-OFS-5",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-326",
+      "name": "resplit-and-rebuild-1",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-327",
+      "name": "resplit-and-rebuild-2",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-328",
+      "name": "resplit-and-rebuild-3",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-329",
+      "name": "resplit-and-rebuild-4",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-330",
+      "name": "resplit-and-rebuild-5",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-331",
+      "name": "OFS-change-does-not-immediately-rebuild-1",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-332",
+      "name": "OFS-change-does-not-immediately-rebuild-2",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-333",
+      "name": "OFS-change-does-not-immediately-rebuild-3",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-334",
+      "name": "OFS-change-does-not-immediately-rebuild-4",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-335",
+      "name": "OFS-change-does-not-immediately-rebuild-5",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-336",
+      "name": "zero-reassign-updates-fields-1",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-337",
+      "name": "zero-reassign-updates-fields-2",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-338",
+      "name": "zero-reassign-updates-fields-3",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-339",
+      "name": "zero-reassign-updates-fields-4",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-340",
+      "name": "zero-reassign-updates-fields-5",
+      "group": "fields-state",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-341",
+      "name": "numeric-string-copy-1",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-342",
+      "name": "numeric-string-copy-2",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-343",
+      "name": "numeric-string-copy-3",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-344",
+      "name": "numeric-string-copy-4",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-345",
+      "name": "numeric-string-copy-5",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-346",
+      "name": "array-key-CONVFMT-1",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-347",
+      "name": "array-key-CONVFMT-2",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-348",
+      "name": "array-key-CONVFMT-3",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-349",
+      "name": "array-key-CONVFMT-4",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-350",
+      "name": "array-key-CONVFMT-5",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-351",
+      "name": "quoted-string-vs-number-1",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-352",
+      "name": "quoted-string-vs-number-2",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-353",
+      "name": "quoted-string-vs-number-3",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-354",
+      "name": "quoted-string-vs-number-4",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0019
+    },
+    {
+      "id": "AWK-355",
+      "name": "quoted-string-vs-number-5",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-356",
+      "name": "array-key-delete-1",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0017
+    },
+    {
+      "id": "AWK-357",
+      "name": "array-key-delete-2",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-358",
+      "name": "array-key-delete-3",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-359",
+      "name": "array-key-delete-4",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0014
+    },
+    {
+      "id": "AWK-360",
+      "name": "array-key-delete-5",
+      "group": "types",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-361",
+      "name": "function-regex-field-rebuild-1",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0043
+    },
+    {
+      "id": "AWK-362",
+      "name": "function-regex-field-rebuild-2",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0012
+    },
+    {
+      "id": "AWK-363",
+      "name": "function-regex-field-rebuild-3",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-364",
+      "name": "function-regex-field-rebuild-4",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-365",
+      "name": "function-regex-field-rebuild-5",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-366",
+      "name": "substr-after-field-assignment-1",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-367",
+      "name": "substr-after-field-assignment-2",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0014
+    },
+    {
+      "id": "AWK-368",
+      "name": "substr-after-field-assignment-3",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-369",
+      "name": "substr-after-field-assignment-4",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0022
+    },
+    {
+      "id": "AWK-370",
+      "name": "substr-after-field-assignment-5",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-371",
+      "name": "pipe-variable-getline-1",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    },
+    {
+      "id": "AWK-372",
+      "name": "pipe-variable-getline-2",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0018
+    },
+    {
+      "id": "AWK-373",
+      "name": "pipe-variable-getline-3",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0019
+    },
+    {
+      "id": "AWK-374",
+      "name": "pipe-variable-getline-4",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0017
+    },
+    {
+      "id": "AWK-375",
+      "name": "pipe-variable-getline-5",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0018
+    },
+    {
+      "id": "AWK-376",
+      "name": "split-clears-array-1",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0011
+    },
+    {
+      "id": "AWK-377",
+      "name": "split-clears-array-2",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-378",
+      "name": "split-clears-array-3",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-379",
+      "name": "split-clears-array-4",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0021
+    },
+    {
+      "id": "AWK-380",
+      "name": "split-clears-array-5",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-381",
+      "name": "POSIX-longest-gsub-1",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0013
+    },
+    {
+      "id": "AWK-382",
+      "name": "POSIX-longest-gsub-2",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-383",
+      "name": "POSIX-longest-gsub-3",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-384",
+      "name": "POSIX-longest-gsub-4",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-385",
+      "name": "POSIX-longest-gsub-5",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0009
+    },
+    {
+      "id": "AWK-386",
+      "name": "array-iteration-order-independent-1",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-387",
+      "name": "array-iteration-order-independent-2",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    },
+    {
+      "id": "AWK-388",
+      "name": "array-iteration-order-independent-3",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0024
+    },
+    {
+      "id": "AWK-389",
+      "name": "array-iteration-order-independent-4",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.0015
+    },
+    {
+      "id": "AWK-390",
+      "name": "array-iteration-order-independent-5",
+      "group": "interactions-advanced",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.002
+    }
+  ]
+}

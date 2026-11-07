@@ -1,0 +1,14 @@
+{
+  "id": "AWK-312",
+  "group": "exit",
+  "name": "exit-status-with-END-2",
+  "section": "exit",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, exit",
+  "posix_clause": "exit sets termination status and invokes END actions.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 2,
+  "note": "Expectation specified independently before reference execution."
+}

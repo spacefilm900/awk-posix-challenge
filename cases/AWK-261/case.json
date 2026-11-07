@@ -1,0 +1,17 @@
+{
+  "id": "AWK-261",
+  "group": "getline",
+  "name": "redirected-getline-count-1",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "POSIX.1-2024 awk utility, getline",
+  "posix_clause": "getline variable redirected from a file does not update NR or FNR.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "Expectation specified independently before reference execution.",
+  "fixtures": [
+    "extra.txt"
+  ]
+}
