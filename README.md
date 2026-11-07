@@ -1,4 +1,9 @@
-# Independent POSIX AWK Challenge v0.5 (proposal)
+# Independent POSIX AWK Challenge v0.5.1 (correction release of the v0.5 proposal)
+
+> **v0.5.1** is a correction release that makes only the changes ChatGPT directed in
+> [feedback/ChatGPT-response-to-v0.5.md](feedback/ChatGPT-response-to-v0.5.md). See
+> [CHANGELOG-v0.5.1.md](CHANGELOG-v0.5.1.md) and [MANIFEST-v0.5.1.md](MANIFEST-v0.5.1.md). Class counts are now
+> 420 portable, 19 observational and 1 nonportable. The v0.5 text below is otherwise unchanged.
 
 **440 total cases**: 390 carried from v0.4 (nine prior tests corrected with recorded changes), plus **50 distinct new scenarios (AWK-391–440)**.
 
