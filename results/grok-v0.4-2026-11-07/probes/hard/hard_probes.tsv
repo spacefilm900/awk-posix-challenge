@@ -1,0 +1,36 @@
+argv_replace	BEGIN{ARGV[1]="f2"} {print FILENAME ":" $0}	f1	-
+argv_append	BEGIN{ARGV[ARGC++]="f2"} {print FILENAME ":" $0}	f1	-
+argv_delete	BEGIN{delete ARGV[1]} {print FILENAME ":" $0}	f1 f2	-
+argv_null	BEGIN{ARGV[1]=""} {print FILENAME ":" $0}	f1 f2	-
+argc_lower	BEGIN{ARGC=2} {print FILENAME ":" $0}	f1 f2	-
+argv_assign_only	BEGIN{ARGV[1]="v=7"} {print v, "[" FILENAME "]", $0}	f1	sin
+filename_stdin_noop	{print "[" FILENAME "]", $0}	_	sin
+filename_stdin_dash	{print "[" FILENAME "]", $0}	-	sin
+filename_dash_between	{print "[" FILENAME "]", $0}	f1 - f2	sin
+argv_strnum	BEGIN{print (ARGV[1]==10), ARGC}	010	-
+assign_strnum	{print (n==10), n}	n=010 f1	-
+assign_escape	BEGIN{} {print "[" v "]"; exit}	v=a\tb f1	-
+getline_file_no_var	{getline < "f2"; print NR, FNR, NF, $0}	f1	-
+getline_into_field	{getline $2 < "f2"; print $0, NF}	f1	-
+getline_cross_file	NR==1{getline; getline; print FILENAME, FNR, NR, $0}	f1 f2	-
+getline_end_eof	END{r=getline; print r, NR, $0}	f1	-
+getline_same_file_streams	BEGIN{getline l < "f1"; print "B", l} {print "main", $0}	f1	-
+getline_end_file	END{while((getline l < "f2")>0) n++; print n, NR}	f1	-
+getline_nf_end_redirect	END{getline < "f3"; print NF, NR, $0}	f1	-
+getline_unparen_cmp	BEGIN{while ("echo a; echo b" | getline > 0) n++; print n}	_	-
+getline_var_strnum_file	BEGIN{getline v < "f4"; print (v==10)}	_	-
+para_leading_trailing	BEGIN{RS=""}{print NR": [" $0 "]"}	p1	-
+para_fs_comma	BEGIN{RS="";FS=","}{print NF": " $1 "|" $2 "|" $3}	p2	-
+para_fs_single_char	BEGIN{RS="";FS="a"}{print NF}	p3	-
+para_fs_regex	BEGIN{RS="";FS="[,;]"}{print NF}	p2	-
+para_spaces_line	BEGIN{RS=""}{print NR": " NF}	p4	-
+para_tab_line	BEGIN{RS=""}{print NR": " NF}	p5	-
+para_no_trailing_blank	BEGIN{RS=""}{print NR": " $NF} END{print NR}	p6	-
+para_switch_to_nl	BEGIN{RS=""} NR==1{RS="\n"} {print NR": [" $0 "]"}	p7	-
+para_dollar0_assign	BEGIN{RS="";FS=","}{$0="x,y\nz"; print NF}	p6	-
+rs_dot_literal	BEGIN{RS="."}{print NR": [" $0 "]"}	r1	-
+rs_change_midstream	NR==1{RS=";"}{print NR": [" $0 "]"}	r2	-
+fs_dash_F_tab	{print $2}	f5	-
+environ_strnum	BEGIN{print (ENVIRON["APCX"]==10)}	_	-
+filename_stdin_end	END{print "[" FILENAME "]", NR}	_	sin
+filename_stdin_assign_operand	{print "[" FILENAME "]", v, $0}	v=3	sin
