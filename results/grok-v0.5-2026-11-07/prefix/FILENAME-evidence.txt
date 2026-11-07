@@ -1,0 +1,17 @@
+# FILENAME evidence, pre-fix (2026-11-07T09:56:49Z)
+# pyawk d0bdc4bb82654f66572169403a7affb15ad66e62; hawk d24f8d1f1496c8808463a539849e61c2dcb21e36, binary sha256 5ae1ef52df68eb0ec8acdb377d448eab0b3fcfe15ceb48edc0b6b59d6f18c08e
+python3 -m pyawk | AWK-391 | operands: none | got: []:alpha|[]:beta| | expected: [-]:alpha|[-]:beta|
+python3 -m pyawk | AWK-392 | operands: v=7 | got: []:7:x| | expected: [-]:7:x|
+python3 -m pyawk | AWK-399 | operands: f1 | got: []:7:hello| | expected: [-]:7:hello|
+/workspace/hawk/target/release/hawk | AWK-391 | operands: none | got: []:alpha|[]:beta| | expected: [-]:alpha|[-]:beta|
+/workspace/hawk/target/release/hawk | AWK-392 | operands: v=7 | got: []:7:x| | expected: [-]:7:x|
+/workspace/hawk/target/release/hawk | AWK-399 | operands: f1 | got: []:7:hello| | expected: [-]:7:hello|
+mawk | AWK-391 | operands: none | got: [-]:alpha|[-]:beta| | expected: [-]:alpha|[-]:beta|
+mawk | AWK-392 | operands: v=7 | got: [-]:7:x| | expected: [-]:7:x|
+mawk | AWK-399 | operands: f1 | got: [-]:7:hello| | expected: [-]:7:hello|
+/workspace/refs/onetrue-awk/a.out | AWK-391 | operands: none | got: []:alpha|[]:beta| | expected: [-]:alpha|[-]:beta|
+/workspace/refs/onetrue-awk/a.out | AWK-392 | operands: v=7 | got: []:7:x| | expected: [-]:7:x|
+/workspace/refs/onetrue-awk/a.out | AWK-399 | operands: f1 | got: []:7:hello| | expected: [-]:7:hello|
+/workspace/refs/local/bin/gawk --posix | AWK-391 | operands: none | got: [-]:alpha|[-]:beta| | expected: [-]:alpha|[-]:beta|
+/workspace/refs/local/bin/gawk --posix | AWK-392 | operands: v=7 | got: [-]:7:x| | expected: [-]:7:x|
+/workspace/refs/local/bin/gawk --posix | AWK-399 | operands: f1 | got: [-]:7:hello| | expected: [-]:7:hello|
