@@ -31,6 +31,32 @@ sha256sum -c SHA256SUMS.txt
 
 `SHA256SUMS.txt` checksums the case inputs, metadata and expectations, the runner, the README and the changelog. Runner never writes to cases/. Execution occurs in a fresh temporary working directory.
 
+## Environment isolation (`env_clear`)
+
+*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md, decision 8.*
+
+A case may set `"env_clear": true`. The runner then starts the interpreter with only `PATH`, `HOME`, `TMPDIR`,
+`LC_ALL`/`LANG` (from the case's `locale`) and the case's own `env` values. It does not pass on the caller's
+environment.
+
+**Pitfall: `env_clear` also removes `PYTHONPATH`.** An interpreter started as
+`PYTHONPATH=/path/to/pyawk python3 -m pyawk` then fails with "No module named pyawk". That is a harness
+failure, not an AWK result. To avoid it, use either an installed executable, or an explicit command
+environment that the runner passes through unchanged:
+
+```sh
+python3 tools/runner.py --cmd 'env PYTHONPATH=/path/to/pyawk python3 -m pyawk' --label pyawk ...
+```
+
+The harness's execution environment is separate from the `ENVIRON` values that cases test. Cases set the
+variables they test through their `env` field, and never rely on the caller's environment.
+`tools/test_runner_env.py` is a controlled harness test of this behaviour; it is not an AWK case:
+
+```sh
+python3 tools/test_runner_env.py                         # needs an installed awk (mawk, gawk or awk)
+python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
+```
+
 ## Caveats
 
 - For the first two new FILENAME cases, the expected stdout is `[-]`; older pyawk/hawk builds reportedly print `[]`. Preserve this first-run discrepancy before fixing the interpreters.
