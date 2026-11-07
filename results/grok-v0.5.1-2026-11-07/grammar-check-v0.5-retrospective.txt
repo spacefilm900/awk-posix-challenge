@@ -1,0 +1,6 @@
+WARN AWK-403 [portable]
+    program.awk: print list contains unparenthesised '=='
+    strict awk rejects program: /workspace/refs/onetrue-awk/a.out: syntax error at source line 1 source file <v0.5 worktree>/cases/AWK-403/program.awk / context is / {old=$0; r=getline v < "other"; print r, v, >>>  old== <<<
+
+1 of 440 cases flagged (portable 1); strict-awk parse check ON (/workspace/refs/onetrue-awk/a.out).
+These are warnings for manual review against awk2024.txt lines 1434-1700, not verdicts.

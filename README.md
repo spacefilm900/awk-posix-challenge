@@ -82,6 +82,36 @@ python3 tools/test_runner_env.py                         # needs an installed aw
 python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
 ```
 
+## Strict-grammar check (warning signal, not an oracle)
+
+`tools/grammar_check.py` looks for portable cases that may be outside the POSIX grammar. It was added at ChatGPT's request in
+`feedback/ChatGPT-response-to-v0.5.md` (next actions). It reports two kinds of warning:
+
+- **Rejected by a strict awk.** It runs each case under One True AWK (`--onetrue PATH`, or the `ONETRUE_AWK`
+  environment variable), using the runner's argv, fixtures, stdin and locale. It reports any parse diagnostic.
+- **Constructs a lexical scan finds outside the grammar, or ambiguous or unspecified there.** These are:
+  - an unparenthesised comparison in a `print`/`printf` list (awk2024.txt lines 1537-1597);
+  - `**` and `**=`;
+  - gawk-only functions, variables and keywords, and `|&`;
+  - `func`;
+  - GNU regex operators;
+  - unparenthesised concatenation around `getline` (lines 1231-1233 and 1251-1253);
+  - a multi-character `RS` (line 827).
+
+```sh
+python3 tools/grammar_check.py            # static scan plus the One True AWK parse check
+python3 tools/grammar_check.py --no-run   # static scan only
+```
+
+**A warning means "review this case by hand against the grammar".** It is not a verdict.
+- One True AWK has its own extensions and bugs.
+- The scan is a heuristic lexer, not a parser.
+- Some flagged constructs are fine in nonportable or observational cases.
+
+A clean run does not prove that every program conforms. The tool always exits 0. For v0.5.1 it flags 0 of the
+440 cases. Run against the v0.5 tree, it flags exactly one case: AWK-403, the case ChatGPT corrected. See
+`results/grok-v0.5.1-2026-11-07/grammar-check*.txt`.
+
 ## Caveats
 
 - For the first two new FILENAME cases, the expected stdout is `[-]`; older pyawk/hawk builds reportedly print `[]`. Preserve this first-run discrepancy before fixing the interpreters.
