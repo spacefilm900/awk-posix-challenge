@@ -31,6 +31,26 @@ sha256sum -c SHA256SUMS.txt
 
 `SHA256SUMS.txt` checksums the case inputs, metadata and expectations, the runner, the README and the changelog. Runner never writes to cases/. Execution occurs in a fresh temporary working directory.
 
+## Summary reporting by class
+
+*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md ("Requested next actions").*
+
+Always report the three classes separately; never add them into one headline score.
+
+- **Portable conformance** (`portable`). The POSIX text specifies the behaviour. A failure is a *candidate*
+  POSIX violation, which still has to be adjudicated against the text.
+- **Observational compatibility** (`observational`). The case records common practice, or a contested or
+  unstated point. A failure is never evidence of a POSIX violation.
+- **Nonportable** (`nonportable`). The behaviour is unspecified or implementation-defined, and the result is
+  for information only.
+
+```sh
+python3 tools/summarize.py results/*.json              # text
+python3 tools/summarize.py --markdown results/*.json   # a Markdown table
+```
+
+v0.5.1 has 440 cases: 420 portable, 19 observational and 1 nonportable.
+
 ## Environment isolation (`env_clear`)
 
 *Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md, decision 8.*
