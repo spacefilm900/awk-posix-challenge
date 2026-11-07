@@ -1,0 +1,15 @@
+{
+  "id": "AWK-434",
+  "name": "array-delete-reinsert",
+  "group": "interactions-deep",
+  "section": "interactions-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: delete, in",
+  "posix_clause": "delete removes an array member; re-adding creates the member.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null
+}

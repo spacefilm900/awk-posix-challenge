@@ -20,7 +20,7 @@ def main():
     if not (folder/f).is_file() or '..' in pathlib.PurePosixPath(f).parts or pathlib.PurePosixPath(f).is_absolute():raise ValueError('Invalid fixture '+f)
     dest=wd/f;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(folder/f,dest)
    prog=folder/'program.awk';argv=command+options+['-f',str(prog)]+operands
-   env=os.environ.copy();env.update({'LC_ALL':m.get('locale','C'),'LANG':m.get('locale','C')});env.update(m.get('env',{}))
+   env=({'PATH':os.environ.get('PATH','/usr/bin:/bin'),'HOME':str(wd),'TMPDIR':str(wd)} if m.get('env_clear',False) else os.environ.copy());env.update({'LC_ALL':m.get('locale','C'),'LANG':m.get('locale','C')});env.update(m.get('env',{}))
    inp=(folder/m.get('stdin','stdin.txt')).read_bytes() if m.get('stdin','stdin.txt') is not None else b''
    t=time.monotonic()
    try:

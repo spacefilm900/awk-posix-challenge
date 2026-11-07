@@ -1,0 +1,14 @@
+{
+  "id": "AWK-438",
+  "name": "exit-function-end",
+  "group": "interactions-deep",
+  "section": "interactions-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: exit",
+  "posix_clause": "exit from function stops input actions but invokes END actions and sets exit status.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 4,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

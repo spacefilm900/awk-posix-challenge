@@ -1,0 +1,15 @@
+{
+  "id": "AWK-440",
+  "name": "regex-leftmost-longest-branched",
+  "group": "interactions-deep",
+  "section": "interactions-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "XBD 9.1: ERE leftmost-longest",
+  "posix_clause": "ERE matching selects the longest among the leftmost matches.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null
+}

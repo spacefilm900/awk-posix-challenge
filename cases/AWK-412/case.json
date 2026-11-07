@@ -1,0 +1,18 @@
+{
+  "id": "AWK-412",
+  "name": "getline-pipe-reopen",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: close and getline",
+  "posix_clause": "Closing a pipe allows reopening it and reading from its start.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "requires": [
+    "sh"
+  ],
+  "stdin": null
+}

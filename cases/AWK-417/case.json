@@ -1,0 +1,14 @@
+{
+  "id": "AWK-417",
+  "name": "rs-paragraph-literal-fs-newline",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: RS null, fields",
+  "posix_clause": "With RS null, newline separates fields even with single-character FS.",
+  "posix_status": "contested",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

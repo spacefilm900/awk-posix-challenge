@@ -1,0 +1,18 @@
+{
+  "id": "AWK-422",
+  "name": "redir-close-retruncate",
+  "group": "output-deep",
+  "section": "output-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: close and output redirection",
+  "posix_clause": "After close, a new > open truncates file.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "expected_files": {
+    "out": "expected-file-out"
+  },
+  "stdin": null
+}

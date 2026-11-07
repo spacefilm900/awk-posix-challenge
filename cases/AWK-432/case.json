@@ -1,0 +1,17 @@
+{
+  "id": "AWK-432",
+  "name": "getline-into-field-after-ofs",
+  "group": "interactions-deep",
+  "section": "interactions-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline / fields / OFS",
+  "posix_clause": "A getline field target causes field assignment and record reconstruction.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "fixtures": [
+    "other"
+  ]
+}

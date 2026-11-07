@@ -1,0 +1,1 @@
+BEGIN{print (ENVIRON["CHALLENGE_N"]==10)}

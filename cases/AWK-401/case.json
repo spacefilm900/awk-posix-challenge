@@ -1,0 +1,17 @@
+{
+  "id": "AWK-401",
+  "name": "getline-redirected-record",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline expression",
+  "posix_clause": "Redirected getline without variable sets $0, NF and does not advance main input counters.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "fixtures": [
+    "other"
+  ]
+}

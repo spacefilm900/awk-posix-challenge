@@ -1,0 +1,18 @@
+{
+  "id": "AWK-410",
+  "name": "getline-numeric-string",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: numeric strings",
+  "posix_clause": "getline variable values derived from input can be numeric strings.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null,
+  "fixtures": [
+    "other"
+  ]
+}

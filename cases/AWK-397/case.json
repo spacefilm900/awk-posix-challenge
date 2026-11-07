@@ -1,0 +1,23 @@
+{
+  "id": "AWK-397",
+  "name": "argc-truncate",
+  "group": "argv",
+  "section": "argv",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: ARGC",
+  "posix_clause": "ARGC controls the number of ARGV elements processed.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "operands": [
+    "f1",
+    "f2"
+  ],
+  "stdin": null,
+  "fixtures": [
+    "f1",
+    "f2"
+  ]
+}

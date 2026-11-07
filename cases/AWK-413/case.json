@@ -1,0 +1,17 @@
+{
+  "id": "AWK-413",
+  "name": "getline-in-end-redirected",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline, END",
+  "posix_clause": "Redirected getline in END updates $0 and NF while NR reflects main input.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "fixtures": [
+    "other"
+  ]
+}

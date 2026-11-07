@@ -1,0 +1,14 @@
+{
+  "id": "AWK-414",
+  "name": "rs-paragraph-leading-trailing",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: RS null paragraph mode",
+  "posix_clause": "RS null means paragraphs separated by one or more empty lines.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

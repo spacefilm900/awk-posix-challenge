@@ -1,0 +1,14 @@
+{
+  "id": "AWK-416",
+  "name": "rs-paragraph-regex-fs-newline",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: RS null + FS regular expression",
+  "posix_clause": "When RS is null, newline is a field separator no matter the value of FS.",
+  "posix_status": "contested",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

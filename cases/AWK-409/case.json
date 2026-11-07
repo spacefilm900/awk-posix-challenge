@@ -1,0 +1,14 @@
+{
+  "id": "AWK-409",
+  "name": "getline-end-eof",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline EOF",
+  "posix_clause": "Unredirected getline at EOF returns zero without replacing record contents.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

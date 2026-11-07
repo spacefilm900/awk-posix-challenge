@@ -1,0 +1,18 @@
+{
+  "id": "AWK-426",
+  "name": "env-numeric-string",
+  "group": "values-deep",
+  "section": "values-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: ENVIRON / numeric strings",
+  "posix_clause": "Environment variable values can have numeric-string attribute.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "env": {
+    "CHALLENGE_N": "010"
+  },
+  "stdin": null
+}

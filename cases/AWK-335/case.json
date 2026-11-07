@@ -1,7 +1,7 @@
 {
   "id": "AWK-335",
   "group": "fields-state",
-  "name": "OFS-change-does-not-immediately-rebuild-5",
+  "name": "ofs-does-not-rebuild-until-field-assignment-5",
   "section": "fields-state",
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
   "posix_reference": "POSIX.1-2024 awk utility, fields-state",
@@ -10,5 +10,6 @@
   "classification": "portable",
   "locale": "C",
   "expected_exit": 0,
-  "note": "Repeated cases reserved for distinct inputs."
+  "note": "v0.5 correction: unlike the v0.4 test, this prints $0 directly before and after field reassignment.",
+  "history": "v0.5: source and expectation corrected after independent audit identified an ineffective assertion"
 }

@@ -1,0 +1,15 @@
+{
+  "id": "AWK-433",
+  "name": "array-subsep-distinct",
+  "group": "interactions-deep",
+  "section": "interactions-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: SUBSEP",
+  "posix_clause": "Multiple subscripts combine with SUBSEP to form string indices.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null
+}

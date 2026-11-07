@@ -1,0 +1,18 @@
+{
+  "id": "AWK-424",
+  "name": "redir-printf-and-print",
+  "group": "output-deep",
+  "section": "output-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: print / printf",
+  "posix_clause": "print and printf redirection to same file share the output stream.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "expected_files": {
+    "out": "expected-file-out"
+  },
+  "stdin": null
+}

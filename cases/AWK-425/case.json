@@ -1,0 +1,15 @@
+{
+  "id": "AWK-425",
+  "name": "redir-read-after-close",
+  "group": "output-deep",
+  "section": "output-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline, close",
+  "posix_clause": "A file can be read via redirected getline after output stream is closed.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null
+}

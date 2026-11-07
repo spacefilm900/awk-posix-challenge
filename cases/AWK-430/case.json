@@ -1,0 +1,15 @@
+{
+  "id": "AWK-430",
+  "name": "split-elements-numeric-string",
+  "group": "values-deep",
+  "section": "values-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: split / numeric-string",
+  "posix_clause": "Elements created from split have numeric-string attribute when appropriate.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "stdin": null
+}

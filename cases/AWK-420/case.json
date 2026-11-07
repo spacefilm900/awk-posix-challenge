@@ -1,0 +1,14 @@
+{
+  "id": "AWK-420",
+  "name": "rs-change-midstream",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: RS",
+  "posix_clause": "Moment at which a midstream RS assignment takes effect is not explicitly stated.",
+  "posix_status": "unstated",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

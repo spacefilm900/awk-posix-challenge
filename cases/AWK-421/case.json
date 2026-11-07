@@ -1,0 +1,18 @@
+{
+  "id": "AWK-421",
+  "name": "redir-two-prints-same-open",
+  "group": "output-deep",
+  "section": "output-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: output redirection",
+  "posix_clause": "Repeated > redirection to an open file does not re-truncate it.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "expected_files": {
+    "out": "expected-file-out"
+  },
+  "stdin": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "AWK-415",
+  "name": "rs-paragraph-comma-fs-newline",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: RS null, newline as field separator",
+  "posix_clause": "In paragraph mode, newline is a field separator regardless of FS.",
+  "posix_status": "contested",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}

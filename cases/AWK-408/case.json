@@ -1,0 +1,23 @@
+{
+  "id": "AWK-408",
+  "name": "getline-cross-file",
+  "group": "getline",
+  "section": "getline",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: getline / FNR / FILENAME",
+  "posix_clause": "Unredirected getline advances record counters and crosses input-file boundaries.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "operands": [
+    "f1",
+    "f2"
+  ],
+  "stdin": null,
+  "fixtures": [
+    "f1",
+    "f2"
+  ]
+}

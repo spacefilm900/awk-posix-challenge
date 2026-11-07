@@ -1,0 +1,204 @@
+{
+  "label": "pyawk-original",
+  "command": [
+    "python3",
+    "-m",
+    "pyawk"
+  ],
+  "cases": 10,
+  "passes": 8,
+  "failures": 2,
+  "skips": 0,
+  "by_classification": {
+    "observational": {
+      "PASS": 3,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "portable": {
+      "PASS": 5,
+      "FAIL": 2,
+      "SKIP": 0
+    }
+  },
+  "results": [
+    {
+      "id": "AWK-391",
+      "name": "stdin-filename-no-operands",
+      "group": "argv",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6628,
+      "actual_stdout": "[]:alpha\n[]:beta\n",
+      "actual_stderr": "",
+      "expected_stdout": "[-]:alpha\n[-]:beta\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-392",
+      "name": "stdin-filename-only-assignment",
+      "group": "argv",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6959,
+      "actual_stdout": "[]:7:x\n",
+      "actual_stderr": "",
+      "expected_stdout": "[-]:7:x\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-393",
+      "name": "argv-replace-file",
+      "group": "argv",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6406
+    },
+    {
+      "id": "AWK-397",
+      "name": "argc-truncate",
+      "group": "argv",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.686
+    },
+    {
+      "id": "AWK-411",
+      "name": "getline-pipe-reuse",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6855
+    },
+    {
+      "id": "AWK-415",
+      "name": "rs-paragraph-comma-fs-newline",
+      "group": "records-deep",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7505
+    },
+    {
+      "id": "AWK-416",
+      "name": "rs-paragraph-regex-fs-newline",
+      "group": "records-deep",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.739
+    },
+    {
+      "id": "AWK-417",
+      "name": "rs-paragraph-literal-fs-newline",
+      "group": "records-deep",
+      "classification": "observational",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6632
+    },
+    {
+      "id": "AWK-430",
+      "name": "split-elements-numeric-string",
+      "group": "values-deep",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.6563
+    },
+    {
+      "id": "AWK-438",
+      "name": "exit-function-end",
+      "group": "interactions-deep",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 4,
+      "duration_seconds": 0.7003
+    }
+  ]
+}

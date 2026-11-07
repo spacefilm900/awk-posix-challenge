@@ -1,0 +1,22 @@
+{
+  "id": "AWK-393",
+  "name": "argv-replace-file",
+  "group": "argv",
+  "section": "argv",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: ARGV and input processing",
+  "posix_clause": "ARGV entries can be changed before the associated input file is opened.",
+  "posix_status": "specified",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+  "operands": [
+    "f1"
+  ],
+  "stdin": null,
+  "fixtures": [
+    "f1",
+    "f2"
+  ]
+}

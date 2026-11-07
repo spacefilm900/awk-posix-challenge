@@ -1,1 +1,1 @@
-BEGIN { OFS="|"; a="ab"; gsub(/a|ab/,"X",a); print a }
+BEGIN{x="abc";n=gsub(/ab|abc/,"Z",x);print n ":" x}

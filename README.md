@@ -1,69 +1,43 @@
-# Independent POSIX AWK Challenge v0.4 (proposed)
+# Independent POSIX AWK Challenge v0.5 (proposal)
 
-A separately maintained, fixed-expectation AWK interpreter comparison corpus.
-**390 cases**: 250 carried forward from v0.3 and **140 new cases (AWK-251–AWK-390)**.
+**440 total cases**: 390 carried from v0.4 (nine prior tests corrected with recorded changes), plus **50 distinct new scenarios (AWK-391–440)**.
 
-## Baseline and release policy
+The challenge is a standards-oriented comparison corpus, not a certification. In particular, observational/nonportable tests are never to be counted as evidence of POSIX violations. Every expectation is fixed, and any mismatch should be investigated independently before a change is made.
 
-- Programs, stdin, and expected stdout/stderr for AWK-001–AWK-250 are unchanged from v0.3. Metadata-only updates to AWK-105 and the fifteen audited cases are explicitly recorded below.
-- The original v0.3 results from 7 November 2026 should remain frozen in the upstream GitHub repository; do not replace them with this release's results.
-- This is a **proposed v0.4**, not an upstream release. It has not been reviewed or accepted by the repo maintainers.
-- The corpus is a conformance *challenge*, not a POSIX certification. Some cases deliberately describe observational or nonportable behaviour. The new cases are designed from the POSIX AWK interface and prior audit recommendations, but the specification traceability requires further human audit.
-- Expectations are fixed text files; the runner never updates them. A disagreement is a candidate defect or candidate oracle mistake, not an automatic basis to rewrite an expectation.
+## Changes
 
-## Results (this evaluation environment)
+See [CHANGELOG-v0.5.md](CHANGELOG-v0.5.md) for the precise list of modified historical test files. The original v0.4 release and its baseline results should be retained separately.
 
-| Interpreter | Cases passing | Failures | Scope |
-| --- | ---: | ---: | --- |
-| mawk | 390/390 | 0 | Complete v0.4 corpus |
-| nawk (system alternate AWK) | 390/390 | 0 | Complete v0.4 corpus |
-| pyawk (uploaded enhancements ZIP) | 32/32 | 0 | Selected new cases only; not a complete run |
-| hawk (Rust) | not run | — | Executable/repository not supplied here |
-
-The version and exact provenance of `nawk` in this container are not equivalent to Grok's independently built 2026 `onetrue-awk` binary.
-
-## Changes from v0.3
-
-- AWK-105 `FS=""`: metadata-only correction to `nonportable` / `unspecified`.
-- The eight incomplete/non-text input cases (AWK-015, AWK-064, AWK-065, AWK-115–119) are now marked `observational` / `outside-requirements`.
-- The seven cases involving assignment to NF or return without a value (AWK-006, AWK-053, AWK-054, AWK-080, AWK-103, AWK-111, AWK-175) are now marked `observational` / `unstated`.
-- Original source and expected-output files remain unchanged, including the historical first 50 AWK program files lacking a trailing newline. Their POSIX text-file hygiene should be addressed in a future separate revision, if desired.
-- New AWK-251–390: getline, separate input operands, FNR/NR, command-line variable assignments, redirection and reopening, exit/error behaviour, field and record state, type conversion, regex, array and function interactions.
-- Runner creates a new temporary working directory for each case, stages fixtures, supports operand arguments and -v/-F options, validates output files, and supports nonzero exit / nonempty diagnostic checks.
-- Existing case JSON schemas are compatible with the new runner. No shell expansion or interpolation of case commands is performed by the runner.
-
-## Classification counts
-
-- Portable: **374**
-- Observational: **15**
-- Nonportable: **1**
-
-These counts represent declared classifications, not independently certified POSIX conformance.
-
-## Run
+## Usage
 
 ```sh
-python3 tools/runner.py --cmd 'mawk' --label mawk --output results/mawk.json
-python3 tools/runner.py --cmd 'awk' --label system-awk --output results/system.json
+python3 tools/runner.py --cmd mawk --label mawk --output results/mawk.json
+python3 tools/runner.py --cmd 'gawk --posix' --label gawk-posix --output results/gawk.json
 PYTHONPATH=/path/to/pyawk-enhancements python3 tools/runner.py --cmd 'python3 -m pyawk' --label pyawk --output results/pyawk.json
 ```
 
-To run only the new cases, list IDs `AWK-251` to `AWK-390`:
+To run new cases only:
 
 ```sh
-python3 tools/runner.py --cmd mawk --ids $(seq -f 'AWK-%03g' 251 390)
+python3 tools/runner.py --cmd mawk --ids $(python3 -c 'print(" ".join("AWK-%03d" % i for i in range(391,441)))')
 ```
 
-On macOS (where `seq -f` may not be available), use Python to construct the ID list or run the entire suite.
+## Verification
 
-## Corpus integrity
+```sh
+sha256sum -c SHA256SUMS.txt
+# On macOS: shasum -a 256 -c SHA256SUMS.txt
+```
 
-`SHA256SUMS.txt` covers every file under `cases/`. Run `sha256sum -c SHA256SUMS.txt` on systems with sha256sum, or use `shasum -a 256 -c SHA256SUMS.txt` on macOS.
+`SHA256SUMS.txt` checksums the case inputs, metadata and expectations, the runner, the README and the changelog. Runner never writes to cases/. Execution occurs in a fresh temporary working directory.
 
-## Known constraints / follow-up review
+## Caveats
 
-- Several tests are parameterized variations of a scenario; 140 cases is not 140 unique semantic features. Prioritize new *semantic* coverage in the next batch.
-- The tests use short input fixtures and modest output sizes, not resource-exhaustion probes.
-- Some existing programs lack the final newline required of POSIX text files. Those are unchanged intentionally for historical provenance.
-- Do not infer from passing the 390 cases that the interpreter is generally correct.
-- POSIX utility URL: https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html
+- For the first two new FILENAME cases, the expected stdout is `[-]`; older pyawk/hawk builds reportedly print `[]`. Preserve this first-run discrepancy before fixing the interpreters.
+- `RS=""` newline splitting with non-space FS (AWK-415–417) has expectations derived from a literal reading of the 2024 specification, but mawk and nawk disagree; these three are intentionally classified observational/contested pending adjudication, not declared POSIX violations. The whitespace-only separator case is also observational.
+- The 390 older results in Grok's v0.4 report are not validation results for this modified v0.5 corpus.
+- Run against at least gawk --posix, mawk, onetrue-awk and both candidate implementations before accepting the release.
+
+## Local v0.5 validation results
+
+See `results/local-v0.5/VALIDATION.md` and accompanying JSON. System mawk and nawk: 437/440, with all three disagreements in observational cases AWK-415–417. Both passed every one of 418 portable cases. Original pyawk: AWK-391 and AWK-392 reproduce the frozen stdin FILENAME defect; eight other sampled tests passed. Hawk has not been run here.

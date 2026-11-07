@@ -1,7 +1,7 @@
 {
   "id": "AWK-384",
   "group": "interactions-advanced",
-  "name": "POSIX-longest-gsub-4",
+  "name": "gsub-longest-distinct-3",
   "section": "interactions-advanced",
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
   "posix_reference": "POSIX.1-2024 awk utility, interactions-advanced",
@@ -10,5 +10,6 @@
   "classification": "portable",
   "locale": "C",
   "expected_exit": 0,
-  "note": "Expectation specified independently before reference execution."
+  "note": "v0.5: replaces byte-identical v0.4 duplicate with distinct longest-match scenario.",
+  "history": "v0.5: new program and expected output, replacing exact duplicate"
 }

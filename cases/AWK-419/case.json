@@ -1,0 +1,14 @@
+{
+  "id": "AWK-419",
+  "name": "rs-paragraph-space-line",
+  "group": "records-deep",
+  "section": "records-deep",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: paragraph mode, XBD blank line",
+  "posix_clause": "Treatment of whitespace-only lines as paragraph separators requires a separate normative interpretation; record common practice only.",
+  "posix_status": "unstated",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated."
+}
