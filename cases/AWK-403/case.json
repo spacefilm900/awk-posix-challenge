@@ -13,5 +13,6 @@
   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
   "fixtures": [
     "other"
-  ]
+  ],
+  "history": "v0.5.1: program corrected from `print r, v, old==$0, NR, FNR` to `print r, v, (old==$0), NR, FNR`. In the POSIX grammar a print expression list cannot contain an unparenthesised comparison (awk2024.txt lines 1541-1597), so the v0.5 program was not a valid POSIX awk program (lines 1943-1944). This is a correction to the test program, not an interpreter failure; the expected output is unchanged. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 2."
 }
