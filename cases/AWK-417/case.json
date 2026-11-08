@@ -4,12 +4,14 @@
   "group": "records-deep",
   "section": "records-deep",
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
-  "posix_reference": "awk: RS null, fields",
+  "posix_reference": "POSIX.1-2024 awk, Variables and Special Variables: RS (awk2024.txt lines 826-830)",
   "posix_clause": "With RS null, newline separates fields even with single-character FS.",
   "posix_status": "specified (provisional)",
   "classification": "portable",
   "locale": "C",
   "expected_exit": 0,
   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
-  "v051_note": "POSIX.1-2024 RS=\"\" newline splitting; mawk differs"
+  "known_implementation_differences": "mawk 1.3.4 20250131 prints \"2:x:y\\nz\" (no newline field separation for a single-character FS). BusyBox awk 1.35.0 prints \"4:x:\". gawk 5.4.1 (default and --posix) and onetrue-awk 20260426 agree with the expectation. For context, the GNU Awk manual says the newline rule applies when FS is a single character but not when it is a regexp: GNU Awk manual, \"Multiple-Line Records\": \"When FS is the null string (\"\") or a regexp, this special feature of RS does not apply. It does apply to the default field separator of a single space: FS = \" \". Note that language in the POSIX specification implies that this special feature should apply when FS is a regexp. However, Unix awk has never behaved that way, nor has gawk. This is essentially a bug in POSIX.\"",
+  "history": "v0.5.1: reclassified from observational/contested to portable (provisional); expectation unchanged. The exact clause is in posix_clause_exact. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 5.",
+  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is."
 }

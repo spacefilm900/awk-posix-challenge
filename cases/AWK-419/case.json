@@ -11,5 +11,7 @@
   "locale": "C",
   "expected_exit": 0,
   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
-  "v051_note": "Blank-line wording versus whitespace-only blank lines; references differ from literal XBD reading"
+  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is.",
+  "contest_note": "awk2024.txt line 828 separates paragraphs by \"a <newline> plus one or more blank lines\". XBD (Base Definitions, 'Blank Line') defines a blank line as a line consisting solely of zero or more <blank> characters terminated by a <newline>, so a literal reading makes the line holding only spaces a separator (3 records). All implementations run so far (pyawk, hawk, mawk, gawk, onetrue-awk, BusyBox) treat only empty lines as separators (2 records), and the expected output records that historical behaviour. It is not a portable normative result. (The XBD clause is quoted from the Base Definitions volume, which is not in awk2024.txt.)",
+  "history": "v0.5.1: posix_status changed from \"unstated\" to \"contested\", with contest_note describing the conflict between the XBD blank-line definition and historical behaviour; expectation and observational classification unchanged. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 7."
 }

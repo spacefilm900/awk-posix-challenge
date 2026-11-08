@@ -4,12 +4,14 @@
   "group": "records-deep",
   "section": "records-deep",
   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
-  "posix_reference": "awk: RS null + FS regular expression",
+  "posix_reference": "POSIX.1-2024 awk, Variables and Special Variables: RS (awk2024.txt lines 826-830)",
   "posix_clause": "When RS is null, newline is a field separator no matter the value of FS.",
   "posix_status": "known standards-implementation conflict",
   "classification": "observational",
   "locale": "C",
   "expected_exit": 0,
   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
-  "v051_note": "Regex FS versus paragraph newline: GNU awk explicitly documents historical exception"
+  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is.",
+  "known_implementation_differences": "The expectation follows the POSIX text. gawk 5.4.1 (default and --posix), onetrue-awk 20260426, mawk 1.3.4 and BusyBox 1.35.0 do not add <newline> as a field separator when FS is a regular expression. The GNU Awk manual acknowledges the conflict: GNU Awk manual, \"Multiple-Line Records\": \"When FS is the null string (\"\") or a regexp, this special feature of RS does not apply. It does apply to the default field separator of a single space: FS = \" \". Note that language in the POSIX specification implies that this special feature should apply when FS is a regexp. However, Unix awk has never behaved that way, nor has gawk. This is essentially a bug in POSIX.\" A separate standards-interpretation request may be appropriate.",
+  "history": "v0.5.1: kept observational and re-annotated as a known standards-implementation conflict; the POSIX-derived expectation is deliberately not altered to match the reference implementations. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 6."
 }
