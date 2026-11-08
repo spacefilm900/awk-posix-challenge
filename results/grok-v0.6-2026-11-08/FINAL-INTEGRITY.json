@@ -1,0 +1,50 @@
+{
+  "checked_uk": "2026-11-08T10:31:05.454683+00:00",
+  "timezone": "Europe/London",
+  "archive_files_checked": 2813,
+  "archive_mismatches": [],
+  "inherited_files_each_tree": 2320,
+  "inherited_added_or_missing": [],
+  "pyawk_version": {
+    "command": [
+      "env",
+      "PYTHONPATH=/workspace/pyawk",
+      "/workspace/pyawk/.venv/bin/python",
+      "-B",
+      "-m",
+      "pyawk",
+      "--version"
+    ],
+    "returncode": 0,
+    "output": "pyawk 1.1.0\n"
+  },
+  "onetrue_source_commit": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "output": "5739fd79bcfc75ba7526773d0cf634521f8aca3c\n"
+  },
+  "final_interpreter_git_status": {
+    "pyawk": {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    "hawk": {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  }
+}
