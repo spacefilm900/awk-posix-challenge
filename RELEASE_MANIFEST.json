@@ -21,5 +21,5 @@
       "fails": 9
     }
   },
-  "note": "SHA256SUMS.txt excludes itself and RELEASE_MANIFEST.json (generated after initial manifest); see checksum coverage update in packaging"
+  "note": "SHA256SUMS.txt covers every file tracked in the repository except itself, so RELEASE_MANIFEST.json IS included. Regenerated for the final v0.6 tag (corrected stale note: the earlier text said RELEASE_MANIFEST.json was excluded, which was not true of the shipped SHA256SUMS.txt)."
 }
