@@ -1,0 +1,742 @@
+--- v0.5.1/cases/AWK-403/case.json
++++ archive/cases/AWK-403/case.json
+@@ -13,6 +13,5 @@
+   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+   "fixtures": [
+     "other"
+-  ],
+-  "history": "v0.5.1: program corrected from `print r, v, old==$0, NR, FNR` to `print r, v, (old==$0), NR, FNR`. In the POSIX grammar a print expression list cannot contain an unparenthesised comparison (awk2024.txt lines 1541-1597), so the v0.5 program was not a valid POSIX awk program (lines 1943-1944). This is a correction to the test program, not an interpreter failure; the expected output is unchanged. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 2."
++  ]
+ }
+
+--- v0.5.1/cases/AWK-415/case.json
++++ archive/cases/AWK-415/case.json
+@@ -4,14 +4,12 @@
+   "group": "records-deep",
+   "section": "records-deep",
+   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+-  "posix_reference": "POSIX.1-2024 awk, Variables and Special Variables: RS (awk2024.txt lines 826-830)",
++  "posix_reference": "awk: RS null, newline as field separator",
+   "posix_clause": "In paragraph mode, newline is a field separator regardless of FS.",
+   "posix_status": "specified (provisional)",
+   "classification": "portable",
+   "locale": "C",
+   "expected_exit": 0,
+   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+-  "known_implementation_differences": "mawk 1.3.4 20250131 does not add <newline> as a field separator when FS is a single non-space character (prints \"2:a:b\\nc\" for record 1). BusyBox awk 1.35.0 differs on record 2 (\"2:e:\"). gawk 5.4.1 (default and --posix) and onetrue-awk 20260426 agree with the expectation. For context, the GNU Awk manual says the newline rule applies when FS is a single character but not when it is a regexp: GNU Awk manual, \"Multiple-Line Records\": \"When FS is the null string (\"\") or a regexp, this special feature of RS does not apply. It does apply to the default field separator of a single space: FS = \" \". Note that language in the POSIX specification implies that this special feature should apply when FS is a regexp. However, Unix awk has never behaved that way, nor has gawk. This is essentially a bug in POSIX.\"",
+-  "history": "v0.5.1: reclassified from observational/contested to portable (provisional); expectation unchanged. The exact clause is in posix_clause_exact. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 5.",
+-  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is."
++  "v051_note": "POSIX.1-2024 RS=\"\" newline splitting; mawk differs"
+ }
+
+--- v0.5.1/cases/AWK-416/case.json
++++ archive/cases/AWK-416/case.json
+@@ -4,14 +4,12 @@
+   "group": "records-deep",
+   "section": "records-deep",
+   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+-  "posix_reference": "POSIX.1-2024 awk, Variables and Special Variables: RS (awk2024.txt lines 826-830)",
++  "posix_reference": "awk: RS null + FS regular expression",
+   "posix_clause": "When RS is null, newline is a field separator no matter the value of FS.",
+   "posix_status": "known standards-implementation conflict",
+   "classification": "observational",
+   "locale": "C",
+   "expected_exit": 0,
+   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+-  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is.",
+-  "known_implementation_differences": "The expectation follows the POSIX text. gawk 5.4.1 (default and --posix), onetrue-awk 20260426, mawk 1.3.4 and BusyBox 1.35.0 do not add <newline> as a field separator when FS is a regular expression. The GNU Awk manual acknowledges the conflict: GNU Awk manual, \"Multiple-Line Records\": \"When FS is the null string (\"\") or a regexp, this special feature of RS does not apply. It does apply to the default field separator of a single space: FS = \" \". Note that language in the POSIX specification implies that this special feature should apply when FS is a regexp. However, Unix awk has never behaved that way, nor has gawk. This is essentially a bug in POSIX.\" A separate standards-interpretation request may be appropriate.",
+-  "history": "v0.5.1: kept observational and re-annotated as a known standards-implementation conflict; the POSIX-derived expectation is deliberately not altered to match the reference implementations. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 6."
++  "v051_note": "Regex FS versus paragraph newline: GNU awk explicitly documents historical exception"
+ }
+
+--- v0.5.1/cases/AWK-417/case.json
++++ archive/cases/AWK-417/case.json
+@@ -4,14 +4,12 @@
+   "group": "records-deep",
+   "section": "records-deep",
+   "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+-  "posix_reference": "POSIX.1-2024 awk, Variables and Special Variables: RS (awk2024.txt lines 826-830)",
++  "posix_reference": "awk: RS null, fields",
+   "posix_clause": "With RS null, newline separates fields even with single-character FS.",
+   "posix_status": "specified (provisional)",
+   "classification": "portable",
+   "locale": "C",
+   "expected_exit": 0,
+   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+-  "known_implementation_differences": "mawk 1.3.4 20250131 prints \"2:x:y\\nz\" (no newline field separation for a single-character FS). BusyBox awk 1.35.0 prints \"4:x:\". gawk 5.4.1 (default and --posix) and onetrue-awk 20260426 agree with the expectation. For context, the GNU Awk manual says the newline rule applies when FS is a single character but not when it is a regexp: GNU Awk manual, \"Multiple-Line Records\": \"When FS is the null string (\"\") or a regexp, this special feature of RS does not apply. It does apply to the default field separator of a single space: FS = \" \". Note that language in the POSIX specification implies that this special feature should apply when FS is a regexp. However, Unix awk has never behaved that way, nor has gawk. This is essentially a bug in POSIX.\"",
+-  "history": "v0.5.1: reclassified from observational/contested to portable (provisional); expectation unchanged. The exact clause is in posix_clause_exact. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 5.",
+-  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is."
++  "v051_note": "POSIX.1-2024 RS=\"\" newline splitting; mawk differs"
+ }
+
+--- v0.5.1/cases/AWK-419/case.json
++++ archive/cases/AWK-419/case.json
+@@ -11,7 +11,5 @@
+   "locale": "C",
+   "expected_exit": 0,
+   "note": "v0.5: independently authored expectation; disagreements must be adjudicated, not automatically updated.",
+-  "posix_clause_exact": "The first character of the string value of RS shall be the input record separator; a <newline> by default. If RS contains more than one character, the results are unspecified. If RS is null, then records are separated by sequences consisting of a <newline> plus one or more blank lines, leading or trailing blank lines shall not result in empty records at the beginning or end of the input, and a <newline> shall always be a field separator, no matter what the value of FS is.",
+-  "contest_note": "awk2024.txt line 828 separates paragraphs by \"a <newline> plus one or more blank lines\". XBD (Base Definitions, 'Blank Line') defines a blank line as a line consisting solely of zero or more <blank> characters terminated by a <newline>, so a literal reading makes the line holding only spaces a separator (3 records). All implementations run so far (pyawk, hawk, mawk, gawk, onetrue-awk, BusyBox) treat only empty lines as separators (2 records), and the expected output records that historical behaviour. It is not a portable normative result. (The XBD clause is quoted from the Base Definitions volume, which is not in awk2024.txt.)",
+-  "history": "v0.5.1: posix_status changed from \"unstated\" to \"contested\", with contest_note describing the conflict between the XBD blank-line definition and historical behaviour; expectation and observational classification unchanged. Directed by ChatGPT, feedback/ChatGPT-response-to-v0.5.md, decision 7."
++  "v051_note": "Blank-line wording versus whitespace-only blank lines; references differ from literal XBD reading"
+ }
+
+--- v0.5.1/README.md
++++ archive/README.md
+@@ -1,9 +1,20 @@
+-# Independent POSIX AWK Challenge v0.5.1 (correction release of the v0.5 proposal)
++# Independent POSIX AWK Challenge v0.6 — final proposed freeze
+ 
+-> **v0.5.1** is a correction release that makes only the changes ChatGPT directed in
+-> [feedback/ChatGPT-response-to-v0.5.md](feedback/ChatGPT-response-to-v0.5.md). See
+-> [CHANGELOG-v0.5.1.md](CHANGELOG-v0.5.1.md) and [MANIFEST-v0.5.1.md](MANIFEST-v0.5.1.md). Class counts are now
+-> 420 portable, 19 observational and 1 nonportable. The v0.5 text below is otherwise unchanged.
++**528 total cases:** 440 inherited from the v0.5 corpus with minimal v0.5.1 corrections reconstructed from Grok’s report, plus 75 reviewed implementation-side proposals and 13 independently authored scenarios. **This is an independent challenge artifact, not an official POSIX certification.**
++
++**Important provenance:** This working release is based on the v0.5 ZIP available to ChatGPT, not on a byte-for-byte export of Grok’s tagged v0.5.1 tree. Reconstructed v0.5.1 edits: AWK-403 parentheses and AWK-415/416/417/419 metadata. It does NOT claim to reproduce every v0.5.1 ancillary tool or document. Grok must compare these files with tagged v0.5.1 and flag any discrepancy before adopting v0.6. The actual v0.5.1 frozen upstream tag remains authoritative.
++
++**Execution:** `python3 tools/runner.py --cmd mawk --output results.json`. The runner checks each test in a fresh working directory. `--gate-classifications` defaults to `portable`, but the JSON still reports every disagreement. To fail the process for observational cases too, supply `--gate-classifications portable observational nonportable`. Optional `--ids AWK-...` selects cases. Test AWK-471 uses `no_program_file` to support `-f -`. Test AWK-528 sets `env_clear=true`. Runner’s isolated environment retains PATH, HOME and TMPDIR, so `python -m pyawk` requires an explicitly provided PYTHONPATH or an installed launcher.
++
++**Classification discipline:** Observational outputs represent explicitly labelled hypotheses or compatibility observations; they are not conformance oracles, and discrepancies must never automatically trigger interpreter changes. Tests AWK-475/476 cite Austin Group 1198 and are observational. AWK-470 and AWK-482 are likewise observational. UTF-8 tests under `C.UTF-8` are observational until locale/reference evidence is adjudicated (AWK-483, 489). AWK-415/417 remain provisionally specified portable despite known mawk disagreement; AWK-416 and 419 remain observational. No expected output was changed to force a reference implementation pass.
++
++## Full technical documentation
++
++See `FINAL_HANDOVER_TO_GROK.md`, `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
++
++## Previous README (v0.5)
++
++# Independent POSIX AWK Challenge v0.5 (proposal)
+ 
+ **440 total cases**: 390 carried from v0.4 (nine prior tests corrected with recorded changes), plus **50 distinct new scenarios (AWK-391–440)**.
+ 
+@@ -36,52 +47,6 @@
+ 
+ `SHA256SUMS.txt` checksums the case inputs, metadata and expectations, the runner, the README and the changelog. Runner never writes to cases/. Execution occurs in a fresh temporary working directory.
+ 
+-## Summary reporting by class
+-
+-*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md ("Requested next actions").*
+-
+-Always report the three classes separately; never add them into one headline score.
+-
+-- **Portable conformance** (`portable`). The POSIX text specifies the behaviour. A failure is a *candidate*
+-  POSIX violation, which still has to be adjudicated against the text.
+-- **Observational compatibility** (`observational`). The case records common practice, or a contested or
+-  unstated point. A failure is never evidence of a POSIX violation.
+-- **Nonportable** (`nonportable`). The behaviour is unspecified or implementation-defined, and the result is
+-  for information only.
+-
+-```sh
+-python3 tools/summarize.py results/*.json              # text
+-python3 tools/summarize.py --markdown results/*.json   # a Markdown table
+-```
+-
+-v0.5.1 has 440 cases: 420 portable, 19 observational and 1 nonportable.
+-
+-## Environment isolation (`env_clear`)
+-
+-*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md, decision 8.*
+-
+-A case may set `"env_clear": true`. The runner then starts the interpreter with only `PATH`, `HOME`, `TMPDIR`,
+-`LC_ALL`/`LANG` (from the case's `locale`) and the case's own `env` values. It does not pass on the caller's
+-environment.
+-
+-**Pitfall: `env_clear` also removes `PYTHONPATH`.** An interpreter started as
+-`PYTHONPATH=/path/to/pyawk python3 -m pyawk` then fails with "No module named pyawk". That is a harness
+-failure, not an AWK result. To avoid it, use either an installed executable, or an explicit command
+-environment that the runner passes through unchanged:
+-
+-```sh
+-python3 tools/runner.py --cmd 'env PYTHONPATH=/path/to/pyawk python3 -m pyawk' --label pyawk ...
+-```
+-
+-The harness's execution environment is separate from the `ENVIRON` values that cases test. Cases set the
+-variables they test through their `env` field, and never rely on the caller's environment.
+-`tools/test_runner_env.py` is a controlled harness test of this behaviour; it is not an AWK case:
+-
+-```sh
+-python3 tools/test_runner_env.py                         # needs an installed awk (mawk, gawk or awk)
+-python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
+-```
+-
+ ## Caveats
+ 
+ - For the first two new FILENAME cases, the expected stdout is `[-]`; older pyawk/hawk builds reportedly print `[]`. Preserve this first-run discrepancy before fixing the interpreters.
+
+--- v0.5.1/SHA256SUMS.txt
++++ archive/SHA256SUMS.txt
+@@ -1,8 +1,13 @@
+-6391dcd2d5f477a046bd7598d277c6258b474ab44f5eb33c6fb067e6b8ee1bbb  CHANGELOG-v0.5.1.md
+ 5c823e40714a66ab89e00e94156fb0ebf8251f134c0dca4579b878ec61078559  CHANGELOG-v0.5.md
+-6a900ac422fa9d7b65ba315694aecd556b948d37736470aff166ce86107ae788  MANIFEST-v0.5.1.md
+-00053f82dc396f524b7ce66e4f02f7f1ac036fcdd89f67e840bbbf1755ec6b39  README.md
++2b49ffb6b37942a3060abce6008d57017200b8aa624fbccdd9e2070470807bda  CHANGELOG-v0.6.md
++ab59003d7f938e01d6f0f25d124528bf9fc86450948410c0abac83b663bc6ef4  FINAL_HANDOVER_TO_GROK.md
++3c60c22de45f5563fd2186d3a9953f004156e0e15bf2990a131be2c9c0091e87  README.md
++de074e1860e5a69e0cf05c61de62bfaa8704d4bd22bdb922a3200d7a777c5fad  RELEASE_MANIFEST.json
+ 28b0c2f21014ab43a2bb46bae91c6cc5443efa0d2c1edc94ff1213f19e9e5931  RESPONSE_TO_GROK-v0.5.md
++01f441e1c6269a1d9a97cb3b7aa67850efe9e9179a81e31a3f8334f80b813b53  RESPONSE_TO_GROK.md
++6e3fb22369b4baef0e6c511089b8f224adaf2418f7bef78609c36f82d203d254  V06_CASE_AUDIT.md
++ceaf40b5516b25bd9cfa52fe0c9942bc615b2dfd9a20b0b615dd6d859711c1ac  V06_REQUIREMENTS_MATRIX.md
++114f21ff505f7062bbd985d02e2bcc2c074e70c459cd54f39d99663d7ab54187  VALIDATION-v0.6.md
+ 2450bee41e4ec2626668063ef5c8e9a66e39a60d60a5eb5f009110ad5bed5a2d  cases/AWK-001/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-001/expected.stderr
+ 49ca9e49d387144ebfad9187ceafff390675ea7fc11cdbcf8c8a6e7f91e4b0d1  cases/AWK-001/expected.stdout
+@@ -2117,7 +2122,7 @@
+ c0cde77fa8fef97d476c10aad3d2d54fcc2f336140d073651c2dcccf1e379fd6  cases/AWK-402/other
+ 4794508e480f7275b698a199f6de71b21eb220bef92acf2faad300eed204e9be  cases/AWK-402/program.awk
+ e5db62dc3798fa734062f14085dd1ceeb5979f6f740c7fab13e2631d7557b5a2  cases/AWK-402/stdin.txt
+-a2a0a1f077136e18702182226e24c23ca21d3d2489f42f48047cb6ef1aeb2897  cases/AWK-403/case.json
++15ec2cede0429b9e665acf41a68183d5709eff8d84211eca8626b66c519ccbb5  cases/AWK-403/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-403/expected.stderr
+ 7227e7d49ecf5f6dd61a62bbc0b7896282dac22ca2344057f9602ccdc5977fec  cases/AWK-403/expected.stdout
+ 607abb39475310a1b9b5e864b3f85acfe09f4bab11dc8a12ade3ebab1a1f186e  cases/AWK-403/other
+@@ -2185,17 +2190,17 @@
+ 5157f3ce17fa130d29e160671fe4f7cb02e1cb080ab7442933b2f4e11d28cbde  cases/AWK-414/expected.stdout
+ ebde9237572ca154c2d3d151aa9c0a29f47266035c085270fc86934b5852a02c  cases/AWK-414/program.awk
+ 90cf4a2c6afc128a3e45d204418996c490276c046a4de58fe48b09566693c99c  cases/AWK-414/stdin.txt
+-4cdabdf051c60631c81cb2ef66f88771cd8d594e10f6ca089cb1f99c8417ebb6  cases/AWK-415/case.json
++7d94b4f5641e1ae407993bc37e2e808c09ae6d68db369e8c0d7ef796d2855093  cases/AWK-415/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-415/expected.stderr
+ 660d0b9c6e0082c2128c84f266fdd7452b97088bc131e5d73c33db2006b6b777  cases/AWK-415/expected.stdout
+ 4c6a76f1e5fc99057fd07479a816d226b2fe880cf85b7f93de6dcd02ddd13cff  cases/AWK-415/program.awk
+ 1b6851ca4e46123a3dc1e48b70ea40fd782e7fada430a319c6a5092c4d1c56c4  cases/AWK-415/stdin.txt
+-a9242dc7f8c5f8a57e34890faffaf3c28151a3b3f6650146f5c83b6697553597  cases/AWK-416/case.json
++0088873bef3162505de8008b1ea2a8fe20918be0b5b636a6867a91a6269daa79  cases/AWK-416/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-416/expected.stderr
+ 5beb24a85b63254bb4a1da9652202c1c972e85fbc7862deef9ad78d6e6788fda  cases/AWK-416/expected.stdout
+ 54f1612a0a179d0ebf91776640a3843551bc3cfe4ec4ae8be421997c250c3966  cases/AWK-416/program.awk
+ 7d7acec3ac35ec40dcb12687bc4820354c7ae29cddc0c66f0942792e60f500f8  cases/AWK-416/stdin.txt
+-73ae724952c0a85081ad9ec35263d5630eea35e662d53c44514b52ac906d9d0f  cases/AWK-417/case.json
++0252413c8913eb63b77e54750520b4197e7fc4bfa883c1b30194ffeb48e1a7c8  cases/AWK-417/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-417/expected.stderr
+ 762ac6af9e9bcc7458943664ebd22ab542872ca0f8f894e6bbb77cef5709d1cb  cases/AWK-417/expected.stdout
+ 8c8ab0c8c492a101f9737fbd65c05672209295851d3e0fd7e3f243a3edddcdf1  cases/AWK-417/program.awk
+@@ -2205,7 +2210,7 @@
+ a683910083691b5be38eabd6716936190f47bb5c7a6c6c5e98cb778394c4e174  cases/AWK-418/expected.stdout
+ 579008e40d47dbf2be14f78f3037be26e1be27799912839129034e504e1bd6c7  cases/AWK-418/program.awk
+ 5509d18a8093bf49f4814cb919b67420450a64de047d36299f597fc6055ff462  cases/AWK-418/stdin.txt
+-daff4fa6d2c8a5f6ce14cd9e292c07578b85ede01ee10e1d4dc2f837356dbdc7  cases/AWK-419/case.json
++072af10bf455143e23c16d0411af3e264a31d259d06af0a72f8ec719880944f6  cases/AWK-419/case.json
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-419/expected.stderr
+ 079957bacc33ff6df58db47da2d5272e48e05b244a6a801a576ffceef14829d4  cases/AWK-419/expected.stdout
+ 72a2414b540760fa6b8f651c58fd412ee2be0ac9f9a3b83da6b5f83742a808fb  cases/AWK-419/program.awk
+@@ -2323,12 +2328,485 @@
+ 59e6dcc862f440661a6cb8812f3fb7dd734a2df084b602ae8fa91e48d550e887  cases/AWK-440/expected.stdout
+ 92af7a8aa81871c14a72a9e6451240e43e708cdeb4e51e2400988deb830e2e62  cases/AWK-440/program.awk
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-440/stdin.txt
+-fddd45c0878a13200a909a92a411272bf0acb859f2d231b4f38a8d3b294d9cb9  feedback/ChatGPT-response-to-v0.5.docx
+-600bfc762a7fee7b6bdbb9e8272773a70d488cd5c44704dd43bd32ea7ce616f5  feedback/ChatGPT-response-to-v0.5.md
++2c6b3085aa209e7b09ef079c3fbdb52984c1dcb25498b9a28a5e8a7e5b5dc5bc  cases/AWK-441/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-441/expected.stderr
++90c6306ed747fb8823b66a9c5abaf54670e6f23c0d1bf57092a5f3c08c90193d  cases/AWK-441/expected.stdout
++b84db48a8849bc2747e5f503cdca361e3f1fc753a299b8818974f148101675ed  cases/AWK-441/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-441/stdin.txt
++0ab78e4ebf3d04d047dab78b1497eb542f1c0beda97c9b86f96844af30c6f81d  cases/AWK-442/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-442/expected.stderr
++3afb972a0cc94a4c200d89abe2ca6dbde7d098df806ba78637feb29e73769f2f  cases/AWK-442/expected.stdout
++b84db48a8849bc2747e5f503cdca361e3f1fc753a299b8818974f148101675ed  cases/AWK-442/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-442/stdin.txt
++8bd744d542bf0827dc6351f59244b8472d44d9624bbc29bef932fb1e4bc24456  cases/AWK-443/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-443/expected.stderr
++73c2cf62d153634805d9d955d3dbba6ee35720daacdd9a5c03fe69edd3b1417e  cases/AWK-443/expected.stdout
++b84db48a8849bc2747e5f503cdca361e3f1fc753a299b8818974f148101675ed  cases/AWK-443/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-443/stdin.txt
++2aa526ca32355862f079fbe8bf55e0f7aca954ee40149164a04af3a1fb5b2c3c  cases/AWK-444/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-444/expected.stderr
++8959620956099c6bc803a0a8a77505470edfc40180477deb20b934b3d93b99a4  cases/AWK-444/expected.stdout
++b84db48a8849bc2747e5f503cdca361e3f1fc753a299b8818974f148101675ed  cases/AWK-444/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-444/stdin.txt
++806098e166cb4b540ab544be0403d738e5072b4e30d55e59ead7da0b276891e4  cases/AWK-445/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-445/expected.stderr
++3612f9434db142f8a62e0d82af8690a58d588c1f4032d160c0314bea249f2e7d  cases/AWK-445/expected.stdout
++ee9e7ea3797fd7a864bdc666696944997182f771f1eb3534c42e3056defc31d2  cases/AWK-445/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-445/stdin.txt
++59a422b5135cc88fad652b0d7671c09a736ea42df3008d758fc711e57c6cb745  cases/AWK-446/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-446/expected.stderr
++09e707eaf49c7f2513ed7cc00cdb44ce4bed0270836c19bc9e2995db9db67f21  cases/AWK-446/expected.stdout
++9c815cd8497175c4156c9736d2b8d72bea1247aa332a32294190e968ecf66ea9  cases/AWK-446/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-446/stdin.txt
++8020661b99aa9f5295a2312858def778728613491b2c4a334f39eb943eee346b  cases/AWK-447/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-447/expected.stderr
++a79122992d53d358e6bbbbb98883d64fa0c15df3bcb08ff7b65a0580870af424  cases/AWK-447/expected.stdout
++12e02f08453c986292b3a8bce40b6ea33475e098c5b1b57191d7fd0af5ecf203  cases/AWK-447/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-447/stdin.txt
++7e273d468c90a1654a7e2dbba919ca370843725853ff5e07c9973fa539ada0da  cases/AWK-448/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-448/expected.stderr
++47cc4a7a956107df2b909f8b67b01beee59bbaa4c7d9cda9651cf32e3a07a397  cases/AWK-448/expected.stdout
++87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7  cases/AWK-448/f1
++7fad6dd592207dcb9fd8182481ff19b5c4324abc8cad0732afcb2b5149b48d9b  cases/AWK-448/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-448/stdin.txt
++725e6e31ee934a2d0f663b0cd6f4f7f1a17ad348b3c1ef6219a1c30983150350  cases/AWK-449/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-449/expected.stderr
++85ad5de9c85c1dce2e6d0d6b6b50088f788476b6961fbb963fac18dbbdbffa49  cases/AWK-449/expected.stdout
++87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7  cases/AWK-449/f1
++83a830381817608ab44eaa93e1854382d018ef5123ed9169b1601c0a58e5cca1  cases/AWK-449/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-449/stdin.txt
++f4b93ba4748054db840585dbca9a635f8aa973d81d2c4e8b9aae2b7e65bbf664  cases/AWK-450/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-450/expected.stderr
++0214dd50bc510eb9a2032842f5209a9c914bd55deaa75d4b353e3448b71580a7  cases/AWK-450/expected.stdout
++ee55264f1170dcc60f57d8e8ea6a002b9d46c761b70cbe1c18fb8ade2cfa931f  cases/AWK-450/program.awk
++eb66c28532611245826dc3b80197a73c64bc390ee828d417916a0c11d9411b0c  cases/AWK-450/stdin.txt
++7c324719c0973ea4394ca1d89e35257fb2f0757feb124d307ae1d3a202c8ae6f  cases/AWK-451/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-451/expected.stderr
++e548f324a7f63f001eb90bc483ddb72a92f7fceddce47c7a9a7b1285c20029b4  cases/AWK-451/expected.stdout
++050e46a4b6c4860aa7962d3ba9bc5921e82348116e4c5f02f1b2fc48474ffc62  cases/AWK-451/program.awk
++7dcca6ffa0b31548edb9ac2cac9c6d363712a10053d7826bf41f389a8be8ef3c  cases/AWK-451/stdin.txt
++54082ad4897790c3148ace1ba78f0abd043aa02bf91cc4a0dbd068529302061d  cases/AWK-452/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-452/expected.stderr
++4b143764a535faa31d292a029093f28511604ec158961d3b22f28ceb07ca9547  cases/AWK-452/expected.stdout
++ee55264f1170dcc60f57d8e8ea6a002b9d46c761b70cbe1c18fb8ade2cfa931f  cases/AWK-452/program.awk
++e170496dc45b8ba8999b767dfb058a0f8f8ad736a2474b2e99f32d0109fa5ecc  cases/AWK-452/stdin.txt
++99590d37b3900b3dc511be39be61876f9b5e6659c89af156146471417b2f3bc5  cases/AWK-453/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-453/expected.stderr
++4b143764a535faa31d292a029093f28511604ec158961d3b22f28ceb07ca9547  cases/AWK-453/expected.stdout
++ee55264f1170dcc60f57d8e8ea6a002b9d46c761b70cbe1c18fb8ade2cfa931f  cases/AWK-453/program.awk
++3a2ee117443de1bfac29ac09711b265e02b42d3fc37e8ab7ef060287adeec82e  cases/AWK-453/stdin.txt
++f6ddd9c8005d47c70754c9edb25cf34fd1ba2e1052ccb59e27439bdcda3f4494  cases/AWK-454/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-454/expected.stderr
++a9c1969769adf89a252e909766a01387a21d0a8b671d1fe089cb6ae3ea378e8c  cases/AWK-454/expected.stdout
++f6972b719b9258f4f0de210878e011e3fb3ae78adf4a29eb9d64e879e2666f75  cases/AWK-454/program.awk
++14271b020fb25f9931adc13c25cf35c042b35ad1629534b65f5a0f426f598590  cases/AWK-454/stdin.txt
++38bfa88afb63ff2f9efa62b38fdf700f815e7d7b84e4ff4e9ee65744af76e505  cases/AWK-455/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-455/expected.stderr
++dfa11c2d06e5d1c4537c26754d761d86f974b4ed2b237f108f62083636f1c74d  cases/AWK-455/expected.stdout
++ee55264f1170dcc60f57d8e8ea6a002b9d46c761b70cbe1c18fb8ade2cfa931f  cases/AWK-455/program.awk
++3028acf5e4c1117ab3d2bfbf5ecffb4d3147c9acb452fb375f27a57acd0bc9b7  cases/AWK-455/stdin.txt
++996a5e99a18008754991fc7291e0dd02cafaaad98f8d72367e082d07f8658d98  cases/AWK-456/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-456/expected.stderr
++a44cfdd61e71e607b82df307c44b2d6c2914544ccb2482c1049394c092f10e2a  cases/AWK-456/expected.stdout
++f12d945020d236ebefeb1b8b694e924599c1a0aada96de68d4078d530dcb94df  cases/AWK-456/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-456/stdin.txt
++8a937078b225f10427157eafc56a2691753f15bd67c04251251ff5254533304e  cases/AWK-457/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-457/expected.stderr
++1b7c81c789545a81f898f3b057117e70622116c3ac4ac5ec49a2f62b173bfd18  cases/AWK-457/expected.stdout
++4353389a3dd0736e352ad1cb1dc968d5dcbb2f5c62a07e83b8178e5bf8bd8d2a  cases/AWK-457/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-457/stdin.txt
++d0399f33d32a8667bdc9a78bee57270a86cae125f9fa3dda347abef06a80a878  cases/AWK-458/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-458/expected.stderr
++37b8c7ec5b066d19c5d68da44e5d5ee2eb3ec1f87709fd9691fe5cbea7f6824b  cases/AWK-458/expected.stdout
++9b90829697e42cbc4d3ae88e566fff63471daa272f57bc0da3a7bc5903fa9604  cases/AWK-458/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-458/stdin.txt
++2bc5a3cfc3ca0d2c72ee9fc2c7559606a6fa7fea06bf2fd6a05f49266d34574e  cases/AWK-459/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-459/expected.stderr
++c0cde77fa8fef97d476c10aad3d2d54fcc2f336140d073651c2dcccf1e379fd6  cases/AWK-459/expected.stdout
++35b1d0b99e49e5b5fc8d342c2bf8ef0ab86a093ab94ebccc237df0dc9e04eedc  cases/AWK-459/program.awk
++8e37bed9dff3949ffd23ae638260dff869f5cc26e551f2a9e5e289a8888949fa  cases/AWK-459/stdin.txt
++87f9aae7a81a3aaef4f22c89e37531e9a6931336f59c58e3a9faf8ddec45fae7  cases/AWK-460/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-460/expected.stderr
++51e519c9478d51b717a43c3d94e75436c9d88432f299b287b28ba704e1e05bb0  cases/AWK-460/expected.stdout
++47fe2db01e7893961c012f280e5386b1238cd1524aaf07344c7f6ddbef85f041  cases/AWK-460/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-460/stdin.txt
++7d2af899f7e80d252a64f1fdcafab3c93a3e578d1d673d2920938fa68f12c476  cases/AWK-461/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-461/expected.stderr
++0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d  cases/AWK-461/expected.stdout
++4b7b4d0bde0f4d55429f3970c67bb27c7998c6f27860a7b83ecd832a399911f8  cases/AWK-461/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-461/stdin.txt
++2b139f10466edc84a67126809e1ceb04b713edbab3627a4c18777ea8bc0649eb  cases/AWK-462/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-462/expected.stderr
++6647e43a5ed96a4fc666b38104500bccf3b56959a93ea85fbd61bf35146b0108  cases/AWK-462/expected.stdout
++d00357c422e31ad657fb5bfcf8dace405fd53bee06f12cddd239ad7d4b253c6c  cases/AWK-462/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-462/stdin.txt
++efd959838b6f6441838f38dc393baf745fad102daed3218c73aea373593a3477  cases/AWK-463/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-463/expected.stderr
++4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865  cases/AWK-463/expected.stdout
++4b4ab39ca8fb4fe5ab2b1a7ef3d83c1b82947399f8a966f795acc242544bafcf  cases/AWK-463/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-463/stdin.txt
++705b10c7e18427aa7d74e20a4426b1de169dbc636ff0b83ef42aa7c7adb99194  cases/AWK-464/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-464/expected.stderr
++a79122992d53d358e6bbbbb98883d64fa0c15df3bcb08ff7b65a0580870af424  cases/AWK-464/expected.stdout
++412b82739a900d036840f78476f16a2cea3ca8be0143c46b6af3b489be1fcf70  cases/AWK-464/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-464/stdin.txt
++47c36212ea985e2211f42e7f6a00e94f0d4f36dc007bf34430a5f318c0124681  cases/AWK-465/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-465/expected.stderr
++32a52d142787b2e750b0742213fc0076703e5d4bee6f63cb3bf8bdfcffeb50c0  cases/AWK-465/expected.stdout
++087a551720ba1e2004701a693cf26c04d5b159db40de1e2cee6f01947ddf25f8  cases/AWK-465/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-465/stdin.txt
++bd59d89e481228e275dc356df231c0f59fcadceeeead58eba5e6fdcb0ff92d94  cases/AWK-466/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-466/expected.stderr
++4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865  cases/AWK-466/expected.stdout
++44f97c0e9bd8f748da26ffba5092a8485766505995bf906752c05c8a1008e7b2  cases/AWK-466/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-466/stdin.txt
++0b89306c898aeb2d57512129f018e0bcaeab7dc0b91fb6d7c6d31985363cb192  cases/AWK-467/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-467/expected.stderr
++3f70bdce354e08f255d03e949c1a782ddfb801aafef5decb392b439d3685db3e  cases/AWK-467/expected.stdout
++a6e2b7a040683432de03a18fd8a1939a2fdf82585b364bfc874bdd4095c4cae1  cases/AWK-467/f
++29ca149b7bcccb220ea2f38c9650a42d43298d2b139ca4c3c98458a4ac7a91b4  cases/AWK-467/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-467/stdin.txt
++69265b6c3bf50bc1ce9a80ecf31ea96cd3a2bbfde147f87afdb2d4ed93bef486  cases/AWK-468/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-468/expected.stderr
++969e70938bbfbb9599db7af8be0b67e0156b23e82310c4e5095f0bc33a6b9b28  cases/AWK-468/expected.stdout
++275a720842f3588ef2ec03a99bc77e4b1308fc6d1e618e9864e9241cff6d2625  cases/AWK-468/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-468/stdin.txt
++2584d476e8f1275368cc24aa1d79452f2506f460e26b07272ddc11dc9fb47d84  cases/AWK-469/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-469/expected.stderr
++ce57158ce97155ae9d1f721c5202ddbe1c539aaefa0a795366fdd8935d6d20b4  cases/AWK-469/expected.stdout
++7a0f5fe91bfc9aaa19d7d7b56b722692d0079f5e0df60296b333d1867f230487  cases/AWK-469/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-469/stdin.txt
++a00129fb569497a6583cb7399991c1acd03cd1205d5d67c6633bc9f269bc47c6  cases/AWK-470/-
++bb5d6763cf0970f8c34ef0f4b370cee46715a91a60279ae69d1c98ddf328d93f  cases/AWK-470/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-470/expected.stderr
++a00129fb569497a6583cb7399991c1acd03cd1205d5d67c6633bc9f269bc47c6  cases/AWK-470/expected.stdout
++0ed2f1b5169685733e9a07e0ae54c282468366be60d1d5c94b716bd626fdcdf3  cases/AWK-470/program.awk
++e975e88e3ce51ae638f464894c2b90cc290bef30bb5ee760bb20da836e7b4e4f  cases/AWK-470/stdin.txt
++58f406319fadd1ebb97e83accc4f614b0f26d74c2915c53ffdf91b1dc998414b  cases/AWK-471/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-471/expected.stderr
++e35d2531ce3ee63df7337ec1bb1c7dcf72a282e57b7d95425dedba2537d33298  cases/AWK-471/expected.stdout
++554162ad0ef7ea2aa700f3b3bcd5430637aa7d5d9887f6dd3a88baa27297b1cf  cases/AWK-471/program.awk
++ea86cd1b09f8bc8be798cdeddb4f32bd9a52f86c4ee95b961d2d10e64f7f8b9f  cases/AWK-471/stdin.txt
++f9c639ef7168e02dcd77b422cda8544e606bc5da33939a7957a3870290d6b64f  cases/AWK-472/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-472/expected.stderr
++e60232f9d45b370dca39f06819a2766de267b0b1e5e666a8a6eba188fdba7038  cases/AWK-472/expected.stdout
++092fcfbbcfca3b5be7ae1b5e58538e92c35ab273ae13664fed0d67484c8e78a6  cases/AWK-472/f1
++91f452781e6196b8cb447142addf7a98a73bc577cffbc7f6bc7b58314a2a4577  cases/AWK-472/program.awk
++cbc80bb5c0c0f8944bf73b3a429505ac5cde16644978bc9a1e74c5755f8ca556  cases/AWK-472/stdin.txt
++2d2f0087b7aacbd987d0d3b1ca649b6f329d4bae9d8e22304c44fcc018f2d5d1  cases/AWK-473/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-473/expected.stderr
++9d72ee61df02faeabc5e74d532def6b054f085d18bfd34409a58d2a4d621c529  cases/AWK-473/expected.stdout
++7349713622eedfbf7a588bea1fa28c6b7d8ba6de1f0e0ba321185ac762208644  cases/AWK-473/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-473/stdin.txt
++0dece34919a162aebc196d57498bbfd6fba33dd153e388912189c3f462a2b333  cases/AWK-474/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-474/expected.stderr
++740ac6e94a23401058f0067a6533084b5c5dc8cfae5373888a78dfd04edaccc0  cases/AWK-474/expected.stdout
++c726ced0eefd4dd4d57ec8f22babf51cf135fbdb61e3c7ea255b45c02e21e79e  cases/AWK-474/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-474/stdin.txt
++fd9e4ed0fa13569fadddcdd9b3663f9a1d86ef4a558a0e0d323aabe953210790  cases/AWK-475/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-475/expected.stderr
++63e9513edcd96636e7a78d2dc432a9d971f3ca5de1d1bcb4c8ffd2bcac8dd7c2  cases/AWK-475/expected.stdout
++0b04db04da88059d854c6f43e5e3ffce950039f28b74c7c04fa2878a8744ac2b  cases/AWK-475/program.awk
++e9885b457eb0355301af76d4330dcaa1bea0864add241cf8afa0e98c61c54d46  cases/AWK-475/stdin.txt
++1f922b3497a2ca221b2b15ca11bc3bccaf369052793a9049b1fab88cf363e25f  cases/AWK-476/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-476/expected.stderr
++ab141ddbc48743e38e48467b1c8f592763e0a85370674e490b8d913f6a2ffac1  cases/AWK-476/expected.stdout
++79b65d5c9a88901950218742d23113e314513596c9a42b5735c7a61ceeb66615  cases/AWK-476/program.awk
++01186fcf04b4b447f393e552964c08c7b419c1ad7a25c342a0b631b1967d3a27  cases/AWK-476/stdin.txt
++12a0d451cd92c4f659c1d5541998ddcbbde5220328fb2280ed32908d8caab322  cases/AWK-477/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-477/expected.stderr
++49f89ed75754d5eeee28d159c28a25033b649b1a03eccfbb343d8e6c0b0f5a7c  cases/AWK-477/expected.stdout
++1a1e1601b4f8ca570ee5003a4b08028a02d4c15268f5c6563acf1e4c0763c01e  cases/AWK-477/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-477/stdin.txt
++1bef795fc7064b84550674b58cd743bc502f4383567f2f8c3fcc4ab2f836bff9  cases/AWK-478/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-478/expected.stderr
++25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e  cases/AWK-478/expected.stdout
++a4a81b965677f6aee3ca376bf26526cd36202506ed4dbc6b9d0c1e2333966e32  cases/AWK-478/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-478/stdin.txt
++0426b0644087fce553ac7ff5adea0291787e832d32ed8dc85739d1539e0256fc  cases/AWK-479/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-479/expected.stderr
++3f11ad6bbc7ecca0b2416b713dee77f1a635c00aaeaa946e14cde1c2bfae56d5  cases/AWK-479/expected.stdout
++6f90b8287c5c44f65657faa120a8685460d35dcfea5454fd170bd8c2f7548889  cases/AWK-479/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-479/stdin.txt
++7d07b2e505112d7d65fda7c902e8bf2be64ba8b7ce8b5274d68b52054eedf9c5  cases/AWK-480/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-480/expected.stderr
++5343cc4018362a27f092ba380aaa30b7b98f1c37a220bde79681d48012eb05ce  cases/AWK-480/expected.stdout
++2124933d278bc3e5d7f9b2ff563ab662e8d06842e2b95e04c286575722ac3d22  cases/AWK-480/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-480/stdin.txt
++0a26a4b20f81c2df9de5f77216f1c45078f32292e3196274bc7bb1aca6ea5e29  cases/AWK-481/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-481/expected.stderr
++acefddc619ff137b2060778489399c55b2ef2e76a8aced04f7b5c1fcdd2b9111  cases/AWK-481/expected.stdout
++32cec6e9f0424440352cb6c7ff103ec26c2ab4c7ab9b8de11d31c07f40ffe292  cases/AWK-481/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-481/stdin.txt
++4130446eff69ca91849d884d2f79ffe3920840241489a1ffa388a5428272e18f  cases/AWK-482/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-482/expected.stderr
++f96ba6f7ab4519af13b846e45f66f148cabe17ba66feb77a591ffa23b9acdd1a  cases/AWK-482/expected.stdout
++5efbdcc7f577e2cc5e970059d781d08f06dbedadbe6ff98106ef626a09573480  cases/AWK-482/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-482/stdin.txt
++09c082cbeb1c5ca30d9730b4aa481056ba0220c1b0569307b044dbf7a0b60a21  cases/AWK-483/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-483/expected.stderr
++c17a3948f723764088c76e47354a1f0014f40440903ae96c95145b3e139d950a  cases/AWK-483/expected.stdout
++6347353c570f72c28ccf772c94005aee2f081ec49309699de78f4954f0a020f7  cases/AWK-483/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-483/stdin.txt
++d1117dea17c6fad776861fbd0928ee4d2b79f94d15dd99cfbf3384732c6d5df6  cases/AWK-484/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-484/expected.stderr
++3f11ad6bbc7ecca0b2416b713dee77f1a635c00aaeaa946e14cde1c2bfae56d5  cases/AWK-484/expected.stdout
++ac08b0eb5d264ccfba529893a781eac832e02ba7e3a946cc1deecba09ae43962  cases/AWK-484/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-484/stdin.txt
++393b4a9c87a2393023b3ed19ee6cdc988af88ad0ba1c682a44c49d2e9e102e84  cases/AWK-485/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-485/expected.stderr
++1964e6003564c5dea0dddf38f6f070566492d1c724a20d05d08c96298d9c5410  cases/AWK-485/expected.stdout
++2011d7d9d1fdf326da9fcd127f6c046fa5716ae8b78965b284fdb169bcd7f966  cases/AWK-485/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-485/stdin.txt
++f48996139a7f71f958703eef0f7248b03e47ef5a2d1171aeeb84358cdac5e3ae  cases/AWK-486/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-486/expected.stderr
++63e9513edcd96636e7a78d2dc432a9d971f3ca5de1d1bcb4c8ffd2bcac8dd7c2  cases/AWK-486/expected.stdout
++b4134b13ffd51b1a1348c8b5fecad1112acbab9b42695a4078732e422a16c292  cases/AWK-486/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-486/stdin.txt
++3d383843715ca7ce9e92cdb6e678c40c7d9cb87facb5117043a727b3e8c77a32  cases/AWK-487/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-487/expected.stderr
++373ff7a5a47d3350f219befcc9d307ca6f10e68790155a39c1777b0d07da42e0  cases/AWK-487/expected.stdout
++6e89f791394c4b5ff86fb74fd70c235145e34f2d3fd94cb5309e0d39f4c30c8c  cases/AWK-487/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-487/stdin.txt
++f25edde260af71a2e1d597e3a6c0393afe053116f3a18cb7473faec92b905542  cases/AWK-488/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-488/expected.stderr
++33d2101a2f0cee668d3022da4bc80053b0bd4970279ba1256d426d53450c4330  cases/AWK-488/expected.stdout
++4231b73475dcc65078b17baad5336b8e8653a91d4fee14e9984345696d0cb804  cases/AWK-488/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-488/stdin.txt
++dcf6565122ceaecd682607c817d8a515248e351edf1c87ba17bee6297216723d  cases/AWK-489/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-489/expected.stderr
++fbbf1106647f1412df72d33bcf50d0765afb32674df9bc92999322fa7be9fdbc  cases/AWK-489/expected.stdout
++6e83646a29742f8aa01f605207356654bcb42da72f2f12541287e75bc0b66895  cases/AWK-489/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-489/stdin.txt
++ea5f3bfef316c2e79932c27f1b9da67bf75a7badcce2e2b81efb9366486e0f84  cases/AWK-490/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-490/expected.stderr
++e07a2f8f77bbc7f756cb0eb9e602bbfc861dafffd666d2c9baee27d62bc1b3be  cases/AWK-490/expected.stdout
++88d868edd403cd1b959edbe7e7c67bda57295813fb6f4c05abc7e5454e134df9  cases/AWK-490/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-490/stdin.txt
++93ea94e57e919632887794b2e1751c44e67390c7f2abfefca316b492c01f4f17  cases/AWK-491/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-491/expected.stderr
++27f09bed9e8e891ed5f123693132a62da20c43f110549ac858072efd4ff0a365  cases/AWK-491/expected.stdout
++b770a195d80decf8bfff2da47ea3f474a3b4343b08b2b2ed2f86e9aa428c9d3b  cases/AWK-491/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-491/stdin.txt
++d55928294825a435895d7d92399035edccc1323e23231a72ba40831802df3c67  cases/AWK-492/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-492/expected.stderr
++dfd574060ebb1b23d44db676d0ac9d47001762cde6d6b0fabef10e220af006f6  cases/AWK-492/expected.stdout
++abb0b80e237a29b3b209a4b08a62bc6d2c04beb5ca7b48e47af6d42241ef752a  cases/AWK-492/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-492/stdin.txt
++88a0eef0825f472bcb3bb77ce7556d810cf0db1947b6bfa6437fb878c59f143b  cases/AWK-493/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-493/expected.stderr
++6ad69a1949ae4b5ef98efec0724035072a7fce7d09a0b9fd3ed74dbe7702f3f7  cases/AWK-493/expected.stdout
++d0585cb5b1c7acbb04f89252deaf01e6b748790368063516098e4130354c1efa  cases/AWK-493/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-493/stdin.txt
++4ac9a14353beb5bdf2b1a40a97baa3c127cc6fcc53803d304bb444592e00cf66  cases/AWK-494/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-494/expected.stderr
++2a24b2df660a54f440c47115628bf8bab4345e2d47649e22c3eb010bde351ba8  cases/AWK-494/expected.stdout
++eae5a0d727e9989c16f5f5fdc2bfe1b195a0dc082e2cc3a01f0bb2c2b1cae9c9  cases/AWK-494/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-494/stdin.txt
++04bfb7a6ffbb58351ff4f5d7b76836b5f69188bd6572a24f1128a75e3bec0d7a  cases/AWK-495/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-495/expected.stderr
++0ccdb5a77ba5bf7687f2565a8ed97dfb9c1af45503c496fb646312239fab5101  cases/AWK-495/expected.stdout
++b1039d8f87fa34ece521918e49b89d3422ef76bedeec4e5ecd7fbb81fb57d9dd  cases/AWK-495/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-495/stdin.txt
++7f8a564b7ceeec4f141304c22cface1a106f9d04ea098152c291d032840ca528  cases/AWK-496/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-496/expected.stderr
++63e9513edcd96636e7a78d2dc432a9d971f3ca5de1d1bcb4c8ffd2bcac8dd7c2  cases/AWK-496/expected.stdout
++a33995eb68f113728d946a4074b8ffe6b5ccd52087325b17546e302fa8d1d1a4  cases/AWK-496/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-496/stdin.txt
++7a91a4a543d21a4613219b2f60b05f8de97a54db221d402ae7a7808d6ca8adf3  cases/AWK-497/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-497/expected.stderr
++0af705c8b43d5ca17db39086e73f1139187257be1082647b0cdab34553456525  cases/AWK-497/expected.stdout
++80ecfb1b77763a2dabc9a79ab6f44f2ad0ebd1cc67668527c3a65a77a0de624e  cases/AWK-497/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-497/stdin.txt
++8b266bae39126f8b1556224bf3aeca24487c2927814cbd2dd44db6b0b5eef394  cases/AWK-498/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-498/expected.stderr
++61e1c1180d4fdd710bd8bef2f2d8b2d5b8a0e7a68f67fd991ff96545f9bb6540  cases/AWK-498/expected.stdout
++6bff3358510645b3a0d9f77352103142e1729971835ce79c4e531e2196fd62f2  cases/AWK-498/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-498/stdin.txt
++a73535f4b0a528c1bbeae8e6f6b6ef93a6971f7bdc50d82a86889fb9714d8ace  cases/AWK-499/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-499/expected.stderr
++f38203c10e4f912dd1cea0c2f726d9bdf61f7d38de40cc51ccdb664fb53392ad  cases/AWK-499/expected.stdout
++826dceda17ae77f9b6367cab13d9a5a94c78effeb1c1ab2e60a4bfa8b501415e  cases/AWK-499/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-499/stdin.txt
++0c8d4d86f6fd48d49cf7dbe8afce9bce437e6a48a3eeba409bbd111ad90cacc0  cases/AWK-500/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-500/expected.stderr
++82c1315e6c757f33c4a77ca58b2a184f5a88614470c05ec77f3d28918db6b8ae  cases/AWK-500/expected.stdout
++449b6ee7b1bb7d12d53cbc9f29d56665f29b07cff24aa1bcc2b754e2edb3e6f9  cases/AWK-500/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-500/stdin.txt
++e2ebfab0f20f4d7af97e109e9718ed9ff449cc585292ee9b8efa9d04871fa516  cases/AWK-501/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-501/expected.stderr
++9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  cases/AWK-501/expected.stdout
++405bc68f5edd79f75863e6e764426ae7f035b4523a1a5baa047986d800c3879b  cases/AWK-501/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-501/stdin.txt
++5e8f143d92b20c56ad428556735ec403581b0bcb42566486a9b9fe7619e8ab8b  cases/AWK-502/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-502/expected.stderr
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-502/expected.stdout
++105166ef1bcf1ecffc71246d3d139d72bae7ac41ad991bd47a8f9846c56a88ff  cases/AWK-502/program.awk
++87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7  cases/AWK-502/stdin.txt
++5129df59520888a00b53b7c91ac5d19f914420504b1c6e2b5ef5bdb27adeef82  cases/AWK-503/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-503/expected.stderr
++8c690cdefcd191b46d8ee7f0fd4ce36f6a9c648c5f6e5785c6ddc64066d0c4ab  cases/AWK-503/expected.stdout
++22417a88227402cb71bd38782a93aa47140690c5f951c53f252c3fef7cd46b70  cases/AWK-503/program.awk
++73cb3858a687a8494ca3323053016282f3dad39d42cf62ca4e79dda2aac7d9ac  cases/AWK-503/stdin.txt
++23d290e1eed5669bd9f1d207c8ce293c3d656ea87634ef6b7d175a7c3d0ed57f  cases/AWK-504/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-504/expected.stderr
++4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865  cases/AWK-504/expected.stdout
++d99bfcdb9c2e9fbae7ce8154a5ab5b0758688ec60732f624b02bb94cac298978  cases/AWK-504/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-504/stdin.txt
++5b06194e21559f0e600f2555bed39a56ccf9c5d3c96e56de1bf150aaf8af0c03  cases/AWK-505/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-505/expected.stderr
++c2a87469faaf1c11bec07a0bbf25e97ce655ac3d457d64e5cfc4d45f96414121  cases/AWK-505/expected.stdout
++840227cd71e18a8ab817dce0776fa64290ca0d71c252bcac21c140c490bcfa2a  cases/AWK-505/f
++d9c878abb5f397cf74e58c83c9fa0f77bfcd4ebd65973942fa0ba96ab1eb1ee5  cases/AWK-505/program.awk
++1a25953465ab671d54b30108a9951b5500fa40994098ef9463853004da7933e1  cases/AWK-505/stdin.txt
++5df811eef5877070a7bf42da286edf7c26c5704aeb5d507c25833a6faae62d87  cases/AWK-506/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-506/expected.stderr
++9ed500695e47162082777a23dc94221957e928829c778c14a9a16dd0c7247fad  cases/AWK-506/expected.stdout
++a2bad2c895b31a8c624cd4007319c7b7933c3149bd46517f65690d90db4ce5d4  cases/AWK-506/program.awk
++9ffaa0f83922d4eb11e56154814a41322108bebaefba1fe7f00c4fcebde5d5fc  cases/AWK-506/stdin.txt
++db5e8e307c3c644bf791f72c403c171d92cd3333e33e80eada433c757430d044  cases/AWK-507/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-507/expected.stderr
++94e25251c4733076cbbe7697236b61cb7b1f0479b0cf8d5b59d1d583868d0472  cases/AWK-507/expected.stdout
++8e8fd895241b3255738ea8772be165c01e68b27e74581a01a588339f1a9a264b  cases/AWK-507/program.awk
++9ffaa0f83922d4eb11e56154814a41322108bebaefba1fe7f00c4fcebde5d5fc  cases/AWK-507/stdin.txt
++4173287f5fc42eae8678bccc56675d8cbc80f9ae6eab21585b7fbeedcbc433e7  cases/AWK-508/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-508/expected.stderr
++76c608e3b7f8da3c5f5fe56e63772ed51d317c184b82db237a11924cfcbbb906  cases/AWK-508/expected.stdout
++939c636eceecc87c5ba11f17ecee678dd9d591747305f4a896e774fc001ac961  cases/AWK-508/program.awk
++01186fcf04b4b447f393e552964c08c7b419c1ad7a25c342a0b631b1967d3a27  cases/AWK-508/stdin.txt
++b233b85e180813f6226b4e91913ded656f436c54139e6db125ae29bbcd578e45  cases/AWK-509/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-509/expected.stderr
++831d063f08335b4f6e494735cc490b24b152fb412d84834e7e14f5fc5c82dbad  cases/AWK-509/expected.stdout
++5fdc536395177d0156baf1ba4c9b96d6c4a77f8146a1ca018b318679a1bec79c  cases/AWK-509/program.awk
++1a25953465ab671d54b30108a9951b5500fa40994098ef9463853004da7933e1  cases/AWK-509/stdin.txt
++da4b58df78056960d0389c54b4003f0d5525b9ae0b4828c7c599ac0e613dfec2  cases/AWK-510/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-510/expected.stderr
++410c89638ae75ccdd88615d7c289e336172bf944d4ddc038f98ea7fa02c8d92e  cases/AWK-510/expected.stdout
++df3e3b2b3fefe403369b02e33ad73033d9bed307b3084687f220ab0fcffd6196  cases/AWK-510/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-510/stdin.txt
++b370f43cce2e77658fe86df96b7226d41c5912403ca53c3fddb80390b812ed28  cases/AWK-511/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-511/empty
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-511/expected.stderr
++6acc355f174b708cd9c28f572cb080181aa31059328fc6fac77fc1ce2009e462  cases/AWK-511/expected.stdout
++911169ddaaf146aff539f58c26c489af3b892dff0fe283c1c264c65ae5aa59a2  cases/AWK-511/f1
++a3a5e715f0cc574a73c3f9bebb6bc24f32ffd5b67b387244c2c909da779a1478  cases/AWK-511/f2
++d83c76c46703de882a316302bd3f0726f15229500f1f1eaf76f9e72cd5090179  cases/AWK-511/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-511/stdin.txt
++cf13ee32e6f0ff672175bd4fb9cc6a38b7d1a354d56783dcc27a6f0db1fb8884  cases/AWK-512/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-512/empty
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-512/expected.stderr
++245807bee7b433c387823621fc7aaa8a4a51eaeb2199809d4c14a6ca06dc7cee  cases/AWK-512/expected.stdout
++911169ddaaf146aff539f58c26c489af3b892dff0fe283c1c264c65ae5aa59a2  cases/AWK-512/f1
++42dc294288ef316a3081e528c780bc77d4217f1a38c6f72b1acd765c73dbd8e2  cases/AWK-512/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-512/stdin.txt
++906bd1d5c9035ab40311d50d6d5b34cfd381858e739a4d0bce829d26824fda62  cases/AWK-513/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-513/expected.stderr
++1dc008d228c479a1728c002e3b40df8ccf8dc403fe358057c73c896b9885480e  cases/AWK-513/expected.stdout
++14c5e74c4b96ccef41cd94db73a9ec3348038ac094feca4fd897cecffa07cdae  cases/AWK-513/f1
++58e58f39b21cd1c8f1b4508d13d5ad8b67dadc5e8f8ce22a39746b3cfc187778  cases/AWK-513/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-513/stdin.txt
++24995195089198b88bf240d43f337a5bb8b93fd280d2ffb8f8c0e24dad045300  cases/AWK-514/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-514/expected.stderr
++af0ffa5c865f22c1b67d54b63b8c35c06d7ad7cdaf24fe1ec9d38bca33381c1d  cases/AWK-514/expected.stdout
++880553fca8fcea94e325ee2cfb48e5a985cc797f39a14cc6d3cedecfeb2ae4d2  cases/AWK-514/f1
++1b6af09164f6e648f672a384203fda98e030171b85e4ad3e6e85a7e5a6e297d8  cases/AWK-514/f2
++adf65666b5e7d70b5fed8aadcf339917c0e32f584655c3150c2d0b28b31a76b9  cases/AWK-514/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-514/stdin.txt
++dea70abf84d49aa4a58aafe3cf2ab3957d46870b72f1e2481d60b173c1f17a9a  cases/AWK-515/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-515/expected.stderr
++a9150be346d8b19aeed9151fdf6cb0aaab0c6a13e5e922f1ec0ee04a9c61aa89  cases/AWK-515/expected.stdout
++05b54a599ea6c836edc5709649924dac70968699eaf0396f0690e7a8c6510bdf  cases/AWK-515/f1
++05b54a599ea6c836edc5709649924dac70968699eaf0396f0690e7a8c6510bdf  cases/AWK-515/f2
++969994e84dcafa4cecf8c890030cc1cb94d08b3f44d43b2e80800b6fb54b6279  cases/AWK-515/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-515/stdin.txt
++48224835d3e6e8a867b2686c0d3a9499b9cb0b4bc8faf596a5cd1ccb8ad44a69  cases/AWK-516/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-516/expected.stderr
++9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  cases/AWK-516/expected.stdout
++5c2b36ade4ffec53255e28cc7632352497990391732ef80d68a21bb6b92d9307  cases/AWK-516/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-516/stdin.txt
++7b4441dd5005da985940e00f58778d5e5397ecd2c4158983e6fb0d05a5709245  cases/AWK-517/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-517/expected.stderr
++dc2f29a0bfa37907796cada2e2ef38f5369d874dcb59dca20543657e2749f42f  cases/AWK-517/expected.stdout
++480ddf8882f2a2f5714b79c3d30e9f85b9630c0a8988204bbedf44c83ab22eeb  cases/AWK-517/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-517/stdin.txt
++743c8ee243e11d580d74f34c4ef31e021aa718105dbcb26101b41a0f43b5c0b0  cases/AWK-518/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-518/expected.stderr
++45431b03394bf9c74375af45d48b5e2259bd04e9fa79081e2696c763e365ffbe  cases/AWK-518/expected.stdout
++79594218ec2ec96eee159e00e8fde60be9f364ae799b6ff9da65d2fb4906ff0e  cases/AWK-518/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-518/stdin.txt
++36e51cae43ff5e6cfae23ade2e4ef0108027b5f149fa28b2ce77056731f748af  cases/AWK-519/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-519/expected.stderr
++eabc2243cb64c4944f0c639dd66b1aef4475792ba858875c57d2dde6e24439ab  cases/AWK-519/expected.stdout
++57207536be9430bba0335cbc6bf7f04473a443249c62f63297c31bbc3184a3ae  cases/AWK-519/program.awk
++facf7c7ae315fc177ccc74b3d837762f7257b6ded1e1f906b7d034f25590263d  cases/AWK-519/stdin.txt
++8060e3d9ae1beda5091b5abec0fe315cbba23b47415868372ed1ef0e3e0a30e6  cases/AWK-520/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-520/expected.stderr
++e628d1e0eca4d8c7f07c8f9e7c2ff22032d7b86798856591ac4cf1074b1a306f  cases/AWK-520/expected.stdout
++ac3f07087ca6e5c0df0d1302044bd8e9d79646789100a4ca1a8df2a120fea71d  cases/AWK-520/program.awk
++01186fcf04b4b447f393e552964c08c7b419c1ad7a25c342a0b631b1967d3a27  cases/AWK-520/stdin.txt
++e825040a542e91a5f7f0a2557b8e03b62db9f53d7093208ebb351bf261b20593  cases/AWK-521/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-521/expected.stderr
++77506f9321b644f9ce66362634b469dbd48b2b0effd3046653ec7e9dd072b64a  cases/AWK-521/expected.stdout
++08c21358e6fcf899869a8f26c7ab9d70ad14eb48c211b72407f22ae07c6dfc16  cases/AWK-521/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-521/stdin.txt
++17125c72cdb40d2e3a23751154138d931e75da1b2cdadbbfd406b113b2e5f2d5  cases/AWK-522/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-522/expected.stderr
++41fc5f08363819809b1ccbafe1d5f27369b7c38585a10cf7c916d54aaf8165c0  cases/AWK-522/expected.stdout
++00c3cf06809ee3ea6a5af72c0dd31f54bd5c47d31580329cb948b2683aba11db  cases/AWK-522/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-522/stdin.txt
++9a332ee2c6e2744ed49a88c3ee80bb6b70278541ce31b92b536bf9cd55a7cc91  cases/AWK-523/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-523/expected.stderr
++ce05c204ff512d9fc2b2c25b2c1dbcbb5d731d6e8652bf35ee798862fdea29d8  cases/AWK-523/expected.stdout
++3695641c8fd1dea9cd37458ffc2a735d6ee5b96f1d6efc12d159ab9feb328613  cases/AWK-523/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-523/stdin.txt
++9e6dd0abdf5c7465df5fa65ab0248aab8ad11cf0ed0cfb9d8dabb021b89de1f4  cases/AWK-524/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-524/expected.stderr
++1b4b77e2ac212d1d5d935ea4ae6caca35ff6169c8a1f23e8b0c1d8dbf464ca23  cases/AWK-524/expected.stdout
++9310383571e1d19813983de3f2b26c4eaeaff9dbebbbebda50903a7c228b55ae  cases/AWK-524/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-524/stdin.txt
++e0a466b69c41fea30942f0f7ade87e9407db62c0ee69beb843f6f43b123de31a  cases/AWK-525/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-525/expected.stderr
++6abdeafc302d5960285d7b0630d318a4c2a84221dcee80c44195f3741961c912  cases/AWK-525/expected.stdout
++2cdaa4f91c003b8628d84faf4d939c3548a2974ceb6f75daa970c9db1a12bb19  cases/AWK-525/program.awk
++911169ddaaf146aff539f58c26c489af3b892dff0fe283c1c264c65ae5aa59a2  cases/AWK-525/stdin.txt
++cbd476a09bd5a99bf4f9c9affafdda93294ea2ba05b5a03db261396fb5442fd9  cases/AWK-526/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-526/expected.stderr
++5e4396f882a69cd2d4e57defe8da0bff12f3b7d1c856753372c3dc574b460d2f  cases/AWK-526/expected.stdout
++7866d7d720742363fd11ee5591be9a949e3a551b31450a9609ef8b6366e709ab  cases/AWK-526/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-526/stdin.txt
++9ab0cf775db5edf303b3e88f708371f87cb6d65a56c259069ddbbca93bca2d1c  cases/AWK-527/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-527/expected.stderr
++bef796ae6fda4571d1e31a0e8e918c9a273728c55dc1a39f6fba7fff1cae1489  cases/AWK-527/expected.stdout
++940f6e4ce52f141bafdbd9917527667412b68795b98b0a2c3fdad782d68fb081  cases/AWK-527/program.awk
++9f2e4ee41b67ed85d340cc9f60a088ba02c7d7f3d57513d0a84c55663e8baac1  cases/AWK-527/stdin.txt
++9256e822c41cb835db0b63491bdd01e9bcb842630d57dc6320d360c70b97bdc2  cases/AWK-528/case.json
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-528/expected.stderr
++9ff474edde2b9bcfc43403bf15f4a609c246838251d5ac6b2bc3574ad5dcef27  cases/AWK-528/expected.stdout
++29986715a5450eb8fb0bb024c6a80748fa753894c1823c5bc6bb7b3f7fd6736e  cases/AWK-528/program.awk
++e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  cases/AWK-528/stdin.txt
++91e101fa2b8825e46ac4398776759e1d110227d068816b0343ee2c035f7b4efa  proposal-sources/grok-evidence-note.md
++a9cc1041deafacaa659e23a7e013bb1800e626415828e94d144a4e1bef7c5f48  proposal-sources/grok-scenarios.py
++0c0050053403c5494ce6098b01a7f7c65a0c3dd848fbd32f144c0b821f952eb3  proposal-sources/grok-v0.6-scenarios.md
++986dcc5966bfcec85180b2748f4c35d43f9fb12a5ec21501ef1e2cbf5d055c46  pyawk-run.log
++afa6e784ab1d3a914626480d7944257cb05d892a491369201ba247d00359008a  pyawk-v0.2-results.json
++1bfcc6e522f5ddb88c3912bb8cffada2b7fd2e525b669df124cff01f65b08235  pyawk-v0.3-spot-results.json
++32b24491b03805bb89a7770be2aadf8a5762e304598eb10de065f9298474e1da  results/independent-v0.6-2026-11-08/LOCAL_ENVIRONMENT.json
++554cf92f363c22e3613d412db61c0f9889a8911c9ff5d446353af539fee2456a  results/independent-v0.6-2026-11-08/mawk.json
++cac2ce096f2a27e579052017a86f5903a9a02592c482bd7ad95a188ec1f6b285  results/independent-v0.6-2026-11-08/mawk.log
++a8a15c171f9afbb3a7b8f1a4f7d4637cb3bacfea119df89c7984687d90097a98  results/independent-v0.6-2026-11-08/nawk.json
++90006d2addd692b25323a2f103fe56f27a88751c85dfa300112abef471048d1b  results/independent-v0.6-2026-11-08/nawk.log
++67f47136175509038b8b31c3e084b966b89758dfed706de26553614b85b1fa5d  results/independent-v0.6-2026-11-08/pyawk-env-clear-verified.json
++69eb92092dd2278af6fcdd232aa5d9cff93fcb93ea520cad1c533f3e99dde773  results/independent-v0.6-2026-11-08/pyawk-older-upload-selected.json
++59a75f39c38215ed8ce5478332ce059c1bcfb36fca78e42554c8dde161f1bb29  results/independent-v0.6-2026-11-08/pyawk-older-upload-selected.log
++9ba549902e36f7e8316c5c2b3f49ec3cf032efdcc04ca317367649b67f43878f  results/local-v0.4/mawk.json
++024765562a63a13289fd04de114316f81835b982a3b2161be3fc394a0c94cfc5  results/local-v0.4/nawk.json
++e369973b73ea4d95a5b295e24eb4faa13f5216d3caea9c7640995655c2161411  results/local-v0.4/pyawk-sample-28.json
++f08392c0a7a4ac00534aa858b2c39a2cc6a39b101f4b885b9a309c993c1f67fc  results/local-v0.4/pyawk-sample-errors-4.json
+ be0591d6d37e7ffe30ebe907471bd42d1f631d33f3efe9addacdde413e92b3a9  results/local-v0.5/VALIDATION.md
+ ae438b8e01eb518aca0136c88a3ab23973e7929ffe02fe8fe4f4c1aaa0266250  results/local-v0.5/mawk-full.json
+ b5f9f845c53bbf08789e295ef80a82b670b6926a9e4199d44af097c9482db4bd  results/local-v0.5/nawk-full.json
+ fc0416453260058c25b009781d0889593dc19c9684623c9c171ed90a77cd0ea9  results/local-v0.5/pyawk-spot.json
+-844afb86b5e67ac38ce2b9e036c70ec2695b55c9a17be7a71291c1487f176c8d  tools/runner.py
+-e07d209623f33e7cc36903a28570e542a2c18c2ee0c32b3b966592bf09b3fa62  tools/summarize.py
+-bfcbddc71737a585fa448eb98f83deffffe81b7d8af807352d0f4df2500cf969  tools/test_runner_env.py
++0f6bd159ed6df68a03df059c14c1172828e01a65e8eb502fff2bbc923b80bd66  system-awk-results.json
++af225f3f51918afa874521a83c2b26dc74fc9ce540eed301e4c06861b062c914  system-awk-v0.2-results.json
++a7be58b11cd81872f53bd621bd627a8409e2d59438eefd856cafe84ba0560dae  system-awk-v0.3-results.json
++1a3ccae638b6feacca801865bc6c752395034a3119af9af59a4aced023122f2c  tools/runner.py
+
+--- v0.5.1/tools/runner.py
++++ archive/tools/runner.py
+@@ -3,7 +3,7 @@
+ import argparse,json,os,pathlib,shlex,subprocess,sys,time,tempfile,shutil,collections
+ ROOT=pathlib.Path(__file__).resolve().parents[1]
+ def main():
+- ap=argparse.ArgumentParser();ap.add_argument('--cmd',required=True);ap.add_argument('--label',default='candidate');ap.add_argument('--timeout',type=float,default=5);ap.add_argument('--output');ap.add_argument('--ids',nargs='*');ap.add_argument('--classifications',nargs='*');args=ap.parse_args()
++ ap=argparse.ArgumentParser();ap.add_argument('--cmd',required=True);ap.add_argument('--label',default='candidate');ap.add_argument('--timeout',type=float,default=5);ap.add_argument('--output');ap.add_argument('--ids',nargs='*');ap.add_argument('--classifications',nargs='*');ap.add_argument('--gate-classifications',nargs='+',default=['portable'],help='Classes that make the process exit nonzero on failure (default: portable)');args=ap.parse_args()
+  command=shlex.split(args.cmd);assert command
+  results=[]
+  for folder in sorted((ROOT/'cases').glob('AWK-*')):
+@@ -19,7 +19,7 @@
+    for f in fixtures:
+     if not (folder/f).is_file() or '..' in pathlib.PurePosixPath(f).parts or pathlib.PurePosixPath(f).is_absolute():raise ValueError('Invalid fixture '+f)
+     dest=wd/f;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(folder/f,dest)
+-   prog=folder/'program.awk';argv=command+options+['-f',str(prog)]+operands
++   prog=folder/'program.awk';argv=command+options+([] if m.get('no_program_file',False) else ['-f',str(prog)])+operands
+    env=({'PATH':os.environ.get('PATH','/usr/bin:/bin'),'HOME':str(wd),'TMPDIR':str(wd)} if m.get('env_clear',False) else os.environ.copy());env.update({'LC_ALL':m.get('locale','C'),'LANG':m.get('locale','C')});env.update(m.get('env',{}))
+    inp=(folder/m.get('stdin','stdin.txt')).read_bytes() if m.get('stdin','stdin.txt') is not None else b''
+    t=time.monotonic()
+@@ -41,5 +41,5 @@
+   dest=pathlib.Path(args.output).resolve()
+   if (ROOT/'cases') in dest.parents:ap.error('Cannot write report inside cases/')
+   dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(json.dumps(report,indent=2)+'\n')
+- return int(report['failures']>0)
++ return int(any(r['status']=='FAIL' and r['classification'] in args.gate_classifications for r in results))
+ if __name__=='__main__':sys.exit(main())

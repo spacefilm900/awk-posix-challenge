@@ -1,0 +1,24 @@
+{
+  "id": "AWK-466",
+  "name": "close-of-an-output-pipe-whose-command-exits-3",
+  "group": "close() / system()",
+  "section": "close() / system()",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1058-1065; 1208-1212",
+  "posix_clause": "1058-1065; 1208-1212",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "Is 'successful' the pclose() call, or the command's status? This is the literal reading of non-zero on failure.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P26",
+  "requires": [
+    "sh"
+  ],
+  "stderr_check": "empty"
+}

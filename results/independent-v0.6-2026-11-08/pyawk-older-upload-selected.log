@@ -1,0 +1,14 @@
+FAIL AWK-391 argv/stdin-filename-no-operands
+FAIL AWK-392 argv/stdin-filename-only-assignment
+FAIL AWK-399 argv/argv-change-to-assignment
+PASS AWK-403 getline/getline-redirected-variable
+PASS AWK-441 -v / assignment operands/v-value-with-t-escape
+PASS AWK-450 -F sepstring/f-t-is-escape-processed-like-v-fs
+PASS AWK-471 getline < "-" / "-" operands/f-reads-the-program-from-standard-input
+FAIL AWK-475 uninitialised values/an-empty-field-is-uninitialised
+FAIL AWK-476 uninitialised values/referencing-a-field-past-nf-does-not-create-it
+PASS AWK-490 index / match / RSTART / RLENGTH/leftmost-beats-longer-then-longest-at-the-same-start
+PASS AWK-521 independent: regex/leftmost-match-wins-over-later-longer-alternative
+FAIL AWK-528 independent: environment/isolated-environment-only-explicit-variables
+
+pyawk-upload-older-selected: 6/12 passed; 6 failed; 0 skipped

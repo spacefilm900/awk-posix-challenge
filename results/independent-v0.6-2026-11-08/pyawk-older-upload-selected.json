@@ -1,0 +1,254 @@
+{
+  "label": "pyawk-upload-older-selected",
+  "command": [
+    "python",
+    "-m",
+    "pyawk"
+  ],
+  "cases": 12,
+  "passes": 6,
+  "failures": 6,
+  "skips": 0,
+  "by_classification": {
+    "observational": {
+      "PASS": 0,
+      "FAIL": 2,
+      "SKIP": 0
+    },
+    "portable": {
+      "PASS": 6,
+      "FAIL": 4,
+      "SKIP": 0
+    }
+  },
+  "results": [
+    {
+      "id": "AWK-391",
+      "name": "stdin-filename-no-operands",
+      "group": "argv",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7453,
+      "actual_stdout": "[]:alpha\n[]:beta\n",
+      "actual_stderr": "",
+      "expected_stdout": "[-]:alpha\n[-]:beta\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-392",
+      "name": "stdin-filename-only-assignment",
+      "group": "argv",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7483,
+      "actual_stdout": "[]:7:x\n",
+      "actual_stderr": "",
+      "expected_stdout": "[-]:7:x\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-399",
+      "name": "argv-change-to-assignment",
+      "group": "argv",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7281,
+      "actual_stdout": "[]:7:hello\n",
+      "actual_stderr": "",
+      "expected_stdout": "[-]:7:hello\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-403",
+      "name": "getline-redirected-variable",
+      "group": "getline",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.8134
+    },
+    {
+      "id": "AWK-441",
+      "name": "v-value-with-t-escape",
+      "group": "-v / assignment operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7993
+    },
+    {
+      "id": "AWK-450",
+      "name": "f-t-is-escape-processed-like-v-fs",
+      "group": "-F sepstring",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7935
+    },
+    {
+      "id": "AWK-471",
+      "name": "f-reads-the-program-from-standard-input",
+      "group": "getline < \"-\" / \"-\" operands",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7974
+    },
+    {
+      "id": "AWK-475",
+      "name": "an-empty-field-is-uninitialised",
+      "group": "uninitialised values",
+      "classification": "observational",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.8306,
+      "actual_stdout": "0 1 0\n",
+      "actual_stderr": "",
+      "expected_stdout": "1 1 0\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-476",
+      "name": "referencing-a-field-past-nf-does-not-create-it",
+      "group": "uninitialised values",
+      "classification": "observational",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.7977,
+      "actual_stdout": "2 0 a b\n",
+      "actual_stderr": "",
+      "expected_stdout": "2 1 a b\n",
+      "files": {}
+    },
+    {
+      "id": "AWK-490",
+      "name": "leftmost-beats-longer-then-longest-at-the-same-start",
+      "group": "index / match / RSTART / RLENGTH",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.8209
+    },
+    {
+      "id": "AWK-521",
+      "name": "leftmost-match-wins-over-later-longer-alternative",
+      "group": "independent: regex",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.8152
+    },
+    {
+      "id": "AWK-528",
+      "name": "isolated-environment-only-explicit-variables",
+      "group": "independent: environment",
+      "classification": "portable",
+      "status": "FAIL",
+      "checks": {
+        "stdout": false,
+        "stderr": false,
+        "exit": false,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 1,
+      "duration_seconds": 0.7822,
+      "actual_stdout": "",
+      "actual_stderr": "/opt/pyvenv/bin/python: No module named pyawk\n",
+      "expected_stdout": "present 0\n",
+      "files": {}
+    }
+  ]
+}

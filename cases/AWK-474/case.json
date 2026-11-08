@@ -1,0 +1,23 @@
+{
+  "id": "AWK-474",
+  "name": "comparisons-involving-an-uninitialised-value",
+  "group": "uninitialised values",
+  "section": "uninitialised values",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "711-723",
+  "posix_clause": "711-723",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P34",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

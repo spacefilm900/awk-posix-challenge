@@ -1,0 +1,22 @@
+{
+  "id": "AWK-521",
+  "name": "leftmost-match-wins-over-later-longer-alternative",
+  "group": "independent: regex",
+  "section": "independent: regex",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "XBD ERE leftmost-longest",
+  "posix_clause": "XBD ERE leftmost-longest",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

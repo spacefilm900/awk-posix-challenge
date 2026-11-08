@@ -1,0 +1,23 @@
+{
+  "id": "AWK-487",
+  "name": "match-of-is-at-the-end-of-the-string",
+  "group": "index / match / RSTART / RLENGTH",
+  "section": "index / match / RSTART / RLENGTH",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1162-1165",
+  "posix_clause": "1162-1165",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "The empty match is after the last character, which is position 4 when numbering from 1.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P47",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

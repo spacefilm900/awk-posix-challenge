@@ -1,0 +1,25 @@
+{
+  "id": "AWK-441",
+  "name": "v-value-with-t-escape",
+  "group": "-v / assignment operands",
+  "section": "-v / assignment operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "77-81; 101-110; 1653-1657",
+  "posix_clause": "77-81; 101-110; 1653-1657",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-v",
+    "x=a\\tb"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P01",
+  "requires": [],
+  "stderr_check": "empty"
+}

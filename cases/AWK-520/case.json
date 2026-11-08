@@ -1,0 +1,22 @@
+{
+  "id": "AWK-520",
+  "name": "assigning-nf-to-zero-rebuilds-empty-record",
+  "group": "independent: fields",
+  "section": "independent: fields",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk fields: NF assignment (check interpretation)",
+  "posix_clause": "awk fields: NF assignment (check interpretation)",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "NF assignment has historically varied; observational unless explicitly adjudicated",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

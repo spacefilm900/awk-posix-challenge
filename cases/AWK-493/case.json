@@ -1,0 +1,23 @@
+{
+  "id": "AWK-493",
+  "name": "split-with-a-single-character-fs-is-literal",
+  "group": "split",
+  "section": "split",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1166-1172; 960-965",
+  "posix_clause": "1166-1172; 960-965",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "This uses the same FS-rules reading as the previous scenario. A pure ERE reading gives 6 empty elements.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P53",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

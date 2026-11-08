@@ -1,0 +1,23 @@
+{
+  "id": "AWK-478",
+  "name": "missing-function-arguments-are-uninitialised",
+  "group": "uninitialised values",
+  "section": "uninitialised values",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1272-1275",
+  "posix_clause": "1272-1275",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P38",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

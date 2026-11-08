@@ -1,0 +1,22 @@
+{
+  "id": "AWK-484",
+  "name": "index-with-an-empty-needle",
+  "group": "index / match / RSTART / RLENGTH",
+  "section": "index / match / RSTART / RLENGTH",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1155-1157",
+  "posix_clause": "1155-1157",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "The text does not say whether an empty string 'occurs' in s. The literal reading is that it occurs first at position 1, including in an empty s.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P44",
+  "requires": [],
+  "stderr_check": "empty"
+}

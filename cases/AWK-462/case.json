@@ -1,0 +1,24 @@
+{
+  "id": "AWK-462",
+  "name": "output-order-around-system",
+  "group": "close() / system()",
+  "section": "close() / system()",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1255-1258; 1043-1044",
+  "posix_clause": "1255-1258; 1043-1044",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "POSIX 2024 does not say that pending output is flushed before system(). Historical awks flush it.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P22",
+  "requires": [
+    "sh"
+  ],
+  "stderr_check": "empty"
+}

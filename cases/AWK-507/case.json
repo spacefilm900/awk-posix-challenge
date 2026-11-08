@@ -1,0 +1,22 @@
+{
+  "id": "AWK-507",
+  "name": "getline-var-updates-nr-and-fnr-not-0-or-nf",
+  "group": "stateful combinations",
+  "section": "stateful combinations",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1239-1242",
+  "posix_clause": "1239-1242",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P67",
+  "requires": [],
+  "stderr_check": "empty"
+}

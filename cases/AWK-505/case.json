@@ -1,0 +1,24 @@
+{
+  "id": "AWK-505",
+  "name": "getline-var-file-leaves-nr-fnr-nf-and-0-alone",
+  "group": "stateful combinations",
+  "section": "stateful combinations",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1243-1250",
+  "posix_clause": "1243-1250",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [
+    "f"
+  ],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P65",
+  "requires": [],
+  "stderr_check": "empty"
+}

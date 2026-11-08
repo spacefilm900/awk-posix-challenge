@@ -1,0 +1,7 @@
+{
+  "entries": 2812,
+  "failed": [],
+  "uncovered": [
+    "SHA256SUMS.txt"
+  ]
+}

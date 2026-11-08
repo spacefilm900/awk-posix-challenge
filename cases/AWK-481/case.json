@@ -1,0 +1,22 @@
+{
+  "id": "AWK-481",
+  "name": "substr-with-n-0-is-empty",
+  "group": "substr",
+  "section": "substr",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1190",
+  "posix_clause": "1190",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P41",
+  "requires": [],
+  "stderr_check": "empty"
+}

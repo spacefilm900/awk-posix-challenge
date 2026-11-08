@@ -1,0 +1,23 @@
+{
+  "id": "AWK-492",
+  "name": "split-with-fs-uses-default-field-splitting",
+  "group": "split",
+  "section": "split",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1166-1172; 955-963",
+  "posix_clause": "1166-1172; 955-963",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "This applies the FS rules (955-969) to fs. 1169 says 'with the ERE fs', so ChatGPT should confirm the reading.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P52",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

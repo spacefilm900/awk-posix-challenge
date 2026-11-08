@@ -1,0 +1,26 @@
+{
+  "id": "AWK-513",
+  "name": "getline-filename-is-a-separate-stream-from-the-main-input",
+  "group": "multi-file",
+  "section": "multi-file",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1243-1248",
+  "posix_clause": "1243-1248",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [
+    "f1"
+  ],
+  "fixtures": [
+    "f1"
+  ],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P73",
+  "requires": [],
+  "stderr_check": "empty"
+}

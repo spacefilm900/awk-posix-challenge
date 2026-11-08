@@ -1,0 +1,25 @@
+{
+  "id": "AWK-447",
+  "name": "v-value-that-only-looks-numeric-1e",
+  "group": "-v / assignment operands",
+  "section": "-v / assignment operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "610-625; 719-722",
+  "posix_clause": "610-625; 719-722",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-v",
+    "x=1e"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P07",
+  "requires": [],
+  "stderr_check": "empty"
+}

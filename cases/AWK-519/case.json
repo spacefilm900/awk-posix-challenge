@@ -1,0 +1,22 @@
+{
+  "id": "AWK-519",
+  "name": "reassign-field-zero-triggers-resplitting-with-current-fs",
+  "group": "independent: fields",
+  "section": "independent: fields",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk fields: assigning $0",
+  "posix_clause": "awk fields: assigning $0",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "AWK-445",
+  "name": "v-numeric-string-with-leading-zeros",
+  "group": "-v / assignment operands",
+  "section": "-v / assignment operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "599-607; 610-631; 711-717",
+  "posix_clause": "599-607; 610-631; 711-717",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-v",
+    "x=010"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P05",
+  "requires": [],
+  "stderr_check": "empty"
+}

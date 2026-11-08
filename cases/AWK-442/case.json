@@ -1,0 +1,25 @@
+{
+  "id": "AWK-442",
+  "name": "v-value-ending-in-an-unescaped-backslash",
+  "group": "-v / assignment operands",
+  "section": "-v / assignment operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "106-110",
+  "posix_clause": "106-110",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-v",
+    "x=ab\\"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P02",
+  "requires": [],
+  "stderr_check": "empty"
+}

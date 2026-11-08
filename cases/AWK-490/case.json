@@ -1,0 +1,22 @@
+{
+  "id": "AWK-490",
+  "name": "leftmost-beats-longer-then-longest-at-the-same-start",
+  "group": "index / match / RSTART / RLENGTH",
+  "section": "index / match / RSTART / RLENGTH",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "838 (XBD 9.1 and 9.4); 1162-1165; 1176-1180",
+  "posix_clause": "838 (XBD 9.1 and 9.4); 1162-1165; 1176-1180",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "This replaces redundant leftmost-longest tests. The longer alternative starts later, so the earlier, shorter match wins.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P50",
+  "requires": [],
+  "stderr_check": "empty"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "AWK-476",
+  "name": "referencing-a-field-past-nf-does-not-create-it",
+  "group": "uninitialised values",
+  "section": "uninitialised values",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "738-739",
+  "posix_clause": "738-739",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "738 says a nonexistent field evaluates to the uninitialized value, and 717 makes the comparison numeric. The same caveat applies as for the previous scenario.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P36",
+  "requires": [],
+  "stderr_check": "empty",
+  "adjudication": "Austin Group defect 1198: cannot make a conformance distinction over uninitialised fields; expected output is hypothesis only"
+}

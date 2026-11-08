@@ -1,0 +1,22 @@
+{
+  "id": "AWK-502",
+  "name": "exit-with-no-expression-in-end-keeps-the-earlier-status",
+  "group": "stateful combinations",
+  "section": "stateful combinations",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1038-1042",
+  "posix_clause": "1038-1042",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 3,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P62",
+  "requires": [],
+  "stderr_check": "empty"
+}

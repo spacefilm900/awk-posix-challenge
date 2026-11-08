@@ -1,0 +1,28 @@
+{
+  "id": "AWK-514",
+  "name": "nextfile-in-each-file-nr-counts-the-record-that-called-it",
+  "group": "multi-file",
+  "section": "multi-file",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "812-814; 1035-1037",
+  "posix_clause": "812-814; 1035-1037",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [
+    "f1",
+    "f2"
+  ],
+  "fixtures": [
+    "f1",
+    "f2"
+  ],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P74",
+  "requires": [],
+  "stderr_check": "empty"
+}

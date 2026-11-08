@@ -1,0 +1,28 @@
+{
+  "id": "AWK-512",
+  "name": "filename-and-fnr-in-end-when-the-last-file-is-empty",
+  "group": "multi-file",
+  "section": "multi-file",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "797-803",
+  "posix_clause": "797-803",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [
+    "f1",
+    "empty"
+  ],
+  "fixtures": [
+    "f1",
+    "empty"
+  ],
+  "note": "Is an empty file 'processed' (799, 803)? The literal reading says yes: FILENAME is 'empty' and FNR is 0.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P72",
+  "requires": [],
+  "stderr_check": "empty"
+}

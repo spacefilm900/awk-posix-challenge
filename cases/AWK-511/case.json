@@ -1,0 +1,30 @@
+{
+  "id": "AWK-511",
+  "name": "fnr-nr-and-filename-with-an-empty-middle-file",
+  "group": "multi-file",
+  "section": "multi-file",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "797-803; 811-814",
+  "posix_clause": "797-803; 811-814",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [
+    "f1",
+    "empty",
+    "f2"
+  ],
+  "fixtures": [
+    "f1",
+    "empty",
+    "f2"
+  ],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P71",
+  "requires": [],
+  "stderr_check": "empty"
+}

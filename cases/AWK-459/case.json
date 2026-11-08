@@ -1,0 +1,22 @@
+{
+  "id": "AWK-459",
+  "name": "c-with-a-numeric-string-field",
+  "group": "printf %c",
+  "section": "printf %c",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "599-607; 1096-1099",
+  "posix_clause": "599-607; 1096-1099",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "A field '66' is a numeric string. Does it 'have a numeric value' (1096)? The literal reading gives 'B'; the alternative is '6'.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P19",
+  "requires": [],
+  "stderr_check": "empty"
+}

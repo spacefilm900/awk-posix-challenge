@@ -1,0 +1,25 @@
+{
+  "id": "AWK-461",
+  "name": "system-returns-the-command-s-exit-status",
+  "group": "close() / system()",
+  "section": "close() / system()",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1255-1258",
+  "posix_clause": "1255-1258",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P21",
+  "requires": [
+    "sh"
+  ],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

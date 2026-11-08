@@ -1,0 +1,25 @@
+{
+  "id": "AWK-450",
+  "name": "f-t-is-escape-processed-like-v-fs",
+  "group": "-F sepstring",
+  "section": "-F sepstring",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "62-65; 107-110; 960-965",
+  "posix_clause": "62-65; 107-110; 960-965",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-F",
+    "\\t"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P10",
+  "requires": [],
+  "stderr_check": "empty"
+}

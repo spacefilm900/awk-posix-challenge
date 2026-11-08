@@ -1,0 +1,25 @@
+{
+  "id": "AWK-470",
+  "name": "getline-when-a-file-named-exists",
+  "group": "getline < \"-\" / \"-\" operands",
+  "section": "getline < \"-\" / \"-\" operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1243-1250; contrast 73, 100, 776-778",
+  "posix_clause": "1243-1250; contrast 73, 100, 776-778",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [
+    "-"
+  ],
+  "note": "POSIX gives '-' a stdin meaning only for file operands (100, 777) and -f progfile (73). getline < expression uses the value as a pathname (1245). The literal reading is the file '-'. Every historical awk reads stdin.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P30",
+  "requires": [],
+  "stderr_check": "empty",
+  "adjudication": "getline < \"-\": pathname vs stdin special-case; spec conflict / implementation difference"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "AWK-472",
+  "name": "argv-element-set-to-at-run-time-reads-stdin",
+  "group": "getline < \"-\" / \"-\" operands",
+  "section": "getline < \"-\" / \"-\" operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "752-759; 776-778; 797-798",
+  "posix_clause": "752-759; 776-778; 797-798",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [
+    "f1"
+  ],
+  "fixtures": [
+    "f1"
+  ],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P32",
+  "requires": [],
+  "stderr_check": "empty"
+}

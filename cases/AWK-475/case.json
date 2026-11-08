@@ -1,0 +1,26 @@
+{
+  "id": "AWK-475",
+  "name": "an-empty-field-is-uninitialised",
+  "group": "uninitialised values",
+  "section": "uninitialised values",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "741-743; 711-717",
+  "posix_clause": "741-743; 711-717",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-F",
+    ","
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "Normative: 742 says an empty field created by FS splitting has the uninitialized value, and 717 says comparing it with a number is numeric. The RATIONALE (2312-2317) gives this very case. Established implementations compare it as the string \"\" here, so this may need a standards interpretation, as with AWK-415 and AWK-417.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P35",
+  "requires": [],
+  "stderr_check": "empty",
+  "adjudication": "Austin Group defect 1198: cannot make a conformance distinction over uninitialised fields; expected output is hypothesis only"
+}

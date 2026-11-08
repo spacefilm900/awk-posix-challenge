@@ -3,7 +3,7 @@
 import argparse,json,os,pathlib,shlex,subprocess,sys,time,tempfile,shutil,collections
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--cmd',required=True);ap.add_argument('--label',default='candidate');ap.add_argument('--timeout',type=float,default=5);ap.add_argument('--output');ap.add_argument('--ids',nargs='*');ap.add_argument('--classifications',nargs='*');args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--cmd',required=True);ap.add_argument('--label',default='candidate');ap.add_argument('--timeout',type=float,default=5);ap.add_argument('--output');ap.add_argument('--ids',nargs='*');ap.add_argument('--classifications',nargs='*');ap.add_argument('--gate-classifications',nargs='+',default=['portable'],help='Classes that make the process exit nonzero on failure (default: portable)');args=ap.parse_args()
  command=shlex.split(args.cmd);assert command
  results=[]
  for folder in sorted((ROOT/'cases').glob('AWK-*')):
@@ -19,7 +19,7 @@ def main():
    for f in fixtures:
     if not (folder/f).is_file() or '..' in pathlib.PurePosixPath(f).parts or pathlib.PurePosixPath(f).is_absolute():raise ValueError('Invalid fixture '+f)
     dest=wd/f;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(folder/f,dest)
-   prog=folder/'program.awk';argv=command+options+['-f',str(prog)]+operands
+   prog=folder/'program.awk';argv=command+options+([] if m.get('no_program_file',False) else ['-f',str(prog)])+operands
    env=({'PATH':os.environ.get('PATH','/usr/bin:/bin'),'HOME':str(wd),'TMPDIR':str(wd)} if m.get('env_clear',False) else os.environ.copy());env.update({'LC_ALL':m.get('locale','C'),'LANG':m.get('locale','C')});env.update(m.get('env',{}))
    inp=(folder/m.get('stdin','stdin.txt')).read_bytes() if m.get('stdin','stdin.txt') is not None else b''
    t=time.monotonic()
@@ -41,5 +41,5 @@ def main():
   dest=pathlib.Path(args.output).resolve()
   if (ROOT/'cases') in dest.parents:ap.error('Cannot write report inside cases/')
   dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(json.dumps(report,indent=2)+'\n')
- return int(report['failures']>0)
+ return int(any(r['status']=='FAIL' and r['classification'] in args.gate_classifications for r in results))
 if __name__=='__main__':sys.exit(main())

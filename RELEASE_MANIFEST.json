@@ -1,0 +1,25 @@
+{
+  "release": "v0.6 independent final proposed freeze",
+  "date_utc": "2026-11-08",
+  "cases": 528,
+  "baseline_source": "AWK_Challenge_440_Tests_v0.5.zip",
+  "upstream_v051_reconstruction": true,
+  "new_proposed_from_grok": 75,
+  "new_independent": 13,
+  "classification_counts": {
+    "portable": 475,
+    "observational": 52,
+    "nonportable": 1
+  },
+  "validation": {
+    "mawk": {
+      "passes": 519,
+      "fails": 9
+    },
+    "nawk": {
+      "passes": 519,
+      "fails": 9
+    }
+  },
+  "note": "SHA256SUMS.txt excludes itself and RELEASE_MANIFEST.json (generated after initial manifest); see checksum coverage update in packaging"
+}

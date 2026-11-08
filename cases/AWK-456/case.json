@@ -1,0 +1,22 @@
+{
+  "id": "AWK-456",
+  "name": "c-with-a-numeric-argument",
+  "group": "printf %c",
+  "section": "printf %c",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1096-1097",
+  "posix_clause": "1096-1097",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P16",
+  "requires": [],
+  "stderr_check": "empty"
+}

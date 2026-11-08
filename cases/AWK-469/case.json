@@ -1,0 +1,23 @@
+{
+  "id": "AWK-469",
+  "name": "getline-from-a-missing-file-returns-1-and-leaves-nr-alone",
+  "group": "close() / system()",
+  "section": "close() / system()",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1260; 1243-1250",
+  "posix_clause": "1260; 1243-1250",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P29",
+  "requires": [],
+  "stderr_check": "ignore",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

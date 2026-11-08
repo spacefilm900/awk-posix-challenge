@@ -1,0 +1,25 @@
+{
+  "id": "AWK-452",
+  "name": "f-with-a-single-ere-metacharacter-is-literal",
+  "group": "-F sepstring",
+  "section": "-F sepstring",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "960-965",
+  "posix_clause": "960-965",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-F",
+    "|"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P12",
+  "requires": [],
+  "stderr_check": "empty"
+}

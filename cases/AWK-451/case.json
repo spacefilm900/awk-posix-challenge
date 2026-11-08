@@ -1,0 +1,26 @@
+{
+  "id": "AWK-451",
+  "name": "f-t-means-the-letter-t-not-tab",
+  "group": "-F sepstring",
+  "section": "-F sepstring",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "62-65; 964-965",
+  "posix_clause": "62-65; 964-965",
+  "posix_status": "portable (provisional)",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-F",
+    "t"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "Historical awks map -Ft to tab. POSIX defines -F sepstring as -v FS=sepstring, so FS is the letter 't'.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P11",
+  "requires": [],
+  "stderr_check": "empty",
+  "review_gate": "non-gating until independently adjudicated; class observational"
+}

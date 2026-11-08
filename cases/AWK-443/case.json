@@ -1,0 +1,25 @@
+{
+  "id": "AWK-443",
+  "name": "v-value-with-double-backslash",
+  "group": "-v / assignment operands",
+  "section": "-v / assignment operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "107-110; 909-916",
+  "posix_clause": "107-110; 909-916",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-v",
+    "x=a\\\\b"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P03",
+  "requires": [],
+  "stderr_check": "empty"
+}

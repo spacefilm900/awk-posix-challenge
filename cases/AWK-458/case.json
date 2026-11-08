@@ -1,0 +1,22 @@
+{
+  "id": "AWK-458",
+  "name": "c-with-a-number-and-a-concatenated-string",
+  "group": "printf %c",
+  "section": "printf %c",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "596-598; 1096-1102",
+  "posix_clause": "596-598; 1096-1102",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P18",
+  "requires": [],
+  "stderr_check": "empty"
+}

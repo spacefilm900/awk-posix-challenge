@@ -1,9 +1,20 @@
-# Independent POSIX AWK Challenge v0.5.1 (correction release of the v0.5 proposal)
+# Independent POSIX AWK Challenge v0.6 — final proposed freeze
 
-> **v0.5.1** is a correction release that makes only the changes ChatGPT directed in
-> [feedback/ChatGPT-response-to-v0.5.md](feedback/ChatGPT-response-to-v0.5.md). See
-> [CHANGELOG-v0.5.1.md](CHANGELOG-v0.5.1.md) and [MANIFEST-v0.5.1.md](MANIFEST-v0.5.1.md). Class counts are now
-> 420 portable, 19 observational and 1 nonportable. The v0.5 text below is otherwise unchanged.
+**528 total cases:** 440 inherited from the v0.5 corpus with minimal v0.5.1 corrections reconstructed from Grok’s report, plus 75 reviewed implementation-side proposals and 13 independently authored scenarios. **This is an independent challenge artifact, not an official POSIX certification.**
+
+**Important provenance:** This working release is based on the v0.5 ZIP available to ChatGPT, not on a byte-for-byte export of Grok’s tagged v0.5.1 tree. Reconstructed v0.5.1 edits: AWK-403 parentheses and AWK-415/416/417/419 metadata. It does NOT claim to reproduce every v0.5.1 ancillary tool or document. Grok must compare these files with tagged v0.5.1 and flag any discrepancy before adopting v0.6. The actual v0.5.1 frozen upstream tag remains authoritative.
+
+**Execution:** `python3 tools/runner.py --cmd mawk --output results.json`. The runner checks each test in a fresh working directory. `--gate-classifications` defaults to `portable`, but the JSON still reports every disagreement. To fail the process for observational cases too, supply `--gate-classifications portable observational nonportable`. Optional `--ids AWK-...` selects cases. Test AWK-471 uses `no_program_file` to support `-f -`. Test AWK-528 sets `env_clear=true`. Runner’s isolated environment retains PATH, HOME and TMPDIR, so `python -m pyawk` requires an explicitly provided PYTHONPATH or an installed launcher.
+
+**Classification discipline:** Observational outputs represent explicitly labelled hypotheses or compatibility observations; they are not conformance oracles, and discrepancies must never automatically trigger interpreter changes. Tests AWK-475/476 cite Austin Group 1198 and are observational. AWK-470 and AWK-482 are likewise observational. UTF-8 tests under `C.UTF-8` are observational until locale/reference evidence is adjudicated (AWK-483, 489). AWK-415/417 remain provisionally specified portable despite known mawk disagreement; AWK-416 and 419 remain observational. No expected output was changed to force a reference implementation pass.
+
+## Full technical documentation
+
+See `FINAL_HANDOVER_TO_GROK.md`, `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
+
+## Previous README (v0.5)
+
+# Independent POSIX AWK Challenge v0.5 (proposal)
 
 **440 total cases**: 390 carried from v0.4 (nine prior tests corrected with recorded changes), plus **50 distinct new scenarios (AWK-391–440)**.
 
@@ -35,82 +46,6 @@ sha256sum -c SHA256SUMS.txt
 ```
 
 `SHA256SUMS.txt` checksums the case inputs, metadata and expectations, the runner, the README and the changelog. Runner never writes to cases/. Execution occurs in a fresh temporary working directory.
-
-## Summary reporting by class
-
-*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md ("Requested next actions").*
-
-Always report the three classes separately; never add them into one headline score.
-
-- **Portable conformance** (`portable`). The POSIX text specifies the behaviour. A failure is a *candidate*
-  POSIX violation, which still has to be adjudicated against the text.
-- **Observational compatibility** (`observational`). The case records common practice, or a contested or
-  unstated point. A failure is never evidence of a POSIX violation.
-- **Nonportable** (`nonportable`). The behaviour is unspecified or implementation-defined, and the result is
-  for information only.
-
-```sh
-python3 tools/summarize.py results/*.json              # text
-python3 tools/summarize.py --markdown results/*.json   # a Markdown table
-```
-
-v0.5.1 has 440 cases: 420 portable, 19 observational and 1 nonportable.
-
-## Environment isolation (`env_clear`)
-
-*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md, decision 8.*
-
-A case may set `"env_clear": true`. The runner then starts the interpreter with only `PATH`, `HOME`, `TMPDIR`,
-`LC_ALL`/`LANG` (from the case's `locale`) and the case's own `env` values. It does not pass on the caller's
-environment.
-
-**Pitfall: `env_clear` also removes `PYTHONPATH`.** An interpreter started as
-`PYTHONPATH=/path/to/pyawk python3 -m pyawk` then fails with "No module named pyawk". That is a harness
-failure, not an AWK result. To avoid it, use either an installed executable, or an explicit command
-environment that the runner passes through unchanged:
-
-```sh
-python3 tools/runner.py --cmd 'env PYTHONPATH=/path/to/pyawk python3 -m pyawk' --label pyawk ...
-```
-
-The harness's execution environment is separate from the `ENVIRON` values that cases test. Cases set the
-variables they test through their `env` field, and never rely on the caller's environment.
-`tools/test_runner_env.py` is a controlled harness test of this behaviour; it is not an AWK case:
-
-```sh
-python3 tools/test_runner_env.py                         # needs an installed awk (mawk, gawk or awk)
-python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
-```
-
-## Strict-grammar check (warning signal, not an oracle)
-
-`tools/grammar_check.py` looks for portable cases that may be outside the POSIX grammar. It was added at ChatGPT's request in
-`feedback/ChatGPT-response-to-v0.5.md` (next actions). It reports two kinds of warning:
-
-- **Rejected by a strict awk.** It runs each case under One True AWK (`--onetrue PATH`, or the `ONETRUE_AWK`
-  environment variable), using the runner's argv, fixtures, stdin and locale. It reports any parse diagnostic.
-- **Constructs a lexical scan finds outside the grammar, or ambiguous or unspecified there.** These are:
-  - an unparenthesised comparison in a `print`/`printf` list (awk2024.txt lines 1537-1597);
-  - `**` and `**=`;
-  - gawk-only functions, variables and keywords, and `|&`;
-  - `func`;
-  - GNU regex operators;
-  - unparenthesised concatenation around `getline` (lines 1231-1233 and 1251-1253);
-  - a multi-character `RS` (line 827).
-
-```sh
-python3 tools/grammar_check.py            # static scan plus the One True AWK parse check
-python3 tools/grammar_check.py --no-run   # static scan only
-```
-
-**A warning means "review this case by hand against the grammar".** It is not a verdict.
-- One True AWK has its own extensions and bugs.
-- The scan is a heuristic lexer, not a parser.
-- Some flagged constructs are fine in nonportable or observational cases.
-
-A clean run does not prove that every program conforms. The tool always exits 0. For v0.5.1 it flags 0 of the
-440 cases. Run against the v0.5 tree, it flags exactly one case: AWK-403, the case ChatGPT corrected. See
-`results/grok-v0.5.1-2026-11-07/grammar-check*.txt`.
 
 ## Caveats
 

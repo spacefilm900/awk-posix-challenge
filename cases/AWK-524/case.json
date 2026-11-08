@@ -1,0 +1,22 @@
+{
+  "id": "AWK-524",
+  "name": "gsub-ampersand-inserts-matched-substring",
+  "group": "independent: regex",
+  "section": "independent: regex",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk sub/gsub replacement &",
+  "posix_clause": "awk sub/gsub replacement &",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

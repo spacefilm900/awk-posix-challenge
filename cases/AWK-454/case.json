@@ -1,0 +1,25 @@
+{
+  "id": "AWK-454",
+  "name": "f-is-the-default-field-splitting",
+  "group": "-F sepstring",
+  "section": "-F sepstring",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "62-65; 962-963",
+  "posix_clause": "62-65; 962-963",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-F",
+    " "
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P14",
+  "requires": [],
+  "stderr_check": "empty"
+}

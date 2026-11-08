@@ -1,0 +1,23 @@
+{
+  "id": "AWK-482",
+  "name": "substr-with-m-0",
+  "group": "substr",
+  "section": "substr",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1190-1192",
+  "posix_clause": "1190-1192",
+  "posix_status": "observational",
+  "classification": "observational",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "The text (1190-1192) does not define a start before position 1. The expectation shown is one reading: the characters at positions m..m+n-1 that exist, which gives 'h'. Another reading is to treat m as 1, which gives 'he'. Recommendation: ChatGPT should choose a reading, or classify this case as nonportable.",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P42",
+  "requires": [],
+  "stderr_check": "empty",
+  "adjudication": "substr m <= 0: not specified; hypothesis only"
+}

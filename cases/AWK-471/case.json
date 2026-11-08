@@ -1,0 +1,26 @@
+{
+  "id": "AWK-471",
+  "name": "f-reads-the-program-from-standard-input",
+  "group": "getline < \"-\" / \"-\" operands",
+  "section": "getline < \"-\" / \"-\" operands",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "72-76",
+  "posix_clause": "72-76",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [
+    "-f",
+    "-"
+  ],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P31",
+  "requires": [],
+  "no_program_file": true,
+  "stderr_check": "empty"
+}

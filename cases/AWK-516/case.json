@@ -1,0 +1,22 @@
+{
+  "id": "AWK-516",
+  "name": "logical-and-short-circuits-assignment",
+  "group": "independent: boolean",
+  "section": "independent: boolean",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk expressions: logical && evaluation",
+  "posix_clause": "awk expressions: logical && evaluation",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

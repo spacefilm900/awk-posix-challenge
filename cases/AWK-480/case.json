@@ -1,0 +1,22 @@
+{
+  "id": "AWK-480",
+  "name": "substr-bounds-omitted-n-n-too-large-start-past-the-end",
+  "group": "substr",
+  "section": "substr",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "1188-1192",
+  "posix_clause": "1188-1192",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P40",
+  "requires": [],
+  "stderr_check": "empty"
+}

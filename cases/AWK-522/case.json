@@ -1,0 +1,22 @@
+{
+  "id": "AWK-522",
+  "name": "subsep-creates-compound-subscript-and-direct-string-alias",
+  "group": "independent: arrays",
+  "section": "independent: arrays",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk arrays: multidimensional indexing SUBSEP",
+  "posix_clause": "awk arrays: multidimensional indexing SUBSEP",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "independently authored ChatGPT scenario",
+  "v06_proposal_id": null,
+  "requires": [],
+  "stderr_check": "empty"
+}

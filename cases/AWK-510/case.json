@@ -1,0 +1,22 @@
+{
+  "id": "AWK-510",
+  "name": "convfmt-for-subscripts-and-concatenation-ofmt-for-print-d-for-integers",
+  "group": "stateful combinations",
+  "section": "stateful combinations",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "590-595; 783-785; 815-818",
+  "posix_clause": "590-595; 783-785; 815-818",
+  "posix_status": "portable",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "options": [],
+  "operands": [],
+  "fixtures": [],
+  "note": "",
+  "v06_origin": "Grok proposed; independently reviewed/recategorised",
+  "v06_proposal_id": "P70",
+  "requires": [],
+  "stderr_check": "empty"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "AWK-528",
+  "name": "isolated-environment-only-explicit-variables",
+  "group": "independent: environment",
+  "section": "ENVIRON",
+  "specification_url": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html",
+  "posix_reference": "awk: ENVIRON and execution environment",
+  "posix_clause": "ENVIRON reflects environment supplied to candidate; runner clears inherited environment except documented essentials",
+  "posix_status": "specified with harness isolation",
+  "classification": "portable",
+  "locale": "C",
+  "expected_exit": 0,
+  "stdin": "stdin.txt",
+  "env_clear": true,
+  "env": {
+    "V06_ISOLATED": "present"
+  },
+  "v06_origin": "independently authored ChatGPT scenario",
+  "note": "Runner environment isolation; outcome must not depend on ambient V06_SHOULD_NOT_LEAK. Harness is tested separately."
+}
