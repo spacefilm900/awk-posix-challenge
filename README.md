@@ -64,6 +64,16 @@ python3 tools/test_runner_env.py                         # needs an installed aw
 python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
 ```
 
+## Locale assumptions (UTF-8 tests)
+
+*Added for the final v0.6 tag, as directed by ChatGPT's final v0.6 review. Documentation only; no case changed.*
+
+- The runner sets both `LC_ALL` and `LANG` to the case's `locale` field (default `C`) for every case, overriding the caller's settings. 526 cases run under `C`/POSIX, so their results do not depend on the host locale.
+- Two cases, AWK-483 (`substr`/`length` count characters) and AWK-489 (`RSTART`/`RLENGTH` count characters), set `"locale": "C.UTF-8"` and `"requires_locale": "C.UTF-8"`. Their expectations assume that a UTF-8 multibyte locale named `C.UTF-8` exists on the host (glibc lists it as `C.utf8` in `locale -a`) and that the interpreter honours `LC_ALL` for character semantics. If the locale is missing, the C library silently falls back to `C` (bytes), and the result says nothing about the interpreter.
+- Both cases are **observational**: POSIX defines the behaviour in terms of the current locale but does not require any particular locale to exist, so the result is not a portable conformance oracle.
+- Input bytes and expected outputs are stored as raw UTF-8. Regex escapes such as `\xc3\xa9` are undefined in POSIX EREs (awk2024.txt lines 921-928), so byte/character regex differences under UTF-8 are observations, not defects.
+- The frozen v0.6 results (`results/grok-v0.6-2026-11-08/`) were produced on Linux with glibc, where `C.UTF-8` is available. Check `locale -a` before comparing results from another host.
+
 ## Previous README (v0.5)
 
 # Independent POSIX AWK Challenge v0.5 (proposal)
