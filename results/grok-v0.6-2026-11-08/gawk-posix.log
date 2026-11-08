@@ -1,0 +1,530 @@
+PASS AWK-001 fields/default-whitespace
+PASS AWK-002 fields/empty-line
+PASS AWK-003 fields/explicit-separator-empty
+PASS AWK-004 fields/field-assign-rebuild
+PASS AWK-005 fields/extend-nf
+PASS AWK-006 fields/nf-truncate
+PASS AWK-007 fields/zero-reassign
+PASS AWK-008 fields/beyond-nf-read
+PASS AWK-009 fields/fs-regex
+PASS AWK-010 fields/ofs-dynamic-rebuild
+PASS AWK-011 records/nr-fnr
+PASS AWK-012 records/next-skips
+PASS AWK-013 records/range-pattern
+PASS AWK-014 records/begin-end
+PASS AWK-015 records/rs-single-char
+PASS AWK-016 records/ors-custom
+PASS AWK-017 records/getline-var
+PASS AWK-018 records/getline-record
+PASS AWK-019 records/getline-eof
+PASS AWK-020 records/blank-record-as-data
+PASS AWK-021 values/numeric-field-comparison
+PASS AWK-022 values/literal-string-comparison
+PASS AWK-023 values/numeric-string-field-lexical
+PASS AWK-024 values/uninitialized-arithmetic
+PASS AWK-025 values/string-to-number
+PASS AWK-026 values/concatenation-precedence
+PASS AWK-027 values/ternary-shortcircuit
+PASS AWK-028 values/and-shortcircuit
+PASS AWK-029 values/or-shortcircuit
+PASS AWK-030 values/modulo-sign
+PASS AWK-031 arrays/key-coercion
+PASS AWK-032 arrays/delete-element
+PASS AWK-033 arrays/multisubscript
+PASS AWK-034 arrays/custom-subsep
+PASS AWK-035 arrays/split-basic
+PASS AWK-036 arrays/split-clears-array
+PASS AWK-037 arrays/array-by-reference
+PASS AWK-038 arrays/scalar-by-value
+PASS AWK-039 arrays/recursion
+PASS AWK-040 arrays/function-local-extra-param
+PASS AWK-041 regex/leftmost-longest-sub
+PASS AWK-042 regex/match-offset
+PASS AWK-043 regex/match-no-result
+PASS AWK-044 regex/gsub-count
+PASS AWK-045 regex/sub-ampersand
+PASS AWK-046 regex/anchored-match
+PASS AWK-047 regex/regex-in-split
+PASS AWK-048 strings/substr-edge
+PASS AWK-049 strings/index-positions
+PASS AWK-050 strings/sprintf-format
+PASS AWK-051 fields/assign-field-rebuild
+PASS AWK-052 fields/assign-record-resplit
+PASS AWK-053 fields/increase-nf
+PASS AWK-054 fields/lower-nf
+PASS AWK-055 fields/field-zero-reassign
+PASS AWK-056 fields/fs-literal-comma
+PASS AWK-057 fields/ofs-record-rebuild
+PASS AWK-058 fields/empty-record
+PASS AWK-059 fields/field-numeric-index
+PASS AWK-060 fields/fs-regex-multiple
+PASS AWK-061 records/nr-fnr-single
+PASS AWK-062 records/next-skips-action
+PASS AWK-063 records/begin-end-order
+PASS AWK-064 records/custom-rs
+PASS AWK-065 records/final-unterminated
+PASS AWK-066 values/num-string-compare-input
+PASS AWK-067 values/numeric-string-array-key
+PASS AWK-068 values/postincrement-evaluation
+PASS AWK-069 values/string-concatenation
+PASS AWK-070 values/logical-short-circuit
+PASS AWK-071 values/ternary-branch-only
+PASS AWK-072 values/numeric-format-printf
+PASS AWK-073 values/conversion-leading-space
+PASS AWK-074 values/subsep-array-tuple
+PASS AWK-075 values/delete-key
+PASS AWK-076 functions/array-pass-mutates
+PASS AWK-077 functions/scalar-pass-by-value
+PASS AWK-078 functions/recursive-factorial
+PASS AWK-079 functions/local-scalar
+PASS AWK-080 functions/return-default
+PASS AWK-081 functions/function-array-alias
+PASS AWK-082 regex/leftmost-longest-sub
+PASS AWK-083 regex/repetition-longest
+PASS AWK-084 regex/gsub-non-overlap
+PASS AWK-085 regex/match-start-length
+PASS AWK-086 regex/sub-only-first
+PASS AWK-087 regex/regex-range
+PASS AWK-088 regex/alternation-priority
+PASS AWK-089 regex/anchor-record
+PASS AWK-090 regex/sub-replacement-ampersand
+PASS AWK-091 control/for-loop-break
+PASS AWK-092 control/while-continue
+PASS AWK-093 control/do-while-once
+PASS AWK-094 control/pattern-range
+PASS AWK-095 control/range-rearm
+PASS AWK-096 control/compound-assignment
+PASS AWK-097 control/printf-without-newline
+PASS AWK-098 control/nextfile-no
+PASS AWK-099 arrays/multi-dimensional-subsep
+PASS AWK-100 arrays/membership-vs-unset
+PASS AWK-101 fields/empty-middle-field
+PASS AWK-102 fields/assign-beyond-nf
+PASS AWK-103 fields/assign-nf-zero
+PASS AWK-104 fields/rebuild-after-ofs-change
+FAIL AWK-105 fields/fs-char-split
+PASS AWK-106 fields/fs-one-space-trims
+PASS AWK-107 fields/fs-comma-preserves-trailing
+PASS AWK-108 fields/field-and-record-update
+PASS AWK-109 fields/set-fs-before-field-read
+PASS AWK-110 fields/rebuild-string-field
+PASS AWK-111 fields/nf-shrink-and-extend
+PASS AWK-112 fields/field-assignment-expression
+PASS AWK-113 fields/preserve-leading-delimiter
+PASS AWK-114 fields/record-number-with-blank-lines
+PASS AWK-115 fields/multiple-records-last-no-nl
+PASS AWK-116 records/custom-rs-colon
+PASS AWK-117 records/rs-single-char-not-found
+PASS AWK-118 records/rs-leading-delimiter
+PASS AWK-119 records/rs-repeated-delimiters
+PASS AWK-120 records/nr-and-end-records
+PASS AWK-121 records/next-in-first-rule
+PASS AWK-122 records/end-after-next
+PASS AWK-123 records/begin-only-no-stdin
+PASS AWK-124 records/begin-body-end-count
+PASS AWK-125 records/range-start-end-same
+PASS AWK-126 records/range-rearm-after-end
+PASS AWK-127 records/range-both-patterns-one-record
+PASS AWK-128 records/next-skip-second-pattern
+PASS AWK-129 records/ors-custom
+PASS AWK-130 records/one-rule-multiple-input
+PASS AWK-131 values/numeric-string-equality
+PASS AWK-132 values/literal-string-comparison
+PASS AWK-133 values/numeric-conversion-leading
+PASS AWK-134 values/printf-truncate-integer
+PASS AWK-135 values/printf-number-sign
+PASS AWK-136 values/printf-left-align
+PASS AWK-137 values/printf-zero-pad
+PASS AWK-138 values/arithmetic-precedence
+PASS AWK-139 values/modulo-positive
+PASS AWK-140 values/logical-nonzero
+PASS AWK-141 values/conditional-branch-evaluation
+PASS AWK-142 values/short-circuit-and
+PASS AWK-143 values/short-circuit-or
+PASS AWK-144 values/assignment-chain
+PASS AWK-145 values/sprintf-width-precision
+PASS AWK-146 arrays/key-zero-vs-string
+PASS AWK-147 arrays/key-01-distinct
+PASS AWK-148 arrays/membership-after-delete
+PASS AWK-149 arrays/membership-empty-value
+PASS AWK-150 arrays/multiindex-subsep
+PASS AWK-151 arrays/subsep-changing-lookup
+PASS AWK-152 arrays/array-value-increment
+PASS AWK-153 arrays/uninitialized-array-value
+PASS AWK-154 arrays/array-numeric-key-conversion
+PASS AWK-155 arrays/array-colon-string-key
+PASS AWK-156 arrays/in-after-reference
+PASS AWK-157 arrays/array-composite-key
+PASS AWK-158 arrays/array-string-number-values
+PASS AWK-159 arrays/array-conditional-operator
+PASS AWK-160 arrays/array-delete-reinsert
+PASS AWK-161 functions/recursive-sum
+PASS AWK-162 functions/recursive-fib-small
+PASS AWK-163 functions/scalars-passed-by-value
+PASS AWK-164 functions/arrays-passed-by-reference
+PASS AWK-165 functions/optional-local
+PASS AWK-166 functions/missing-arg-default
+PASS AWK-167 functions/early-return
+PASS AWK-168 functions/function-global-write
+PASS AWK-169 functions/function-array-and-scalar
+PASS AWK-170 functions/nested-function-call
+PASS AWK-171 functions/return-concat
+PASS AWK-172 functions/function-sprintf
+PASS AWK-173 functions/function-regex-match
+PASS AWK-174 functions/function-parameter-shadow
+PASS AWK-175 functions/function-return-default
+PASS AWK-176 regex/leftmost-longest-alt
+PASS AWK-177 regex/leftmost-longest-backwards
+PASS AWK-178 regex/regex-longest-prefix
+PASS AWK-179 regex/regex-alt-middle
+PASS AWK-180 regex/regex-match-offset
+PASS AWK-181 regex/regex-no-match
+PASS AWK-182 regex/regex-sub-count
+PASS AWK-183 regex/regex-gsub-count
+PASS AWK-184 regex/regex-sub-replacement-amp
+PASS AWK-185 regex/regex-anchored-start
+PASS AWK-186 regex/regex-char-class
+PASS AWK-187 regex/regex-group-repeat
+PASS AWK-188 regex/regex-gsub-nonoverlap
+PASS AWK-189 regex/regex-match-begin-end
+PASS AWK-190 regex/regex-conditional-sub
+PASS AWK-191 strings/substr-middle
+PASS AWK-192 strings/substr-longer
+PASS AWK-193 strings/substr-one
+PASS AWK-194 strings/substr-empty-past-end
+PASS AWK-195 strings/index-found
+PASS AWK-196 strings/index-not-found
+PASS AWK-197 strings/length-string
+PASS AWK-198 strings/tolower-plain
+PASS AWK-199 strings/toupper-plain
+PASS AWK-200 strings/split-comma
+PASS AWK-201 strings/split-regexp
+PASS AWK-202 strings/split-trailing-empty
+PASS AWK-203 strings/sprintf-string-precision
+PASS AWK-204 strings/sprintf-two-calls
+PASS AWK-205 strings/split-assignments
+PASS AWK-206 control/for-loop
+PASS AWK-207 control/nested-loops
+PASS AWK-208 control/break-inner
+PASS AWK-209 control/continue-for
+PASS AWK-210 control/while-loop
+PASS AWK-211 control/do-while
+PASS AWK-212 control/if-else
+PASS AWK-213 control/nested-if
+PASS AWK-214 control/ternary
+PASS AWK-215 control/next-even
+PASS AWK-216 control/pattern-condition
+PASS AWK-217 control/range-trigger
+PASS AWK-218 control/two-independent-rules
+PASS AWK-219 control/begin-and-end-only
+PASS AWK-220 control/exit-status-success
+PASS AWK-221 formatting/escape-tab
+PASS AWK-222 formatting/escape-newline
+PASS AWK-223 formatting/escape-backslash
+PASS AWK-224 formatting/string-quote
+PASS AWK-225 formatting/printf-integer-width
+PASS AWK-226 formatting/printf-string-left
+PASS AWK-227 formatting/printf-precision-float
+PASS AWK-228 formatting/printf-percent
+PASS AWK-229 formatting/print-ofs
+PASS AWK-230 formatting/print-ors
+PASS AWK-231 formatting/print-empty
+PASS AWK-232 formatting/printf-no-implicit-newline
+PASS AWK-233 formatting/printf-zero-width-number
+PASS AWK-234 formatting/sprintf-as-expression
+PASS AWK-235 formatting/multiple-prints
+PASS AWK-236 interactions/field-write-then-regex
+PASS AWK-237 interactions/split-and-array-membership
+PASS AWK-238 interactions/function-field-read
+PASS AWK-239 interactions/regex-and-substr
+PASS AWK-240 interactions/array-from-fields
+PASS AWK-241 interactions/regex-rewrite-field
+PASS AWK-242 interactions/function-mutates-array-from-split
+PASS AWK-243 interactions/range-and-next
+PASS AWK-244 interactions/mutable-field-nf-and-function
+PASS AWK-245 interactions/numeric-array-and-format
+PASS AWK-246 interactions/loop-over-fields
+PASS AWK-247 interactions/function-and-match
+PASS AWK-248 interactions/field-string-conversion
+PASS AWK-249 interactions/array-aggregation-and-end
+PASS AWK-250 interactions/next-and-counter
+PASS AWK-251 getline/implicit-getline-in-BEGIN-1
+PASS AWK-252 getline/implicit-getline-in-BEGIN-2
+PASS AWK-253 getline/implicit-getline-in-BEGIN-3
+PASS AWK-254 getline/implicit-getline-in-BEGIN-4
+PASS AWK-255 getline/implicit-getline-in-BEGIN-5
+PASS AWK-256 getline/getline-variable-preserves-record-1
+PASS AWK-257 getline/getline-variable-preserves-record-2
+PASS AWK-258 getline/getline-variable-preserves-record-3
+PASS AWK-259 getline/getline-variable-preserves-record-4
+PASS AWK-260 getline/getline-variable-preserves-record-5
+PASS AWK-261 getline/redirected-getline-count-1
+PASS AWK-262 getline/redirected-getline-count-2
+PASS AWK-263 getline/redirected-getline-count-3
+PASS AWK-264 getline/redirected-getline-count-4
+PASS AWK-265 getline/redirected-getline-count-5
+PASS AWK-266 getline/pipe-getline-reopen-1
+PASS AWK-267 getline/pipe-getline-reopen-2
+PASS AWK-268 getline/pipe-getline-reopen-3
+PASS AWK-269 getline/pipe-getline-reopen-4
+PASS AWK-270 getline/pipe-getline-reopen-5
+PASS AWK-271 multifile/nr-fnr-two-files-1
+PASS AWK-272 multifile/nr-fnr-two-files-2
+PASS AWK-273 multifile/nr-fnr-two-files-3
+PASS AWK-274 multifile/nr-fnr-two-files-4
+PASS AWK-275 multifile/nr-fnr-two-files-5
+PASS AWK-276 multifile/empty-middle-file-1
+PASS AWK-277 multifile/empty-middle-file-2
+PASS AWK-278 multifile/empty-middle-file-3
+PASS AWK-279 multifile/empty-middle-file-4
+PASS AWK-280 multifile/empty-middle-file-5
+PASS AWK-281 multifile/nextfile-skips-records-1
+PASS AWK-282 multifile/nextfile-skips-records-2
+PASS AWK-283 multifile/nextfile-skips-records-3
+PASS AWK-284 multifile/nextfile-skips-records-4
+PASS AWK-285 multifile/nextfile-skips-records-5
+PASS AWK-286 operands/between-file-variable-assignment-1
+PASS AWK-287 operands/between-file-variable-assignment-2
+PASS AWK-288 operands/between-file-variable-assignment-3
+PASS AWK-289 operands/between-file-variable-assignment-4
+PASS AWK-290 operands/between-file-variable-assignment-5
+PASS AWK-291 operands/option-v-and-trailing-assignment-1
+PASS AWK-292 operands/option-v-and-trailing-assignment-2
+PASS AWK-293 operands/option-v-and-trailing-assignment-3
+PASS AWK-294 operands/option-v-and-trailing-assignment-4
+PASS AWK-295 operands/option-v-and-trailing-assignment-5
+PASS AWK-296 redirection/reuse-file-output-stream-1
+PASS AWK-297 redirection/reuse-file-output-stream-2
+PASS AWK-298 redirection/reuse-file-output-stream-3
+PASS AWK-299 redirection/reuse-file-output-stream-4
+PASS AWK-300 redirection/reuse-file-output-stream-5
+PASS AWK-301 redirection/close-reopens-truncated-1
+PASS AWK-302 redirection/close-reopens-truncated-2
+PASS AWK-303 redirection/close-reopens-truncated-3
+PASS AWK-304 redirection/close-reopens-truncated-4
+PASS AWK-305 redirection/close-reopens-truncated-5
+PASS AWK-306 redirection/append-after-close-1
+PASS AWK-307 redirection/append-after-close-2
+PASS AWK-308 redirection/append-after-close-3
+PASS AWK-309 redirection/append-after-close-4
+PASS AWK-310 redirection/append-after-close-5
+PASS AWK-311 exit/exit-status-with-END-1
+PASS AWK-312 exit/exit-status-with-END-2
+PASS AWK-313 exit/exit-status-with-END-3
+PASS AWK-314 exit/exit-status-with-END-4
+PASS AWK-315 exit/exit-status-with-END-5
+PASS AWK-316 exit/exit-status-preserved-END-1
+PASS AWK-317 errors/missing-file-operand
+PASS AWK-318 errors/missing-between-files
+PASS AWK-319 errors/missing-first-file
+PASS AWK-320 errors/missing-file-after-empty
+PASS AWK-321 fields-state/extend-field-with-OFS-1
+PASS AWK-322 fields-state/extend-field-with-OFS-2
+PASS AWK-323 fields-state/extend-field-with-OFS-3
+PASS AWK-324 fields-state/extend-field-with-OFS-4
+PASS AWK-325 fields-state/extend-field-with-OFS-5
+PASS AWK-326 fields-state/resplit-and-rebuild-1
+PASS AWK-327 fields-state/resplit-and-rebuild-2
+PASS AWK-328 fields-state/resplit-and-rebuild-3
+PASS AWK-329 fields-state/resplit-and-rebuild-4
+PASS AWK-330 fields-state/resplit-and-rebuild-5
+PASS AWK-331 fields-state/ofs-does-not-rebuild-until-field-assignment-1
+PASS AWK-332 fields-state/ofs-does-not-rebuild-until-field-assignment-2
+PASS AWK-333 fields-state/ofs-does-not-rebuild-until-field-assignment-3
+PASS AWK-334 fields-state/ofs-does-not-rebuild-until-field-assignment-4
+PASS AWK-335 fields-state/ofs-does-not-rebuild-until-field-assignment-5
+PASS AWK-336 fields-state/zero-reassign-updates-fields-1
+PASS AWK-337 fields-state/zero-reassign-updates-fields-2
+PASS AWK-338 fields-state/zero-reassign-updates-fields-3
+PASS AWK-339 fields-state/zero-reassign-updates-fields-4
+PASS AWK-340 fields-state/zero-reassign-updates-fields-5
+PASS AWK-341 types/numeric-string-copy-1
+PASS AWK-342 types/numeric-string-copy-2
+PASS AWK-343 types/numeric-string-copy-3
+PASS AWK-344 types/numeric-string-copy-4
+PASS AWK-345 types/numeric-string-copy-5
+PASS AWK-346 types/array-key-CONVFMT-1
+PASS AWK-347 types/array-key-CONVFMT-2
+PASS AWK-348 types/array-key-CONVFMT-3
+PASS AWK-349 types/array-key-CONVFMT-4
+PASS AWK-350 types/array-key-CONVFMT-5
+PASS AWK-351 types/quoted-string-vs-number-1
+PASS AWK-352 types/quoted-string-vs-number-2
+PASS AWK-353 types/quoted-string-vs-number-3
+PASS AWK-354 types/quoted-string-vs-number-4
+PASS AWK-355 types/quoted-string-vs-number-5
+PASS AWK-356 types/array-key-delete-1
+PASS AWK-357 types/array-key-delete-2
+PASS AWK-358 types/array-key-delete-3
+PASS AWK-359 types/array-key-delete-4
+PASS AWK-360 types/array-key-delete-5
+PASS AWK-361 interactions-advanced/function-regex-field-rebuild-1
+PASS AWK-362 interactions-advanced/function-regex-field-rebuild-2
+PASS AWK-363 interactions-advanced/function-regex-field-rebuild-3
+PASS AWK-364 interactions-advanced/function-regex-field-rebuild-4
+PASS AWK-365 interactions-advanced/function-regex-field-rebuild-5
+PASS AWK-366 interactions-advanced/substr-after-field-assignment-1
+PASS AWK-367 interactions-advanced/substr-after-field-assignment-2
+PASS AWK-368 interactions-advanced/substr-after-field-assignment-3
+PASS AWK-369 interactions-advanced/substr-after-field-assignment-4
+PASS AWK-370 interactions-advanced/substr-after-field-assignment-5
+PASS AWK-371 getline/pipe-variable-getline-1
+PASS AWK-372 getline/pipe-variable-getline-2
+PASS AWK-373 getline/pipe-variable-getline-3
+PASS AWK-374 getline/pipe-variable-getline-4
+PASS AWK-375 getline/pipe-variable-getline-5
+PASS AWK-376 interactions-advanced/split-clears-array-1
+PASS AWK-377 interactions-advanced/split-clears-array-2
+PASS AWK-378 interactions-advanced/split-clears-array-3
+PASS AWK-379 interactions-advanced/split-clears-array-4
+PASS AWK-380 interactions-advanced/split-clears-array-5
+PASS AWK-381 interactions-advanced/POSIX-longest-gsub-1
+PASS AWK-382 interactions-advanced/gsub-longest-distinct-1
+PASS AWK-383 interactions-advanced/gsub-longest-distinct-2
+PASS AWK-384 interactions-advanced/gsub-longest-distinct-3
+PASS AWK-385 interactions-advanced/gsub-longest-distinct-4
+PASS AWK-386 interactions-advanced/array-iteration-order-independent-1
+PASS AWK-387 interactions-advanced/array-iteration-order-independent-2
+PASS AWK-388 interactions-advanced/array-iteration-order-independent-3
+PASS AWK-389 interactions-advanced/array-iteration-order-independent-4
+PASS AWK-390 interactions-advanced/array-iteration-order-independent-5
+PASS AWK-391 argv/stdin-filename-no-operands
+PASS AWK-392 argv/stdin-filename-only-assignment
+PASS AWK-393 argv/argv-replace-file
+PASS AWK-394 argv/argv-append-file
+PASS AWK-395 argv/argv-delete-file
+PASS AWK-396 argv/argv-empty-file
+PASS AWK-397 argv/argc-truncate
+PASS AWK-398 argv/argv-operand-numeric-string
+PASS AWK-399 argv/argv-change-to-assignment
+PASS AWK-400 argv/filename-two-files-and-fnr
+PASS AWK-401 getline/getline-redirected-record
+PASS AWK-402 getline/getline-redirected-field
+PASS AWK-403 getline/getline-redirected-variable
+PASS AWK-404 getline/getline-reuse-file-handle
+PASS AWK-405 getline/getline-close-rewind
+PASS AWK-406 getline/getline-eof-preserves-target
+PASS AWK-407 getline/getline-begin-consumes-input
+PASS AWK-408 getline/getline-cross-file
+PASS AWK-409 getline/getline-end-eof
+PASS AWK-410 getline/getline-numeric-string
+PASS AWK-411 getline/getline-pipe-reuse
+PASS AWK-412 getline/getline-pipe-reopen
+PASS AWK-413 getline/getline-in-end-redirected
+PASS AWK-414 records-deep/rs-paragraph-leading-trailing
+PASS AWK-415 records-deep/rs-paragraph-comma-fs-newline
+FAIL AWK-416 records-deep/rs-paragraph-regex-fs-newline
+PASS AWK-417 records-deep/rs-paragraph-literal-fs-newline
+PASS AWK-418 records-deep/rs-single-char-literal
+PASS AWK-419 records-deep/rs-paragraph-space-line
+PASS AWK-420 records-deep/rs-change-midstream
+PASS AWK-421 output-deep/redir-two-prints-same-open
+PASS AWK-422 output-deep/redir-close-retruncate
+PASS AWK-423 output-deep/redir-append-preexisting
+PASS AWK-424 output-deep/redir-printf-and-print
+PASS AWK-425 output-deep/redir-read-after-close
+PASS AWK-426 values-deep/env-numeric-string
+PASS AWK-427 values-deep/convfmt-array-key
+PASS AWK-428 values-deep/convfmt-ofmt-separation
+PASS AWK-429 values-deep/string-constant-versus-number
+PASS AWK-430 values-deep/split-elements-numeric-string
+PASS AWK-431 interactions-deep/sub-on-field-rebuild
+PASS AWK-432 interactions-deep/getline-into-field-after-ofs
+PASS AWK-433 interactions-deep/array-subsep-distinct
+PASS AWK-434 interactions-deep/array-delete-reinsert
+PASS AWK-435 interactions-deep/function-scalar-value
+PASS AWK-436 interactions-deep/function-array-reference
+PASS AWK-437 interactions-deep/nextfile-skip-and-end
+PASS AWK-438 interactions-deep/exit-function-end
+PASS AWK-439 interactions-deep/regex-gsub-empty-match
+PASS AWK-440 interactions-deep/regex-leftmost-longest-branched
+PASS AWK-441 -v / assignment operands/v-value-with-t-escape
+PASS AWK-442 -v / assignment operands/v-value-ending-in-an-unescaped-backslash
+PASS AWK-443 -v / assignment operands/v-value-with-double-backslash
+PASS AWK-444 -v / assignment operands/v-value-with-octal-escapes
+PASS AWK-445 -v / assignment operands/v-numeric-string-with-leading-zeros
+PASS AWK-446 -v / assignment operands/v-numeric-string-with-leading-and-trailing-blanks
+PASS AWK-447 -v / assignment operands/v-value-that-only-looks-numeric-1e
+PASS AWK-448 -v / assignment operands/assignment-operand-with-t-escape
+PASS AWK-449 -v / assignment operands/timing-of-assignment-operands-around-begin-and-end
+PASS AWK-450 -F sepstring/f-t-is-escape-processed-like-v-fs
+PASS AWK-451 -F sepstring/f-t-means-the-letter-t-not-tab
+PASS AWK-452 -F sepstring/f-with-a-single-ere-metacharacter-is-literal
+PASS AWK-453 -F sepstring/f-with-a-multi-character-ere
+PASS AWK-454 -F sepstring/f-is-the-default-field-splitting
+PASS AWK-455 -F sepstring/f-becomes-the-ere-a-literal-dot
+PASS AWK-456 printf %c/c-with-a-numeric-argument
+PASS AWK-457 printf %c/c-with-a-string-constant-that-looks-numeric
+PASS AWK-458 printf %c/c-with-a-number-and-a-concatenated-string
+PASS AWK-459 printf %c/c-with-a-numeric-string-field
+PASS AWK-460 printf %c/c-with-width-and-the-flag
+FAIL AWK-461 close() / system()/system-returns-the-command-s-exit-status
+PASS AWK-462 close() / system()/output-order-around-system
+PASS AWK-463 close() / system()/close-of-a-stream-that-was-never-opened-is-non-zero
+PASS AWK-464 close() / system()/close-twice-0-the-first-time-then-non-zero
+PASS AWK-465 close() / system()/close-of-an-input-pipe-whose-command-succeeded
+FAIL AWK-466 close() / system()/close-of-an-output-pipe-whose-command-exits-3
+PASS AWK-467 close() / system()/reading-a-file-again-after-close-starts-at-the-beginning
+PASS AWK-468 close() / system()/after-close-truncates-again
+PASS AWK-469 close() / system()/getline-from-a-missing-file-returns-1-and-leaves-nr-alone
+FAIL AWK-470 getline < "-" / "-" operands/getline-when-a-file-named-exists
+PASS AWK-471 getline < "-" / "-" operands/f-reads-the-program-from-standard-input
+PASS AWK-472 getline < "-" / "-" operands/argv-element-set-to-at-run-time-reads-stdin
+PASS AWK-473 uninitialised values/an-uninitialised-scalar-is-both-0-and
+PASS AWK-474 uninitialised values/comparisons-involving-an-uninitialised-value
+FAIL AWK-475 uninitialised values/an-empty-field-is-uninitialised
+FAIL AWK-476 uninitialised values/referencing-a-field-past-nf-does-not-create-it
+PASS AWK-477 uninitialised values/in-does-not-create-an-element-a-reference-does
+PASS AWK-478 uninitialised values/missing-function-arguments-are-uninitialised
+PASS AWK-479 uninitialised values/an-uninitialised-global-passed-to-a-function-becomes-an-array
+PASS AWK-480 substr/substr-bounds-omitted-n-n-too-large-start-past-the-end
+PASS AWK-481 substr/substr-with-n-0-is-empty
+FAIL AWK-482 substr/substr-with-m-0
+PASS AWK-483 substr/substr-and-length-count-characters-in-utf-8
+PASS AWK-484 index / match / RSTART / RLENGTH/index-with-an-empty-needle
+PASS AWK-485 index / match / RSTART / RLENGTH/index-basic-cases-including-an-empty-haystack
+PASS AWK-486 index / match / RSTART / RLENGTH/match-of-an-ere-that-matches-empty
+PASS AWK-487 index / match / RSTART / RLENGTH/match-of-is-at-the-end-of-the-string
+PASS AWK-488 index / match / RSTART / RLENGTH/a-failed-match-resets-rstart-and-rlength
+PASS AWK-489 index / match / RSTART / RLENGTH/rstart-and-rlength-count-characters-in-utf-8
+PASS AWK-490 index / match / RSTART / RLENGTH/leftmost-beats-longer-then-longest-at-the-same-start
+PASS AWK-491 index / match / RSTART / RLENGTH/other-functions-do-not-set-rstart-or-rlength
+PASS AWK-492 split/split-with-fs-uses-default-field-splitting
+PASS AWK-493 split/split-with-a-single-character-fs-is-literal
+PASS AWK-494 split/split-deletes-every-old-element-first
+PASS AWK-495 split/split-a-empties-the-array
+PASS AWK-496 split/split-elements-are-numeric-strings
+PASS AWK-497 split/the-source-string-is-an-element-of-the-target-array
+PASS AWK-498 split/an-ere-fs-with-leading-and-trailing-separators
+PASS AWK-499 delete array/delete-a-then-reuse-a
+PASS AWK-500 delete array/delete-a-on-an-array-parameter-clears-the-caller-s-array
+PASS AWK-501 delete array/delete-a-k-inside-for-k-in-a
+PASS AWK-502 stateful combinations/exit-with-no-expression-in-end-keeps-the-earlier-status
+PASS AWK-503 stateful combinations/exit-in-begin-runs-end-and-reads-no-input
+PASS AWK-504 stateful combinations/exit-inside-end-stops-the-remaining-end-actions
+PASS AWK-505 stateful combinations/getline-var-file-leaves-nr-fnr-nf-and-0-alone
+PASS AWK-506 stateful combinations/plain-getline-updates-nr-fnr-nf-and-0
+PASS AWK-507 stateful combinations/getline-var-updates-nr-and-fnr-not-0-or-nf
+PASS AWK-508 stateful combinations/assigning-nf-2-creates-empty-fields-and-rebuilds-with-ofs
+PASS AWK-509 stateful combinations/changing-ofs-without-touching-a-field-leaves-0-alone
+PASS AWK-510 stateful combinations/convfmt-for-subscripts-and-concatenation-ofmt-for-print-d-for-integers
+PASS AWK-511 multi-file/fnr-nr-and-filename-with-an-empty-middle-file
+PASS AWK-512 multi-file/filename-and-fnr-in-end-when-the-last-file-is-empty
+PASS AWK-513 multi-file/getline-filename-is-a-separate-stream-from-the-main-input
+PASS AWK-514 multi-file/nextfile-in-each-file-nr-counts-the-record-that-called-it
+PASS AWK-515 multi-file/an-fs-operand-between-files-applies-to-the-next-file
+PASS AWK-516 independent: boolean/logical-and-short-circuits-assignment
+PASS AWK-517 independent: boolean/logical-or-short-circuits-assignment
+PASS AWK-518 independent: conditional/conditional-expression-skips-unused-branch
+PASS AWK-519 independent: fields/reassign-field-zero-triggers-resplitting-with-current-fs
+PASS AWK-520 independent: fields/assigning-nf-to-zero-rebuilds-empty-record
+PASS AWK-521 independent: regex/leftmost-match-wins-over-later-longer-alternative
+PASS AWK-522 independent: arrays/subsep-creates-compound-subscript-and-direct-string-alias
+PASS AWK-523 independent: arrays/delete-selected-key-and-retain-unrelated-key
+PASS AWK-524 independent: regex/gsub-ampersand-inserts-matched-substring
+PASS AWK-525 independent: control/next-skips-subsequent-actions-in-same-record
+PASS AWK-526 independent: conversion/integer-numeric-value-converted-to-array-key
+PASS AWK-527 independent: records/rs-changed-in-begin-before-input-starts
+PASS AWK-528 independent: environment/isolated-environment-only-explicit-variables
+
+gawk-posix: 520/528 passed; 8 failed; 0 skipped
