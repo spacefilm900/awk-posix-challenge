@@ -12,6 +12,58 @@
 
 See `FINAL_HANDOVER_TO_GROK.md`, `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
 
+## v0.5.1 additions (retained in v0.6)
+
+*Merged back from the v0.5.1 README at tag v0.5.1 (7a0adbf), as directed by ChatGPT's final v0.6 review. The five case.json files listed under "Important provenance" above have been restored byte-for-byte from that tag, so the reconstruction caveat no longer applies to them.*
+
+v0.5.1 was a correction release that made only the changes ChatGPT directed in [feedback/ChatGPT-response-to-v0.5.md](feedback/ChatGPT-response-to-v0.5.md). See [CHANGELOG-v0.5.1.md](CHANGELOG-v0.5.1.md) and [MANIFEST-v0.5.1.md](MANIFEST-v0.5.1.md).
+
+### Summary reporting by class
+
+*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md ("Requested next actions").*
+
+Always report the three classes separately; never add them into one headline score.
+
+- **Portable conformance** (`portable`). The POSIX text specifies the behaviour. A failure is a *candidate*
+  POSIX violation, which still has to be adjudicated against the text.
+- **Observational compatibility** (`observational`). The case records common practice, or a contested or
+  unstated point. A failure is never evidence of a POSIX violation.
+- **Nonportable** (`nonportable`). The behaviour is unspecified or implementation-defined, and the result is
+  for information only.
+
+```sh
+python3 tools/summarize.py results/*.json              # text
+python3 tools/summarize.py --markdown results/*.json   # a Markdown table
+```
+
+v0.5.1 had 440 cases: 420 portable, 19 observational and 1 nonportable. v0.6 has 528: 475 portable, 52 observational and 1 nonportable.
+
+### Environment isolation (`env_clear`)
+
+*Added in v0.5.1, as directed in feedback/ChatGPT-response-to-v0.5.md, decision 8.*
+
+A case may set `"env_clear": true`. The runner then starts the interpreter with only `PATH`, `HOME`, `TMPDIR`,
+`LC_ALL`/`LANG` (from the case's `locale`) and the case's own `env` values. It does not pass on the caller's
+environment.
+
+**Pitfall: `env_clear` also removes `PYTHONPATH`.** An interpreter started as
+`PYTHONPATH=/path/to/pyawk python3 -m pyawk` then fails with "No module named pyawk". That is a harness
+failure, not an AWK result. To avoid it, use either an installed executable, or an explicit command
+environment that the runner passes through unchanged:
+
+```sh
+python3 tools/runner.py --cmd 'env PYTHONPATH=/path/to/pyawk python3 -m pyawk' --label pyawk ...
+```
+
+The harness's execution environment is separate from the `ENVIRON` values that cases test. Cases set the
+variables they test through their `env` field, and never rely on the caller's environment.
+`tools/test_runner_env.py` is a controlled harness test of this behaviour; it is not an AWK case:
+
+```sh
+python3 tools/test_runner_env.py                         # needs an installed awk (mawk, gawk or awk)
+python3 tools/test_runner_env.py --pyawk-dir /path/to/pyawk   # also demonstrates the PYTHONPATH pitfall
+```
+
 ## Previous README (v0.5)
 
 # Independent POSIX AWK Challenge v0.5 (proposal)
