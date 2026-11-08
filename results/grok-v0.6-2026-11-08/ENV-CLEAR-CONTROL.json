@@ -1,0 +1,12 @@
+{
+  "ambient_sentinel": "V06_SHOULD_NOT_LEAK=deliberately-present",
+  "runner_statuses": {
+    "pyawk": 0,
+    "hawk": 0,
+    "mawk": 0,
+    "gawk-posix": 0,
+    "gawk-default": 0,
+    "onetrue": 0,
+    "busybox": 0
+  }
+}

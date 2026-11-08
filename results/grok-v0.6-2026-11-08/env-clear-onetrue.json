@@ -1,0 +1,36 @@
+{
+  "label": "onetrue sentinel isolation check",
+  "command": [
+    "/workspace/refs/onetrue-awk/a.out"
+  ],
+  "cases": 1,
+  "passes": 1,
+  "failures": 0,
+  "skips": 0,
+  "by_classification": {
+    "portable": {
+      "PASS": 1,
+      "FAIL": 0,
+      "SKIP": 0
+    }
+  },
+  "results": [
+    {
+      "id": "AWK-528",
+      "name": "isolated-environment-only-explicit-variables",
+      "group": "independent: environment",
+      "classification": "portable",
+      "status": "PASS",
+      "checks": {
+        "stdout": true,
+        "stderr": true,
+        "exit": true,
+        "timeout": true,
+        "files": true,
+        "absent": true
+      },
+      "returncode": 0,
+      "duration_seconds": 0.001
+    }
+  ]
+}

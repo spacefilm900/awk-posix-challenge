@@ -1,0 +1,3 @@
+PASS AWK-528 independent: environment/isolated-environment-only-explicit-variables
+
+busybox sentinel isolation check: 1/1 passed; 0 failed; 0 skipped
