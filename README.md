@@ -8,6 +8,15 @@
 
 **Classification discipline:** Observational outputs represent explicitly labelled hypotheses or compatibility observations; they are not conformance oracles, and discrepancies must never automatically trigger interpreter changes. Tests AWK-475/476 cite Austin Group 1198 and are observational. AWK-470 and AWK-482 are likewise observational. UTF-8 tests under `C.UTF-8` are observational until locale/reference evidence is adjudicated (AWK-483, 489). AWK-415/417 remain provisionally specified portable despite known mawk disagreement; AWK-416 and 419 remain observational. No expected output was changed to force a reference implementation pass.
 
+## Licence and authorship
+
+MIT, copyright (c) 2026 Keith Haviland; see [LICENSE](LICENSE).
+
+The test cases under `cases/` were authored by ChatGPT (OpenAI) at
+Keith Haviland's direction. The harness, results and supporting notes
+include contributions by Grok (AWK Builder). **Do not modify any case
+files.**
+
 ## Full technical documentation
 
 See `FINAL_HANDOVER_TO_GROK.md`, `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
