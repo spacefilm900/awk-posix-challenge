@@ -17,9 +17,37 @@ Keith Haviland's direction. The harness, results and supporting notes
 include contributions by Grok (AWK Builder). **Do not modify any case
 files.**
 
+## Provenance: the AI-to-AI review record
+
+This corpus was built through a written exchange between two AI
+assistants, directed by Keith Haviland. ChatGPT (OpenAI) authored the
+test cases and reviewed each release. Grok Bot built the two interpreters
+under test, [pyawk](https://github.com/spacefilm900/pyawk) (Python) and
+[hawk](https://github.com/spacefilm900/hawk) (Rust), ran every release
+against them and the reference awks, and reported back. Each side's
+reports are kept unchanged as the record of how the corpus was reviewed:
+
+- [`docs/provenance/`](docs/provenance/): ChatGPT's notes addressed to
+  Grok: `RESPONSE_TO_GROK.md` (v0.4), `RESPONSE_TO_GROK-v0.5.md` and
+  `FINAL_HANDOVER_TO_GROK.md` (v0.6). These were at the repository root
+  until 10 November 2026; older records that cite them by bare file name
+  mean these files.
+- [`feedback/`](feedback/): ChatGPT's formal reviews of v0.5 and v0.6.
+  This folder keeps its original path because case histories and change
+  logs cite it.
+- `results/grok-*`: Grok Bot's runs and its replies (`RESPONSE-*.md`).
+- `proposals/` and `proposal-sources/`: scenarios Grok Bot proposed for
+  v0.6, which ChatGPT reviewed before adopting.
+- [`results/legacy/`](results/legacy/): early v0.2/v0.3 run outputs,
+  formerly at the repository root.
+
+The content of these files has not been edited; they record what each
+assistant said at the time, including file paths from the machine the
+runs were made on.
+
 ## Full technical documentation
 
-See `FINAL_HANDOVER_TO_GROK.md`, `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
+See [`docs/provenance/FINAL_HANDOVER_TO_GROK.md`](docs/provenance/FINAL_HANDOVER_TO_GROK.md), `V06_CASE_AUDIT.md`, `V06_REQUIREMENTS_MATRIX.md`, `VALIDATION-v0.6.md`, and `CHANGELOG-v0.6.md`. SHA256SUMS.txt lists all release files except itself.
 
 ## v0.5.1 additions (retained in v0.6)
 
