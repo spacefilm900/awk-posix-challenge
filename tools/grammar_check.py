@@ -222,16 +222,30 @@ def run_strict(awk, case, cdir, timeout, program=None):
     return None
 
 
+def default_onetrue():
+    """$ONETRUE_AWK, else the first onetrue awk found on PATH, else ''."""
+    if os.environ.get("ONETRUE_AWK"):
+        return os.environ["ONETRUE_AWK"]
+    for name in ("original-awk", "onetrue-awk", "bwk-awk", "nawk"):
+        found = shutil.which(name)
+        if found:
+            return found
+    return ""
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--onetrue", default=os.environ.get("ONETRUE_AWK", "/workspace/refs/onetrue-awk/a.out"),
-                    help="strict reference awk used for the parse check")
+    ap.add_argument("--onetrue", default=default_onetrue(),
+                    help="strict reference awk used for the parse check "
+                         "(default: $ONETRUE_AWK, else original-awk, onetrue-awk, bwk-awk or nawk on PATH)")
     ap.add_argument("--no-run", action="store_true", help="static scan only")
     ap.add_argument("--ids", nargs="*")
     ap.add_argument("--timeout", type=float, default=5.0)
     ap.add_argument("--json")
     a = ap.parse_args()
-    run = not a.no_run and Path(a.onetrue).exists()
+    if a.onetrue and not Path(a.onetrue).exists():
+        a.onetrue = shutil.which(a.onetrue) or a.onetrue
+    run = not a.no_run and bool(a.onetrue) and Path(a.onetrue).exists()
     if not a.no_run and not run:
         print(f"note: strict awk {a.onetrue} not found; static scan only", file=sys.stderr)
     report, ncase = [], 0
