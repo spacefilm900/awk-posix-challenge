@@ -1,0 +1,5 @@
+# Local runner output (pass --output results/<run>/...json to keep a run)
+/results.json
+__pycache__/
+*.pyc
+.DS_Store
